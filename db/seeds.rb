@@ -4,6 +4,8 @@ Book.destroy_all
 
 puts 'Repopulating database...'
 
+puts 'Creating books...'
+
 User.create email: 'me@mail.com', password: '123456'
 
 Book.create(title: 'Pride and Prejudice',
@@ -35,5 +37,25 @@ Book.create(title: 'The Picture of Dorian Gray',
   description: 'Newly understanding that his beauty will fade, Dorian Gray expresses the desire to sell his soul, to ensure that his picture, rather than he, will age and fade. The wish is granted, and Dorian pursues a libertine life of varied amoral experiences while staying young and beautiful; all the while, his portrait ages and records every sin.',
   genre: 'Gothic fiction',
   author_name: 'Oscar Wilde')
+
+puts 'Creating book clubs...'
+
+Bookclub.create(name: 'Gangster Grandmas Book Club',
+  genre: 'True Crime',
+  capacity: 10,
+  description: 'For grandmas or anybody else that loves true crime.',
+  user_id: 1)
+
+Bookclub.create(name: 'It’s a Hardback Life',
+  genre: 'Fantasy',
+  capacity: 18,
+  description: 'Take a break from your boring life with a fantasy novel or ten.',
+  user_id: 1)
+
+Bookclub.create(name: 'Agree To Diss A Brie Book Club',
+  genre: 'Any',
+  capacity: 15,
+  description: 'A classic book club for cheese lovers.',
+  user_id: 1)
 
 puts 'Done.'
