@@ -1,0 +1,3 @@
+class Bookclub < ApplicationRecord
+
+end

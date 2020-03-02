@@ -10,10 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_29_163826) do
+ActiveRecord::Schema.define(version: 2020_03_02_143847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookclubs", force: :cascade do |t|
+    t.string "name"
+    t.string "genre"
+    t.integer "capacity"
+    t.string "location"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.integer "year"
+    t.text "description"
+    t.string "genre"
+    t.integer "isbn"
+    t.string "author_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "owners", force: :cascade do |t|
+    t.string "current"
+    t.boolean "reading"
+    t.bigint "user_id", null: false
+    t.bigint "book_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_owners_on_book_id"
+    t.index ["user_id"], name: "index_owners_on_user_id"
+  end
+
+  create_table "swaps", force: :cascade do |t|
+    t.integer "book_1_id"
+    t.integer "book_2_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_swaps_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +67,7 @@ ActiveRecord::Schema.define(version: 2020_02_29_163826) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "owners", "books"
+  add_foreign_key "owners", "users"
+  add_foreign_key "swaps", "users"
 end
