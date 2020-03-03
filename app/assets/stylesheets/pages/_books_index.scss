@@ -1,0 +1,78 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  h2, p {
+    font-family: 'Spartan';
+    color: black;
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+.box {
+  background-color: #D1EDBA;
+  width: 600px;
+  height: 350px;
+  position: relative;
+  left: 140px;
+  margin: 16px;
+  h1, p {
+    position: relative;
+    right: 140px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px gray;
+  position: relative;
+  &:hover {
+    border: 2px solid black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .card-items {
+    padding: 10px;
+    max-width: 60%;
+  }
+}
+
+.book_cover {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+
+.text-container {
+  h1 {
+    font-family: 'Volkhov';
+  }
+  p {
+    font-family: 'Spartan';
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 300px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+.search-bar {
+  max-width: 75%;
+}
