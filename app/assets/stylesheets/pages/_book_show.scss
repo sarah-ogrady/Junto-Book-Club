@@ -1,6 +1,43 @@
+.fixed-bottom-card {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
+  width: 573px;
+  background-color: #d0edba;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 120px;
+  border-radius: 6px 6px 0 0;
+  align-items: center;
+  padding-top: 16px;
+
+  a {
+    margin-top: -22px;
+    color: black;
+    opacity: 60%;
+  }
+}
+
+
+.whole-book-title-container {
+  margin: 20px 100px;
+}
+
+.flex-box-show {
+  display: flex;
+  direction: row;
+}
+
 .books-banner-contents {
   margin: 0 auto;
   width: 600px;
+}
+
+.title {
+  border-bottom: 1px solid lightgrey;
 }
 
 .title-font {
@@ -8,23 +45,47 @@
   text-align: center;
 }
 
+.author {
+  font-size: 16px;
+}
+
 .change-font {
   font-family: 'Spartan';
 }
 
-// html {
-//   height: 100%;
-// }
+.book-image {
+  object-fit: contain;
+  width: 100%;
+  max-height: 280px;
+}
 
-// body {
-//   margin: 0;
-//   min-height: 100%;
-//   background-color: #fff;
-//   font-family: Arial, sans-serif;
-//   font-size: 14px;
-//   line-height: 20px;
-//   color: #333;
-// }
+.form-class {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Spartan';
+}
+
+.btn-dark-green {
+  padding: 8px 12px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: #638D31;
+  color: white;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.find-another {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: grey;
+  }
+}
 
 /*Webflow standard classes */
 html.w-mod-touch * {
@@ -149,34 +210,15 @@ html.w-mod-touch * {
 
 /*-----------------------*/
 
-// h3 {
-//   margin-top: 20px;
-//   margin-bottom: 10px;
-//   font-size: 24px;
-//   line-height: 30px;
-//   font-weight: bold;
-// }
-
-// h6 {
-//   margin-top: 10px;
-//   margin-bottom: 10px;
-//   font-size: 12px;
-//   line-height: 18px;
-//   font-weight: bold;
-// }
-
-// p {
-//   margin-top: 0;
-//   margin-bottom: 10px;
-// }
 
 .scene {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  height: 54vw;
+  margin: 0 auto;
+  width: 560px;
+  height: 480px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -199,7 +241,6 @@ html.w-mod-touch * {
   display: -ms-flexbox;
   display: flex;
   width: 57vw;
-  margin-top: 8vw;
   margin-bottom: 8vw;
   padding-right: 1%;
   padding-left: 1%;
@@ -442,15 +483,17 @@ html.w-mod-touch * {
 }
 
 .page-text p {
-  margin-bottom: 0px;
-  font-size: 0.85vw;
+  padding: 0 0 0 16px;
+  margin: 0;
+  font-size: 12px;
   line-height: 1.5;
-  font-size: 16px;
 }
 
 .page-text h3 {
+  margin-top: 0;
+  padding-left: 16px;
+  font-size: 18px;
   font-family: 'Spartan';
-  font-style: italic;
 }
 
 .page-text h6 {
