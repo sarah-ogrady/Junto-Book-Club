@@ -4,6 +4,14 @@
   box-shadow: (2px 3px 8px rgba(158, 158, 158, 0.2));
 }
 
+.nav-item {
+  margin-right: 15px;
+}
+
+.active {
+  margin-right: 8px;
+}
+
 .main-navigation.is_stuck.navigation-stick {
   box-shadow: (2px 3px 5px rgba(0,0,0,0.2));
 }
