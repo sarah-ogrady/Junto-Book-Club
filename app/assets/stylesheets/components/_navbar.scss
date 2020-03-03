@@ -1,12 +1,17 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
+  box-shadow: (2px 3px 8px rgba(158, 158, 158, 0.2));
 }
 
-.navbar-lewagon .navbar-collapse {
+.main-navigation.is_stuck.navigation-stick {
+  box-shadow: (2px 3px 5px rgba(0,0,0,0.2));
+}
+
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar .navbar-brand img {
   width: 80px;
 }
