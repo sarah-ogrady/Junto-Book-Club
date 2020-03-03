@@ -1,0 +1,28 @@
+.footer {
+  background-color: white;
+  height: 110px;
+  padding: 17px;
+  margin-bottom: -17px;
+}
+
+.footer h3 {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+.social-links-div {
+  text-align: center;
+  font-size: 30px;
+}
+
+.social-link {
+  padding: 10px;
+  color: black;
+  transition: 0.2s;
+}
+
+.social-link:hover {
+  color: #D1EDBA;
+  transition: 0.2s;
+}
