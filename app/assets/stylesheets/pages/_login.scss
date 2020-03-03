@@ -17,7 +17,7 @@
   right: 84px;
   top: 65px;
   font-size: 70px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Volkhov', serif;
   padding-right: 20px;
 }
 
@@ -34,14 +34,22 @@
   }
 }
 
-.login-button {
+.form-actions {
+  margin-bottom: 20px;
+}
+
+.devise-links {
   text-align: center;
-  width: 100%;
-  background-color: #638D31;
-  border-radius: 10px;
-  color: white;
-  font-size: 20px;
-  margin-top: 40px;
+}
+
+.devise-links a {
+  text-decoration: none;
+  color: #222121 !important;
+}
+
+.devise-links a:hover {
+  text-decoration: none;
+  color: black !important;
 }
 
 .login-button:hover {

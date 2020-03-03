@@ -1,12 +1,33 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
+  box-shadow: (2px 3px 8px rgba(158, 158, 158, 0.2));
 }
 
-.navbar-lewagon .navbar-collapse {
+.nav-item {
+  margin-right: 15px;
+}
+
+.active {
+  margin-right: 8px;
+}
+
+.active a {
+  color: #3E3C3C !important;
+}
+
+.active a:hover {
+  color: #111111 !important;
+}
+
+.main-navigation.is_stuck.navigation-stick {
+  box-shadow: (2px 3px 8px rgba(158, 158, 158, 0.2));
+}
+
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar .navbar-brand img {
   width: 80px;
 }
