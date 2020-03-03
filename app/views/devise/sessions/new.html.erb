@@ -5,8 +5,8 @@
 <div class="login-page">
   <div class="row" style="margin-right: 60px; margin-left: 170px;">
     <div class="col-lg-5 login-h1-tag" style="margin-left: 20px;">
-      <h1>Login now, </h1>
-      <h1>To your Account...</h1>
+      <h1>Hello,</h1>
+      <h1>welcome back!</h1>
     </div>
     <div class="col-lg-1"></div>
     <div class="col-lg-5">
@@ -24,12 +24,12 @@
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Log in", class: "login-button"%>
+            <%= f.button :submit, "Log in", class: "btn-dark-green btn-block"%>
           </div>
         <% end %>
-
-        <%= render "devise/shared/links" %>
-
+        <div class="devise-links">
+          <%= render "devise/shared/links" %>
+        </div>
       </div>
     </div>
   </div>

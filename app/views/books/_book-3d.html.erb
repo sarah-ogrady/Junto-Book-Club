@@ -1,0 +1,71 @@
+<div class="whole-book-title-container">
+  <div class="books-banner-contents">
+    <h1 class="title title-font"><strong><%= "#{@book.title}" %></strong></h1>
+    <h6 class="author title-font">By <%= "#{@book.author_name}" %>
+    <h2 class="title-font"><%= @book.year %></h2>
+  </div>
+  <div class="scene">
+    <div class="book-wrap">
+      <div class="left-side">
+        <div class="book-cover-left"></div>
+        <div class="layer1">
+          <div class="page-left"></div>
+        </div>
+        <div class="layer2">
+          <div class="page-left"></div>
+        </div>
+        <div class="layer3">
+          <div class="page-left"></div>
+        </div>
+        <div class="layer4">
+          <div class="page-left"></div>
+        </div>
+        <div class="layer-text">
+          <div class="page-left-2">
+            <div class="corner"></div>
+            <div class="corner2"></div>
+            <div class="corner-fold"></div>
+            <div class="page-text w-richtext">
+              <img class="book-image" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451445646l/18143977.jpg" alt="">
+
+           <!--    <h3><strong>America</strong></h3>
+              <h6>BY <a href="https://www.poetryfoundation.org/poets/walt-whitman" target="_blank">WALT WHITMAN</a></h6>
+              <p>‍</p>
+              <p>Centre of equal daughters, equal sons,</p>
+              <p>All, all alike endear’d, grown, ungrown, young or old,</p>
+              <p>Strong, ample, fair, enduring, capable, rich,</p>
+              <p>Perennial with the Earth, with Freedom, Law and Love,</p>
+              <p>A grand, sane, towering, seated Mother,</p>
+              <p>Chair’d in the adamant of Time.</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center"></div>
+      <div class="right-side">
+        <div class="book-cover-right"></div>
+        <div class="layer1">
+          <div class="page-right"></div>
+        </div>
+        <div class="layer2 right">
+          <div class="page-right"></div>
+        </div>
+        <div class="layer3 right">
+          <div class="page-right"></div>
+        </div>
+        <div class="layer4 right">
+          <div class="page-right"></div>
+        </div>
+        <div class="layer-text right">
+          <div class="page-right-2">
+            <div class="page-text w-richtext">
+              <h3>Summary</h3>
+              <p><%= @book.description %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
