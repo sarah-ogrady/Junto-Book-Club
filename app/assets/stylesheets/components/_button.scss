@@ -1,0 +1,18 @@
+.btn-primary {
+  width: 90px;
+  text-align: center;
+  background-color: #638D31;
+  opacity: 0.8;
+  border: none;
+  &:hover {
+    background-color: #638D31;
+    opacity: 1;
+  }
+  font-family: "Spartan";
+}
+
+.bottom-right{
+  bottom: 8px;
+  right: 8px;
+  position: absolute;
+}
