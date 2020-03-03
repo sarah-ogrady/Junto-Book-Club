@@ -1,8 +1,14 @@
-<div class="books-banner-contents">
-    <h1><%= "#{@book.title}" %></h1>
-    <h2><%= @book.year %></h2>
-    <p><%= @book.description %></p>
-  </div>
-</div>
 
-  <%= link_to "Home", root_path %>
+  <%= render "book-3d" %>
+
+  <div class="fixed-bottom-card">
+    <%= simple_form_for @book, html: { class: 'form-class' }, remote: true do |f| %>
+      <%= f.submit "Swap", class: "btn-dark-green" %>
+    <% end %>
+    <%= link_to "Find another book", root_path, class: "find-another" %>
+  </div>
+
+
+
+
+
