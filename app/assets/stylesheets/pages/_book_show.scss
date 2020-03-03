@@ -12,18 +12,19 @@
   font-family: 'Spartan';
 }
 
-html {
-  height: 100%;
-}
-body {
-  margin: 0;
-  min-height: 100%;
-  background-color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: #333;
-}
+// html {
+//   height: 100%;
+// }
+
+// body {
+//   margin: 0;
+//   min-height: 100%;
+//   background-color: #fff;
+//   font-family: Arial, sans-serif;
+//   font-size: 14px;
+//   line-height: 20px;
+//   color: #333;
+// }
 
 /*Webflow standard classes */
 html.w-mod-touch * {
@@ -148,30 +149,26 @@ html.w-mod-touch * {
 
 /*-----------------------*/
 
-h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: bold;
-}
+// h3 {
+//   margin-top: 20px;
+//   margin-bottom: 10px;
+//   font-size: 24px;
+//   line-height: 30px;
+//   font-weight: bold;
+// }
 
-h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: bold;
-}
+// h6 {
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+//   font-size: 12px;
+//   line-height: 18px;
+//   font-weight: bold;
+// }
 
-p {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-a {
-  text-decoration: underline;
-}
+// p {
+//   margin-top: 0;
+//   margin-bottom: 10px;
+// }
 
 .scene {
   display: -webkit-box;
