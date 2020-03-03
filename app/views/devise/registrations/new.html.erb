@@ -14,9 +14,7 @@
     <div class="col-lg-5 form-position" >
       <p>
         <em>
-         Did you enjoy your first free book swap... You did, Brilliant!
-         Please sign up now for our yearly memebership and enjoy a whole year of unlimited
-         book swaps..
+         Enter your email address and create a password below to join Junto...
         </em>
       </p>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -37,7 +35,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Sign up", class: "sign-up-button"%>
+          <%= f.button :submit, "Sign up", class: "btn-dark-green btn-block"%>
         </div>
       <% end %>
 
