@@ -11,3 +11,34 @@
     font-family: 'Volkhov', serif;
   }
 }
+
+.main-title {
+  position: absolute;
+  width: 680px;
+}
+
+.sign-up {
+  z-index: 1000;
+    margin-top: 20px;
+    display: inline-block;
+    border: 1px solid #638D31;
+    font-size: 30px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    color: white;
+    background-color: #638D31;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 1px 2px 3px #638D31;
+}
+
+.sign-up:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.grow:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
