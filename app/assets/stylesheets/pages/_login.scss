@@ -1,9 +1,8 @@
-
-.sign-up-page {
+.login-page {
   margin-top: 150px;
 }
 
-.h1-tag {
+.login-h1-tag {
   background-color: #D1EDBA;
   height: 500px;
   width: 700px;
@@ -12,7 +11,7 @@
   margin-bottom: 10px;
 }
 
-.h1-tag h1 {
+.login-h1-tag h1 {
   z-index: 1000;
   position: relative;
   right: 84px;
@@ -22,19 +21,20 @@
   padding-right: 20px;
 }
 
-.form-position {
+.login-form-position {
   padding-left: 30px;
   margin-top: 10px;
   border-radius: 10px;
   padding-top: 30px;
   padding-right: 30px;
   box-shadow: 2px 3px 8px lightgrey;
+  padding-bottom: 20px;
   p {
     font-size: 20px;
   }
 }
 
-.sign-up-button {
+.login-button {
   text-align: center;
   width: 100%;
   background-color: #638D31;
@@ -43,4 +43,3 @@
   font-size: 20px;
   margin-top: 40px;
 }
-
