@@ -12,10 +12,10 @@
 
       </div>
       <div class="col-lg-5 swap-margin-right">
-        <h2 style="text-align: center;">Congratulations</h2>
+        <h2 style="text-align: center; margin-top: 10px;">Congratulations</h2>
         <p style="text-align: center;">Your book request has been sent to....</p>
         <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <img src="https://image.flaticon.com/icons/png/512/130/130304.png" />
           <div class="card-product-infos">
             <h3><%= @book_given.title %></h3>
             <p><%= @book_given.year %></p>
@@ -23,6 +23,9 @@
           </div>
         </div>
         <p style="text-align: center; margin-top: 30px;">You will be notified when Gertrude accepts your request!</p>
+        <div style=" text-align: center;">
+           <%= link_to "Return Home", books_path, class: "index-link-from-show"%>
+        </div>
       </div>
     </div>
   </div>
