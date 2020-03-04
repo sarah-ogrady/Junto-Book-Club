@@ -5,7 +5,7 @@
       <div class="text-container box">
         <h1>Find your next book...</h1>
         <p>Search by title, author, genre...</p>
-        <%= form_tag books_path method: :get do %>
+        <%= form_tag books_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
             class: "form-control",
@@ -15,9 +15,6 @@
         <% end %>
       </div>
     </div>
-
-      <div class="col-xs-12 col-md-6 col-lg-6 justify-content-center form-container">
-    </div>
   </div>
 </div>
 
@@ -25,16 +22,14 @@
   <div class="cards">
     <% @books.each do |book| %>
       <div class="card">
-        <%= link_to(book_path(book), class: "d-flex") do %>
-          <img src="https://cdn.domestika.org/c_limit,dpr_auto,f_auto,q_auto,w_820/v1540461189/content-items/002/573/821/WEB_Abbati_Jansson.Illibrodellestate-original.jpg?1540461189" alt="book cover" class="book_cover">
-          <div class="card-items">
-            <h2><%= "#{book.title}" %></h2>
-            <p id="author"><%= "#{book.author_name}" %></p>
-            <!--- need to add a link_to above that links author's name to the author show page --->
-          </div>
-          <img src="https://wallpaperaccess.com/full/1278457.jpg" alt="profile picture" class="avatar">
-          <%= link_to "Choose", "#", class: "btn btn-primary bottom-right" %>
-        <% end %>
+        <img src="https://cdn.domestika.org/c_limit,dpr_auto,f_auto,q_auto,w_820/v1540461189/content-items/002/573/821/WEB_Abbati_Jansson.Illibrodellestate-original.jpg?1540461189" alt="book cover" class="book_cover">
+        <div class="card-items">
+          <h2><%= "#{book.title}" %></h2>
+          <p id="author"><%= "#{book.author_name}" %></p>
+          <!--- need to add a link_to above that links author's name to the author show page --->
+        </div>
+        <img src="https://wallpaperaccess.com/full/1278457.jpg" alt="profile picture" class="avatar">
+        <%= link_to "Choose", book_path(book), class: "btn btn-primary bottom-right" %>
       </div>
     <% end %>
   </div>
