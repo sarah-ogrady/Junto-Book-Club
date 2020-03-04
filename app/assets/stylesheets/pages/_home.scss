@@ -17,25 +17,16 @@
   width: 680px;
 }
 
-.sign-up {
+.btn-signup {
   z-index: 1000;
     margin-top: 20px;
     display: inline-block;
-    border: 1px solid #638D31;
     font-size: 30px;
     padding: 20px 40px;
-    border-radius: 20px;
-    color: white;
-    background-color: #638D31;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 1px 2px 3px #638D31;
 }
 
-.sign-up:hover {
-  color: white;
+.btn-signup:hover {
   text-decoration: none;
-  opacity: 0.9;
 }
 
 .grow:hover {
