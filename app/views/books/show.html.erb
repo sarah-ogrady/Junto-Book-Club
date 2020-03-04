@@ -5,7 +5,7 @@
     <%= simple_form_for [@book, Swap.new], html: { class: 'form-class' } do |f| %>
       <%= f.submit "Swap", class: "btn-dark-green" %>
     <% end %>
-    <%= link_to "Find another book", root_path, class: "find-another" %>
+    <%= link_to "Find another book", books_path, class: "find-another" %>
   </div>
 
 
