@@ -44,18 +44,18 @@ Bookclub.create(name: 'Gangster Grandmas Book Club',
   genre: 'True Crime',
   capacity: 10,
   description: 'For grandmas or anybody else that loves true crime.',
-  user_id: 1)
+  user_id: User.first.id)
 
 Bookclub.create(name: 'It’s a Hardback Life',
   genre: 'Fantasy',
   capacity: 18,
   description: 'Take a break from your boring life with a fantasy novel or ten.',
-  user_id: 1)
+  user_id: User.first.id)
 
 Bookclub.create(name: 'Agree To Diss A Brie Book Club',
   genre: 'Any',
   capacity: 15,
   description: 'A classic book club for cheese lovers.',
-  user_id: 1)
+  user_id: User.first.id)
 
 puts 'Done.'

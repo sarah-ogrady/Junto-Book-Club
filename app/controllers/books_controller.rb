@@ -11,6 +11,9 @@ class BooksController < ApplicationController
     else
       @books = Book.all
     end
+    if params[:filter].present?
+      @books = @books.where(genre: params[:filter])
+    end
   end
 
   def show
@@ -52,9 +55,17 @@ class BooksController < ApplicationController
     redirect_to new_book_path
   end
 
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to books_path
+  end
+
   private
 
   def book_params
     params.require(:book).permit(:isbn, :genre)
   end
+
 end
+
