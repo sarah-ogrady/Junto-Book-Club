@@ -3,4 +3,10 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def my_swaps
+    @swaps = current_user.swaps
+  end
+
+
 end
