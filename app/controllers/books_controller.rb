@@ -53,3 +53,5 @@ class BooksController < ApplicationController
     params.require(:book).permit(:isbn)
   end
 
+end
+
