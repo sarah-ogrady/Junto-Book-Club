@@ -13,6 +13,9 @@ class BooksController < ApplicationController
     else
       @books = Book.all
     end
+    if params[:filter].present?
+      @books = @books.where(genre: params[:filter])
+    end
   end
 
   def new
@@ -43,7 +46,6 @@ class BooksController < ApplicationController
     @book.destroy
     redirect_to books_path
   end
-end
 
   private
 

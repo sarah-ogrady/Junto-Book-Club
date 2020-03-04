@@ -1,23 +1,40 @@
 <div class="banner-index">
   <div class="container">
-  <div class="row banner-contents">
+    <div class="row banner-contents">
 
-    <div class="col-lg-12 col-md-8 col-xs-4">
-      <div class="text-container box">
-        <h1>Find your next book...</h1>
-        <p>Search by title, author, genre...</p>
-        <%= form_tag books_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a book"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
+      <div class="col-lg-12 col-md-8 col-xs-4">
+        <div class="text-container box">
+          <h1>Find your next book...</h1>
+          <p>Search by title, author, genre...</p>
+          <%= form_tag books_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find a book"
+            %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <h3>Filter</h3>
+      <div class="dropdown">
+        <button class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= params[:filter].present? ? params[:filter] : 'Genre' %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to 'Action', books_path(query: params[:query], filter: 'Action'), class: "dropdown-item"  %>
+          <%= link_to 'Adventure', books_path(query: params[:query], filter: 'Adventure'), class: "dropdown-item"  %>
+          <%= link_to 'Classic', books_path(query: params[:query], filter: 'Classic'), class: "dropdown-item"  %>
+          <%= link_to 'Crime', books_path(query: params[:query], filter: 'Crime'), class: "dropdown-item"  %>
+          <%= link_to 'Fantasy', books_path(query: params[:query], filter: 'Fantasy'), class: "dropdown-item"  %>
+          <%= link_to 'Non-Fiction', books_path(query: params[:query], filter: 'Non-Fiction'), class: "dropdown-item"  %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <div class="container">

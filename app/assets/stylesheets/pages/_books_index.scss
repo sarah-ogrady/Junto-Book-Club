@@ -113,3 +113,21 @@
 form {
   display: inline-flex;
 }
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #D1EDBA;
+  border-radius: 5px;
+  background: #D1EDBA;
+  padding: 5px;
+  margin-bottom: 16px;
+  h3 {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+  h3, .dropdown-item {
+    font-family: 'Spartan';
+  }
+}
