@@ -2,9 +2,7 @@ require 'json'
 require 'open-uri'
 
 class BooksController < ApplicationController
-  def show
-    @book = Book.find(params[:id])
-  end
+
 
   def index
     if params[:query].present?
@@ -15,8 +13,17 @@ class BooksController < ApplicationController
     end
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
+
   def new
     @book = Book.new
+  end
+
+  def confirmation
+    @book = Book.find(params[:id])
+    @genre = @book.genre
   end
 
   def create
@@ -26,21 +33,28 @@ class BooksController < ApplicationController
     info_serialized = open(url_info).read
     book_info = JSON.parse(info_serialized)
 
-    @book.title = book_info["items"]["volumeInfo"]["title"]
-    @book.author_name = book_info["items"]["volumeInfo"]["authors"]
-    @book.year = book_info["items"]["volumeInfo"]["publishedDate"].slice[0, 3]
-    @book.description = book_info["items"]["volumeInfo"]["description"]
+    @book.title = book_info["items"].first["volumeInfo"]["title"]
+    @book.author_name = book_info["items"].first["volumeInfo"]["authors"]
+    @book.year = book_info["items"].first["volumeInfo"]["publishedDate"]
+    @book.description = book_info["items"].first["volumeInfo"]["description"]
 
-    cover_file = Uri.open("http://covers.openlibrary.org/b/isbn/#{@book.isbn}-L.jpg")
+    cover_file = URI.open("http://covers.openlibrary.org/b/isbn/#{@book.isbn}-L.jpg")
     @book.photo.attach(io: cover_file, filename: 'cover.jpg', content_type: 'image/jpg')
 
     @book.save
-    redirect_to book_path(@book)
+    redirect_to confirmation_book_path(@book)
+  end
+
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    flash[:notice] = 'Book successfully deleted'
+    redirect_to new_book_path
   end
 
   private
 
   def book_params
-    params.require(:book).permit(:isbn)
+    params.require(:book).permit(:isbn, :genre)
   end
 end
