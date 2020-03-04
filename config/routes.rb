@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :books, only: %i[index show] do
     resources :swaps, only: %i[new create]
   end
+  resources :swaps, only: :show
   resources :bookclubs, only: %i[index show]
 end
