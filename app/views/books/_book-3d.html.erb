@@ -60,7 +60,7 @@
           <div class="page-right-2">
             <div class="page-text w-richtext">
               <h3>Summary</h3>
-              <p><%= @book.description %></p>
+              <p><%= @book.description.truncate(370) %></p>
             </div>
           </div>
         </div>
