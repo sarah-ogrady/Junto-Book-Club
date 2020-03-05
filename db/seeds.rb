@@ -6,6 +6,7 @@ puts 'Repopulating database...'
 
 puts 'Creating books...'
 
+
 User.create email: 'me@mail.com', password: '123456'
 
 user1 = User.create(
