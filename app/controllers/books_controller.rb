@@ -34,18 +34,58 @@ class BooksController < ApplicationController
     url_info = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{@book.isbn}"
 
     info_serialized = open(url_info).read
-    book_info = JSON.parse(info_serialized)
+    @book_info = JSON.parse(info_serialized)
 
-    @book.title = book_info["items"].first["volumeInfo"]["title"]
-    @book.author_name = book_info["items"].first["volumeInfo"]["authors"]
-    @book.year = book_info["items"].first["volumeInfo"]["publishedDate"]
-    @book.description = book_info["items"].first["volumeInfo"]["description"]
+    if @book_info["totalItems"].zero?
+      flash[:alert] = "that isbn didn't work"
+      return render :new
+    end
 
-    cover_file = URI.open("http://covers.openlibrary.org/b/isbn/#{@book.isbn}-L.jpg")
+    @book.title = api_hash["title"]
+    @book.author_name = api_hash["authors"]
+    @book.year = api_hash["publishedDate"]
+    @book.description = api_hash["description"]
+
+    cover_file = find_image
     @book.photo.attach(io: cover_file, filename: 'cover.jpg', content_type: 'image/jpg')
 
     @book.save
     redirect_to confirmation_book_path(@book)
+  end
+
+  def api_hash
+    @book_info["items"].select{ |item| item["volumeInfo"]["language"] == "en" }.first["volumeInfo"]
+  end
+
+  def find_image
+    images = api_hash["imageLinks"]
+    if images
+      image = images["thumbnail"]
+      URI.open(image)
+    else
+      use_open_library("L")
+    end
+  end
+
+  def use_open_library(size)
+    url = open_library_url(@book.isbn, "L")
+    begin
+      URI.open(url)
+    rescue StandardError
+      if size == "L"
+        use_open_library("M")
+      elsif size == "M"
+        use_open_library("S")
+      elsif size == "S"
+        # Noooope
+        # none of this has worked
+        URI.open("https://islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg")
+      end
+    end
+  end
+
+  def open_library_url(isbn, size)
+    "http://covers.openlibrary.org/b/isbn/#{isbn}-#{size}.jpg?default=false"
   end
 
   def destroy
