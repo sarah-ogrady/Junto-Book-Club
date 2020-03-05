@@ -1,10 +1,21 @@
 
   <%= render "book-3d" %>
+<div class="mapclass">
+  <div style="margin-bottom: 60px;">
+    <h2><%= @book.user.first_name %> <%= @book.user.last_name %></h2>
+    <h3><%= @book.user.location %></h3>
 
-  <div>
-    <h2 style="text-align: center;"><%= @book.user.first_name %> <%= @book.user.last_name %></h2>
-    <h3 style="text-align: center;"><%= @book.user.location %></h3>
+   <div class="mapbox-style">
+     <div id="map"
+       style="width: 440px;
+       height: 200px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+     </div>
+   </div>
   </div>
+</div>
+
 
   <div class="fixed-bottom-card">
     <%= simple_form_for [@book, Swap.new], html: { class: 'form-class' } do |f| %>
