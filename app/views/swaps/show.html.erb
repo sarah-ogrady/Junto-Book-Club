@@ -22,7 +22,7 @@
             <p><%= @book_given.genre %></p>
           </div>
         </div>
-        <p style="text-align: center; margin-top: 30px;">You will be notified when Gertrude accepts your request!</p>
+        <p style="text-align: center; margin-top: 30px;"><%="You will be notified when #{@swap.giving_user.first_name} accepts your request!"%></p>
         <div style=" text-align: center;">
            <%= link_to "My Swaps", my_swaps_path, class: "index-link-from-show"%>
         </div>
