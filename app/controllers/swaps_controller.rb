@@ -16,6 +16,6 @@ class SwapsController < ApplicationController
 
   def complete
     @swap = Swap.find(params[:id])
-    @swap.update(complete:true)
+    @swap.update(status: 'complete')
   end
 end

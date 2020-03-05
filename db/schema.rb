@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_05_124054) do
+ActiveRecord::Schema.define(version: 2020_03_05_165503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,7 +85,7 @@ ActiveRecord::Schema.define(version: 2020_03_05_124054) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.bigint "user_2_id", null: false
-    t.boolean "complete", default: false
+    t.string "status", default: "pending"
     t.index ["user_2_id"], name: "index_swaps_on_user_2_id"
     t.index ["user_id"], name: "index_swaps_on_user_id"
   end
@@ -108,9 +108,9 @@ ActiveRecord::Schema.define(version: 2020_03_05_124054) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookclubs", "users"
+  add_foreign_key "books", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
-  add_foreign_key "books", "users"
   add_foreign_key "swaps", "users"
   add_foreign_key "swaps", "users", column: "user_2_id"
 end
