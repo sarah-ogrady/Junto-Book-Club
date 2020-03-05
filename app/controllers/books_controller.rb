@@ -46,7 +46,6 @@ class BooksController < ApplicationController
     @book.year = api_hash["publishedDate"]
     @book.description = api_hash["description"]
 
-    binding.pry
     cover_file = find_image
     @book.photo.attach(io: cover_file, filename: 'cover.jpg', content_type: 'image/jpg')
 
@@ -69,17 +68,18 @@ class BooksController < ApplicationController
   end
 
   def use_open_library(size)
-    open_library_url(@book.isbn, "L")
+    url = open_library_url(@book.isbn, "L")
     begin
       URI.open(url)
-    rescue 404
+    rescue StandardError
       if size == "L"
-        open_library_url(@book.isbn, "M")
+        use_open_library("M")
       elsif size == "M"
-        open_library_url(@book.isbn, "S")
+        use_open_library("S")
       elsif size == "S"
         # Noooope
         # none of this has worked
+        URI.open("https://islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg")
       end
     end
   end
