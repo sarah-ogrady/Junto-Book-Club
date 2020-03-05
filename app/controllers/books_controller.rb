@@ -54,6 +54,7 @@ class BooksController < ApplicationController
     cover_file = find_image
     @book.photo.attach(io: cover_file, filename: 'cover.jpg', content_type: 'image/jpg')
 
+    @book.user = current_user
     @book.save
     redirect_to confirmation_book_path(@book)
   end
