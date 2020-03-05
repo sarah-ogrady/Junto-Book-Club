@@ -13,7 +13,7 @@
       </div>
       <div class="col-lg-5 swap-margin-right">
         <h2 style="text-align: center; margin-top: 10px;">Congratulations</h2>
-        <p style="text-align: center;">Your book request has been sent to....</p>
+        <p style="text-align: center;"><%="Your book request has been sent to #{@swap.giving_user.first_name.capitalize}!"%></p>
         <div class="card-product">
           <img src="https://image.flaticon.com/icons/png/512/130/130304.png" />
           <div class="card-product-infos">
@@ -22,7 +22,7 @@
             <p><%= @book_given.genre %></p>
           </div>
         </div>
-        <p style="text-align: center; margin-top: 30px;"><%="You will be notified when #{@swap.giving_user.first_name} accepts your request!"%></p>
+        <p style="text-align: center; margin-top: 30px;"><%="You will be notified when #{@swap.giving_user.first_name.capitalize} accepts your request!"%></p>
         <div style=" text-align: center;">
            <%= link_to "My Swaps", my_swaps_path, class: "index-link-from-show"%>
         </div>
