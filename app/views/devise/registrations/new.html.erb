@@ -32,6 +32,8 @@
           <%= f.input :password_confirmation,
                       required: true,
                       input_html: { autocomplete: "new-password" }, required: false %>
+          <%= f.input :location,
+                       required: true, placeholder: "First Half Of Postcode" %>
           <%= f.input :photo, as: :file %>
         </div>
 

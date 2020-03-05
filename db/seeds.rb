@@ -8,11 +8,14 @@ puts 'Creating books...'
 
 User.create email: 'me@mail.com', password: '123456'
 
-Book.create(title: 'Pride and Prejudice',
+user1 = User.create(
+  first_name: "Bob"
+  )
+book1 = Book.create(title: 'Pride and Prejudice',
   year: 1813,
   description: "Mr Bennet of Longbourn estate has five daughters, but his property is entailed and can only be passed to a male heir. His wife also lacks an inheritance, so his family will be destitute upon his death. Thus it is imperative that at least one of the girls marry well to support the others, which is a motivation that drives the plot. The novel revolves around the importance of marrying for love, not for money or social prestige, despite the communal pressure to make a wealthy match.",
   genre: 'Classic',
-  author_name: 'Jane Austen')
+  author_name: 'Jane Austen', user: user1)
 
 Book.create(title: "Harry Potter and the Philosopher's Stone",
   year: 1997,
