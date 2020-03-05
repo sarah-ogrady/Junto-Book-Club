@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   end
   resources :swaps, only: :show
   resources :bookclubs, only: %i[index show]
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end

@@ -62,6 +62,22 @@ ActiveRecord::Schema.define(version: 2020_03_05_124054) do
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
   create_table "swaps", force: :cascade do |t|
     t.integer "book_1_id"
     t.integer "book_2_id"
@@ -92,6 +108,8 @@ ActiveRecord::Schema.define(version: 2020_03_05_124054) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookclubs", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "books", "users"
   add_foreign_key "swaps", "users"
   add_foreign_key "swaps", "users", column: "user_2_id"
