@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :giving_swaps, class_name: 'Swap', source: :giving_user
   has_many :receiving_swaps, class_name: 'Swap', source: :receiving_user, foreign_key: 'user_2_id'
   has_one_attached :photo
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 
   def swaps
     Swap.where(id: [giving_swaps.ids, receiving_swaps.ids].flatten)
