@@ -28,6 +28,8 @@
             <div class="page-text w-richtext">
             <% if @book.photo.attached? %>
               <%= cl_image_tag @book.photo.key, class: 'book-image' %>
+            <% else %>
+              <%= image_tag "https://islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg", class: 'book-image' %>
             <% end %>
 
            <!--    <h3><strong>America</strong></h3>

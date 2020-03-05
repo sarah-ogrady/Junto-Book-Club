@@ -18,6 +18,11 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    @user = @book.user
+    @markers = [{
+      lat: @user.latitude,
+      lng: @user.longitude
+    }]
   end
 
   def new
