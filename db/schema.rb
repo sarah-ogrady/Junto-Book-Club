@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_04_151222) do
+ActiveRecord::Schema.define(version: 2020_03_05_121024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,17 +57,8 @@ ActiveRecord::Schema.define(version: 2020_03_04_151222) do
     t.string "author_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "owners", force: :cascade do |t|
-    t.string "current"
-    t.boolean "reading"
     t.bigint "user_id", null: false
-    t.bigint "book_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["book_id"], name: "index_owners_on_book_id"
-    t.index ["user_id"], name: "index_owners_on_user_id"
+    t.index ["user_id"], name: "index_books_on_user_id"
   end
 
   create_table "swaps", force: :cascade do |t|
@@ -95,8 +86,7 @@ ActiveRecord::Schema.define(version: 2020_03_04_151222) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookclubs", "users"
-  add_foreign_key "owners", "books"
-  add_foreign_key "owners", "users"
+  add_foreign_key "books", "users"
   add_foreign_key "swaps", "users"
   add_foreign_key "swaps", "users", column: "user_2_id"
 end
