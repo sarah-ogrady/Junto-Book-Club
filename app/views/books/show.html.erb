@@ -1,20 +1,33 @@
 
-  <%= render "book-3d" %>
-<div class="mapclass">
-  <div style="margin-bottom: 60px;">
-    <h2><%= @book.user.first_name %> <%= @book.user.last_name %></h2>
-    <h3><%= @book.user.location %></h3>
 
-   <div class="mapbox-style">
-     <div id="map"
-       style="width: 700px;
-       height: 350px;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-     </div>
-   </div>
+
+
+  <div class="row">
+    <div class="col-lg-7">
+      <%= render "book-3d" %>
+    </div>
+    <div class="co-lg-5">
+      <div class="mapclass">
+        <div style="margin-bottom: 40px;">
+          <h2><%= @book.user.first_name %> <%= @book.user.last_name %></h2>
+          <h3><%= @book.user.location %></h3>
+
+         <div class="mapbox-style">
+           <div id="map"
+             style="width: 525px;
+             height: 350px;"
+             data-markers="<%= @markers.to_json %>"
+             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+           </div>
+         </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
+
+
+
 
 
   <div class="fixed-bottom-card">
