@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   belongs_to :bookclub, required: false
-  has_many :owners
+  has_many :books
   has_many :giving_swaps, class_name: 'Swap', source: :giving_user
   has_many :receiving_swaps, class_name: 'Swap', source: :receiving_user, foreign_key: 'user_2_id'
   has_one_attached :photo

@@ -5,12 +5,24 @@
 <br>
 <div class="container">
   <div class="row">
-    <div class="col-lg-12 swaps-requested">
-      <% @swaps.each do |swap| %>
-        <h1><strong><%= swap.book_given.title %></strong></h1>
-        <p><%= swap.book_given.year %></p>
-        <p><%= swap.book_given.description %></p>
-      <% end %>
+    <div class="col-lg-12">
+      <div class="swaps-requested">
+        <h2>Pending Swaps</h2>
+        <% @swaps.where(:complete => false) do |swap| %>
+          <h3><strong><%= swap.book_given.title %></strong></h3>
+          <p><%= swap.book_given.year %></p>
+          <p><%= swap.book_given.description %></p>
+        <% end %>
+      </div>
+
+      <div class="swaps-completed">
+        <h2>Completed Swaps</h2>
+        <% @swaps.where(:complete => true).each do |swap| %>
+          <h3><strong><%= swap.book_given.title %></strong></h3>
+          <p><%= swap.book_given.year %></p>
+          <p><%= swap.book_given.description %></p>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

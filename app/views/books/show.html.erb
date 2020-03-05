@@ -1,6 +1,11 @@
 
   <%= render "book-3d" %>
 
+  <div>
+    <h2 style="text-align: center;"><%= @book.user.first_name %> <%= @book.user.last_name %></h2>
+    <h3 style="text-align: center;"><%= @book.user.location %></h3>
+  </div>
+
   <div class="fixed-bottom-card">
     <%= simple_form_for [@book, Swap.new], html: { class: 'form-class' } do |f| %>
       <%= f.submit "Swap", class: "btn-dark-green" %>
