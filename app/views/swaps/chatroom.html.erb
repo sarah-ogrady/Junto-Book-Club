@@ -9,6 +9,6 @@
     </div>
   <% end %>
 </div>
-<%= simple_form_for [ @swap, @message ], url: swap_messages_path(swap_id: @swap.id) do |f| %>
+<%= simple_form_for [ @swap, @message ], url: swap_messages_path(swap_id: @swap.id), remote: true do |f| %>
   <%= f.input :content, label: false, placeholder: "Message" %>
 <% end %>

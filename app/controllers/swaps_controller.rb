@@ -5,7 +5,6 @@ class SwapsController < ApplicationController
     @book = Book.find(params[:book_id])
     @book.update(hidden: true)
     @swap = Swap.new(book_given: @book, giving_user: @book.user, receiving_user: current_user)
-    @chatroom = Chatroom.create(name: "somethign", swap: @swap)
     @swap.save
     redirect_to swap_path(@swap)
   end
