@@ -25,8 +25,8 @@
           <%= params[:filter].present? ? params[:filter] : 'Genre' %>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <%= link_to 'Humour', books_path(query: params[:query], filter: 'Humour'), class: "dropdown-item"  %>
           <%= link_to 'Drama', books_path(query: params[:query], filter: 'Drama'), class: "dropdown-item"  %>
+          <%= link_to 'Romance', books_path(query: params[:query], filter: 'Romance'), class: "dropdown-item"  %>
           <%= link_to 'Classic', books_path(query: params[:query], filter: 'Classic'), class: "dropdown-item"  %>
           <%= link_to 'Thriller', books_path(query: params[:query], filter: 'Thriller'), class: "dropdown-item"  %>
           <%= link_to 'Historical fiction', books_path(query: params[:query], filter: 'Historical fiction'), class: "dropdown-item"  %>
