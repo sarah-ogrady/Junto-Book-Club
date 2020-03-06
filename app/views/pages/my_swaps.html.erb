@@ -71,7 +71,7 @@
                         <p><%= "#{swap.receiving_user.first_name.capitalize}'s Location: #{swap.receiving_user.location}" %></p>
                         <p><%= "Chat with #{swap.receiving_user.first_name.capitalize} to arrange a time and place to swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
-                        <%= link_to "Messages", root_path, class: "btn-light-green" %>
+                        <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-light-green" %>
                         <%= link_to "Swap Complete", root_path, class: "btn-light-green" %>
                       </div>
                     </div>
@@ -92,7 +92,7 @@
                         <p><%= "Great news, #{swap.giving_user.first_name.capitalize} has approved your request and chosen one of your books!" %></p>
                         <p><%= "Chat with #{swap.giving_user.first_name.capitalize} to arrange a time and place to swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
-                        <%= link_to "Messages", root_path, class: "btn-light-green" %>
+                        <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-light-green" %>
                         <%= link_to "Swap Complete", root_path, class: "btn-light-green" %>
                       </div>
                     </div>
