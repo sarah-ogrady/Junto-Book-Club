@@ -1,0 +1,25 @@
+<div class="container">
+  <h2><%= "#{@user.first_name}'s Books" %></h2>
+
+  <p>Choose a book to complete the switch!</p>
+
+
+  <div class="cards">
+    <% @books.where(:hidden => false).each do |book| %>
+      <div class="card">
+        <% if book.photo.attached? %>
+          <%= cl_image_tag book.photo.key, class: 'book-cover' %>
+        <% else %>
+          <%= image_tag "https://i.imgur.com/sJ3CT4V.gif", class: 'book-cover' %>
+        <% end %>
+          <div class="card-items">
+            <h2><%= "#{book.title}" %></h2>
+            <p id="author"><%= "#{book.author_name}" %></p>
+          </div>
+          <img src="https://wallpaperaccess.com/full/1278457.jpg" alt="profile picture" class="card-avatar">
+          <%= link_to "Choose", book_chosen_swap_path(@swap, book_id: book.id), method: :patch, class: "btn btn-primary bottom-right" %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

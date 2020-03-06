@@ -10,9 +10,13 @@ Rails.application.routes.draw do
       get :confirmation
     end
   end
-  resources :swaps, only: :show
-  resources :bookclubs, only: %i[index show]
-  resources :chatrooms, only: :show do
+  resources :swaps, only: :show do
+    member do
+      get :chatroom
+      get :choose_book
+      patch :book_chosen
+    end
     resources :messages, only: :create
   end
+  resources :bookclubs, only: %i[index show]
 end
