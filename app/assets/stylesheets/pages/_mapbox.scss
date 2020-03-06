@@ -1,10 +1,19 @@
 .mapclass {
   text-align: center;
+  margin-top: 100px;
+  h3 {
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 40px;
+    padding-bottom: 13px;
+  }
 }
 
 
 #map {
- border: 1px solid black;
+ box-shadow: 2px 4px 4px lightgrey;
+ border-radius: 10px;
+
+
 
 }
 

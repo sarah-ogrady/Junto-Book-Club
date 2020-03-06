@@ -31,6 +31,7 @@
           <%= link_to 'Crime', books_path(query: params[:query], filter: 'Crime'), class: "dropdown-item"  %>
           <%= link_to 'Fantasy', books_path(query: params[:query], filter: 'Fantasy'), class: "dropdown-item"  %>
           <%= link_to 'Non-Fiction', books_path(query: params[:query], filter: 'Non-Fiction'), class: "dropdown-item"  %>
+         <!--  ["Humour", "Non-fiction", "Fantasy", "Drama", "Romance", "Crime", "Action", "Thriller", "Poetry", "Science fiction", "Historical fiction", "Political fiction"] -->
         </div>
       </div>
     </div>
@@ -39,9 +40,14 @@
 
 <div class="container">
   <div class="cards">
-    <% @books.where(:hidden => false).each do |book| %>
+    <% @books.where(:hidden => false).where.not(:user_id => current_user.id).each do |book| %>
       <div class="card">
-        <img src="https://cdn.domestika.org/c_limit,dpr_auto,f_auto,q_auto,w_820/v1540461189/content-items/002/573/821/WEB_Abbati_Jansson.Illibrodellestate-original.jpg?1540461189" alt="book cover" class="book_cover">
+        <% if book.photo.attached? %>
+          <%= cl_image_tag book.photo.key, class: 'book-cover' %>
+        <% else %>
+          <%= image_tag "https://i.imgur.com/sJ3CT4V.gif", class: 'book-cover' %>
+        <% end %>
+        <!-- <img src="https://cdn.domestika.org/c_limit,dpr_auto,f_auto,q_auto,w_820/v1540461189/content-items/002/573/821/WEB_Abbati_Jansson.Illibrodellestate-original.jpg?1540461189" alt="book cover" class="book_cover"> -->
         <div class="card-items">
           <h2><%= "#{book.title}" %></h2>
           <p id="author"><%= "#{book.author_name}" %></p>
