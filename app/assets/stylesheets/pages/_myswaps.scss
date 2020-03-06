@@ -1,5 +1,97 @@
+.swaps-box {
+  padding: 20px;
+  width: 700px;
+  margin: 0 auto;
+  background-color: rgba(252, 252, 252, 0.7);
+  border-radius: 6px;
+}
 
+.swaps-box > h2 {
+  align-text: center;
+}
 
-.swaps-requested {
- border: 1px solid black;
+.nav-link {
+  color: black;
+  &:hover {
+    color: grey;
+  }
+}
+
+.flex-title-swaps {
+  display: flex;
+  justify-content: space-between;
+  a {
+    padding-top: 10px;
+  }
+}
+
+.bookswap-card {
+  background-color: white;
+  margin: 20px;
+  justify-content: space-between;
+  border-radius: 8px;
+  opacity: 0.9;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#book-photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.bookswap-card-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  p {
+    margin-bottom: 0px;
+    padding-left: 20px;
+    color: black;
+  &:hover {
+    color: grey;
+    }
+  }
+}
+
+#book-title {
+  font-weight: bold;
+}
+
+.link-to-performers {
+  &:hover{
+  text-decoration: none;
+  }
+}
+
+.icon-with-text {
+  align-text: center;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.microphone {
+  font-size: 72px;
+  padding-bottom: 10px;
+}
+
+#price {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  font-size: 20px;
+}
+
+.price {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#rejected-message {
+  color: red;
 }

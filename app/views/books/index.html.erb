@@ -39,7 +39,7 @@
 
 <div class="container">
   <div class="cards">
-    <% @books.where(:hidden => false).each do |book| %>
+    <% @books.where(:hidden => false).where.not(:user_id => current_user.id).each do |book| %>
       <div class="card">
         <img src="https://cdn.domestika.org/c_limit,dpr_auto,f_auto,q_auto,w_820/v1540461189/content-items/002/573/821/WEB_Abbati_Jansson.Illibrodellestate-original.jpg?1540461189" alt="book cover" class="book_cover">
         <div class="card-items">

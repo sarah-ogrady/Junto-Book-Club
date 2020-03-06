@@ -16,13 +16,13 @@ class SwapsController < ApplicationController
 
   def accept
     @swap = Swap.find(params[:id])
-    @swap.update(status: 'accepted')
+    @swap.update(status: 'bookchosen')
     redirect_to my_swaps_path
   end
 
   def reject
     @swap = Swap.find(params[:id])
-    @swap.update(status: 'rejected')
+    @swap.update(rejected: true)
     redirect_to my_swaps_path
   end
 
