@@ -44,7 +44,9 @@
   transition: 0.5s;
 }
 
-
+.card-trip-infos {
+  background-color: #D1EDBA;
+}
 
 
 .card-trip .card-trip-infos {
@@ -60,6 +62,7 @@
   right: 16px;
   top: -20px;
   width: 40px;
+
 }
 
 /* gareth's code ends here */
@@ -183,3 +186,6 @@ form {
     font-family: 'Spartan';
   }
 }
+
+
+
