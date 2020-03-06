@@ -116,7 +116,7 @@ def scrape(isbn)
     return render :new
   end
 
-  @book.title = api_hash["%w{title}"]
+  @book.title = api_hash["title"]
   @book.author_name = api_hash["authors"]
   @book.year = api_hash["publishedDate"]
   @book.description = api_hash["description"]
