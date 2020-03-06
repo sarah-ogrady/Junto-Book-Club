@@ -3,7 +3,7 @@ class SwapsController < ApplicationController
 
   def create
     @book = Book.find(params[:book_id])
-    @book.update(hidden:true)
+    @book.update(hidden: true)
     @swap = Swap.new(book_given: @book, giving_user: @book.user, receiving_user: current_user)
     @chatroom = Chatroom.create(name: "somethign", swap: @swap)
     @swap.save
@@ -43,6 +43,7 @@ class SwapsController < ApplicationController
     @swap = Swap.find(params[:id])
     @book = Book.find(params[:book_id])
     @swap.book_received = @book
+    @book.update(hidden: true)
     @swap.update(status: 'bookchosen')
     redirect_to my_swaps_path
   end
@@ -51,7 +52,6 @@ class SwapsController < ApplicationController
     # add if/else that only displays chatroom if user is part of the associated swap
     @swap = Swap.find(params[:id])
     if current_user == @swap.giving_user || @swap.receiving_user
-      @chatroom = @swap.chatroom
       @message = Message.new
     else
       redirect_to root_path
