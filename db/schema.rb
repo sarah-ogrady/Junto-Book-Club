@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_05_165503) do
+ActiveRecord::Schema.define(version: 2020_03_05_202716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 2020_03_05_165503) do
     t.bigint "user_id", null: false
     t.bigint "user_2_id", null: false
     t.string "status", default: "pending"
+    t.boolean "rejected", default: false
     t.index ["user_2_id"], name: "index_swaps_on_user_2_id"
     t.index ["user_id"], name: "index_swaps_on_user_id"
   end
