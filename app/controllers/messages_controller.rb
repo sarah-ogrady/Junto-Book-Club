@@ -1,12 +1,11 @@
 class MessagesController < ApplicationController
   def create
     @swap = Swap.find(params[:swap_id])
-    @chatroom = @swap.chatroom
     @message = Message.new(message_params)
-    @message.chatroom = @chatroom
+    @message.swap = @swap
     @message.user = current_user
     if @message.save
-      redirect_to chatroom_swap_path(@swap, @chatroom)
+      redirect_to chatroom_swap_path(@swap)
     else
       render "chatrooms/show"
     end

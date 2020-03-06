@@ -5,8 +5,7 @@ class PagesController < ApplicationController
   end
 
   def my_swaps
-    @swaps = current_user.swaps.where(complete: false)
-    @chatroom = Chatroom.new
+    @swaps = current_user.swaps.where(status: "pending")
   end
 
 
