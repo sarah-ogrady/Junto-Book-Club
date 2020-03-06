@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def my_swaps
-    @swaps = current_user.swaps.where(status: "pending")
+    @swaps = current_user.swaps
   end
 
 
