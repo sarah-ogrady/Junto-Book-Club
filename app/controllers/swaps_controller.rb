@@ -3,7 +3,7 @@ class SwapsController < ApplicationController
 
   def create
     @book = Book.find(params[:book_id])
-    @book.update(hidden:true)
+    @book.update(hidden: true)
     @swap = Swap.new(book_given: @book, giving_user: @book.user, receiving_user: current_user)
     @swap.save
     redirect_to swap_path(@swap)
@@ -42,6 +42,7 @@ class SwapsController < ApplicationController
     @swap = Swap.find(params[:id])
     @book = Book.find(params[:book_id])
     @swap.book_received = @book
+    @book.update(hidden: true)
     @swap.update(status: 'bookchosen')
     redirect_to my_swaps_path
   end

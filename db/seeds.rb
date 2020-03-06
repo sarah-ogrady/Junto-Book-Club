@@ -48,7 +48,7 @@ user5 = User.create(
   )
 
 user6 = User.create(
-  first_name: "Scot",
+  first_name: "Scott",
   last_name: "Buckland",
   location: "SL0",
   email: "scotty_b@gmail.com",
