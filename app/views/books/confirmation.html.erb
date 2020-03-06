@@ -8,6 +8,6 @@
   <% if @book.photo.attached? %>
     <%= image_tag @book.photo.service_url, alt: "alttext" %>
   <% end %>
-  <%= link_to 'Confirm?', book_path(@book)  %>
-  <%= link_to 'Reject?', book_path(@book), method: :delete, data: { confirm: 'are you sure' }  %>
+  <%= link_to 'Confirm?', book_path(@book), class: "btn-light-green"  %>
+  <%= link_to 'Reject?', book_path(@book), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-light-green"  %>
 </div>
