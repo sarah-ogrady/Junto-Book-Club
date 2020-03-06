@@ -10,7 +10,8 @@
       <div class="mapclass">
         <div style="margin-bottom: 40px;">
           <h2><%= @book.user.first_name %> <%= @book.user.last_name %></h2>
-          <h3><%= @book.user.location %></h3>
+          <%= image_tag "#{@book.user.avatar}", class: "avatarcard"%>
+          <h3><%= @book.user.location %> </h3>
 
          <div class="mapbox-style">
            <div id="map"

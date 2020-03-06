@@ -1,21 +1,21 @@
 // Specific CSS for your home-page
 
-.home-image img {
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: 3px 4px 4px grey;
-}
+// .home-image img {
+//   width: 100%;
+//   border-radius: 5px;
+//   box-shadow: 3px 4px 4px grey;
+// }
 
-.home-image {
-  h1 {
-    font-family: 'Volkhov', serif;
-  }
-}
+// .home-image {
+//   h1 {
+//     font-family: 'Volkhov', serif;
+//   }
+// }
 
-.main-title {
-  position: absolute;
-  width: 680px;
-}
+// .main-title {
+//   position: absolute;
+//   width: 680px;
+// }
 
 .btn-signup {
   z-index: 1000;
@@ -27,6 +27,33 @@
 
 .btn-signup:hover {
   text-decoration: none;
+}
+
+.buttonposition {
+  position: relative;
+  left: 298px;
+    bottom: 171px;
+}
+
+
+.image-background {
+  margin-right: 40px;
+  margin-left: 378px;
+   img {
+    width: 80%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+     box-shadow: 3px 4px 4px grey;
+   }
+      h1 {
+            position: relative;
+    top: 332px;
+    right: 106px;
+    width: 318px;
+    font-size: 65px;
+    font-family: 'Volkhov', serif;
+ }
 }
 
 .grow:hover {
