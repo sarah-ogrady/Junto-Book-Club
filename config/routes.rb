@@ -12,12 +12,11 @@ Rails.application.routes.draw do
   end
   resources :swaps, only: :show do
     member do
+      get :chatroom
       get :choose_book
       patch :book_chosen
     end
-  end
-  resources :bookclubs, only: %i[index show]
-  resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
+  resources :bookclubs, only: %i[index show]
 end
