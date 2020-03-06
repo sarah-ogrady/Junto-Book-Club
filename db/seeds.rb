@@ -13,7 +13,7 @@ user1 = User.create(
   location: "E10",
   email: "nsmith@gmail.com",
   password: '123123',
-  avatar: 'https://images.unsplash.com/photo-1540057268416-a8d6f0f60ac5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80'
+  avatar: 'https://images.unsplash.com/photo-1551158390-3235cf6a4d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=934&q=80'
   )
 
 user2 = User.create(
@@ -49,7 +49,7 @@ user5 = User.create(
   location: "SL0",
   email: "asheraz@gmail.com",
   password: '123123',
-  avatar: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
+  avatar: 'https://images.unsplash.com/photo-1517945577684-acd9255116a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
   )
 
 user6 = User.create(
@@ -116,7 +116,7 @@ def scrape(isbn)
     return render :new
   end
 
-  @book.title = api_hash["title"]
+  @book.title = api_hash["%w{title}"]
   @book.author_name = api_hash["authors"]
   @book.year = api_hash["publishedDate"]
   @book.description = api_hash["description"]
@@ -127,7 +127,6 @@ end
 
 index1 = 0
 
-# isbn_array1 = [{genre: 'Drama', isbn: '9780099448822'}, {genre: 'Fantasy', isbn: '9780099458326'}, {genre: 'Humour', isbn: '9780099458326'}, {genre: 'Humour', isbn: '0241355516'}, {genre: 'Humour', isbn: '0241355516'}]
 isbn_array1 = [{genre: 'Thriller', isbn: '1473676398'}, {genre: 'Historical fiction', isbn: '1447286030'}, {genre: 'Drama', isbn: '0552551643'}, {genre: 'Fantasy', isbn: '1408890046'}, {genre: 'Political fiction', isbn: '0241979064'}]
 5.times do
   p index1
