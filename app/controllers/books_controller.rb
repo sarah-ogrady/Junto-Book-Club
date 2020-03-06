@@ -3,7 +3,6 @@ require 'open-uri'
 
 class BooksController < ApplicationController
 
-
   def index
     if params[:query].present?
       sql_query = "title ILIKE :query OR description ILIKE :query OR genre ILIKE :query"
