@@ -14,7 +14,7 @@
         <% end %>
           <div class="card-items">
             <h2><%= "#{book.title}" %></h2>
-            <p id="author"><%= "#{book.author_name}" %></p>
+            <p id="author"><%= author_cleaning(@book.author_name) %></p>
           </div>
           <img src="https://wallpaperaccess.com/full/1278457.jpg" alt="profile picture" class="card-avatar">
           <%= link_to "Choose", book_chosen_swap_path(@swap, book_id: book.id), method: :patch, class: "btn btn-primary bottom-right" %>
