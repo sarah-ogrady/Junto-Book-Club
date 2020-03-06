@@ -12,7 +12,8 @@ user1 = User.create(
   last_name: "Smith",
   location: "E10",
   email: "nsmith@gmail.com",
-  password: '123123'
+  password: '123123',
+  avatar: 'https://images.unsplash.com/photo-1540057268416-a8d6f0f60ac5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80'
   )
 
 user2 = User.create(
@@ -20,7 +21,8 @@ user2 = User.create(
   last_name: "Silverman",
   location: "E1",
   email: "tanya_gibson@gmail.com",
-  password: '123123'
+  password: '123123',
+  avatar: 'https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80'
   )
 
 user3 = User.create(
@@ -28,7 +30,8 @@ user3 = User.create(
   last_name: "Wong",
   location: "TW1",
   email: "emily_wong@gmail.com",
-  password: '123123'
+  password: '123123',
+  avatar: 'https://images.unsplash.com/photo-1542200843-f8ee535b631f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
   )
 
 user4 = User.create(
@@ -36,7 +39,8 @@ user4 = User.create(
   last_name: "Hussain",
   location: "E10",
   email: "mo_1992@gmail.com",
-  password: '123123'
+  password: '123123',
+  avatar: 'https://images.unsplash.com/photo-1518779158850-b302524a03d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80'
   )
 
 user5 = User.create(
@@ -44,7 +48,8 @@ user5 = User.create(
   last_name: "Sheraz",
   location: "SL0",
   email: "asheraz@gmail.com",
-  password: '123123'
+  password: '123123',
+  avatar: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
   )
 
 user6 = User.create(
@@ -52,7 +57,8 @@ user6 = User.create(
   last_name: "Buckland",
   location: "SL0",
   email: "scotty_b@gmail.com",
-  password: '123123'
+  password: '123123',
+  avatar: 'https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
   )
 
 user7 = User.create(
@@ -60,7 +66,8 @@ user7 = User.create(
   last_name: "Lovett",
   location: "SL0",
   email: "meggie_love@hotmail.com",
-  password: '123123'
+  password: '123123',
+  avatar: 'https://images.unsplash.com/photo-1499358517822-d8578907a095?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80'
   )
 
 def api_hash

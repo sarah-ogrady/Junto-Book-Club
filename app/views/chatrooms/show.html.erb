@@ -1,15 +1,16 @@
-<h1>#<%= @chatroom.name %></h1>
+<!-- <h1>#<%= @chatroom.name %></h1>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
     <div class="message-container">
       <i class="author">
-        <span><%= message.user %></span>
+        <span><%= message.user.first_name %></span>
         <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
       </i>
       <p><%= message.content %></p>
     </div>
   <% end %>
 </div>
-<%= simple_form_for [ @chatroom, @message ] do |f| %>
+<%= simple_form_for [ @swap, @chatroom, @message ] do |f| %>
   <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
 <% end %>
+ -->
