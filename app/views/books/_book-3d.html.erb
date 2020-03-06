@@ -1,7 +1,8 @@
 <div class="whole-book-title-container">
   <div class="books-banner-contents">
-    <h1 class="title title-font"><strong><%= "#{@book.title}" %></strong></h1>
-    <h6 class="author title-font">By <%= "#{@book.author_name}" %>
+    <h1 class="title title-font"><strong><%= @book.title %></strong></h1>
+    <h6 class="author title-font">By <%= author_cleaning(@book.author_name) %>
+
     <h2 class="title-font"><%= @book.year %></h2>
   </div>
   <div class="scene">
