@@ -1,0 +1,5 @@
+meta_product_name: "Junto Book Club"
+meta_title: "Junto | For book sharing and book clubs"
+meta_description: "Bringing book lovers together through book swapping"
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
+twitter_account: "@junto"   # required for Twitter Cards
