@@ -110,7 +110,7 @@ user12 = User.create(
   first_name: "Tia",
   last_name: "Nguyen",
   location: "E15",
-  email: "tia_n_1995@hotmail.com",
+  email: "tian@hotmail.com",
   password: '123123',
   avatar: 'https://media-exp1.licdn.com/dms/image/C4E03AQFLLevw_988cQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=MIXW_g67Lx3qaKfUijR58mcx_yNDCH-jYCAzSQ7VO0c'
   )
