@@ -312,7 +312,7 @@ end
 
 index11 = 0
 
-isbn_array11 = [{genre: 'Non-fiction', isbn: '0141033576'}, {genre: 'Historical fiction', isbn: '0141189576'}, {genre: 'Non-fiction', isbn: '0984699465'}, {genre: 'Non-fiction', isbn: '9780140276053'}, {genre: 'Non-fiction', isbn: '1982137274'}]
+isbn_array11 = [{genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Historical fiction', isbn: '0141189576'}, {genre: 'Non-fiction', isbn: '0984699465'}, {genre: 'Non-fiction', isbn: '9780140276053'}, {genre: 'Non-fiction', isbn: '1982137274'}]
 5.times do
   p index11
   @book = Book.new(genre: "#{isbn_array11[index11][:genre]}", user_id: user11.id, isbn: "#{isbn_array11[index11][:isbn]}")
