@@ -1,0 +1,30 @@
+.book_to_confirm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 16px;
+  .details_headers {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+.small_details {
+  font-size: 16px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.confirmation_buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.btn-light-green {
+  margin: 0px 3px;
+  &:hover {
+    text-decoration: none;
+  }
+}

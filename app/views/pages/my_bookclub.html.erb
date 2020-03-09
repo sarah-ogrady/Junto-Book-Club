@@ -1,0 +1,36 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 style="text-align: center; background-color: #D1EDBA; padding: 5px 20px;">Your Current Bookclub</h1>
+
+
+
+
+
+<div class="map-margin-my-bookclub">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="my-bookclub-info">
+        <h1><%= "#{@bookclub.name}" %></h1>
+        <h2><%= @bookclub.genre %></h2>
+        <p><em><%= @bookclub.location %></em></p>
+        <p><em><%= @bookclub.description %></em></p>
+      </div>
+       <br>
+       <p><em>You may change your Bookclub at any time. just simple go to the </em><strong>'find a Bookclub page'</strong><em> and click on a new Bookclub, please note you can only belong to one Bookclub at a time. Happy reading.</em></p>
+    </div>
+    <div class="col-lg-6">
+     <div class="mapbox-style-my-bookclub">
+      <div class="mapclass-my-bookclub">
+       <div id="map"
+         style="width: 100%;
+         height: 350px;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>

@@ -1,8 +1,28 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="books-banner-contents">
   <h1><%= "#{@bookclub.name}" %></h1>
   <h2><%= @bookclub.genre %></h2>
   <p><%= @bookclub.location %></p>
   <p><%= @bookclub.description %></p>
 </div>
+<div class="mapbox-style">
+  <div class="mapclass">
+    <div id="map"
+       style="width: 525px;
+       height: 350px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+     </div>
+   </div>
+</div>
 
 <%= link_to "Back to Book Clubs", bookclubs_path %>
+<%= link_to "Confirm", bookclub_confirmation_path(@bookclub) %>
+
+
+
