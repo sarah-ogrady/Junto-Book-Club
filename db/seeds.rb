@@ -1,4 +1,5 @@
 # genre: 'Thriller', isbn: '0008234183'
+require "open-uri"
 puts 'Deleting'
 User.destroy_all
 Book.destroy_all
@@ -13,8 +14,9 @@ user1 = User.create(
   location: "E10",
   email: "nohara@gmail.com",
   password: '123123',
-  avatar: 'https://res.cloudinary.com/arxmush/image/upload/v1553214529/Gallery/brianna_one_bb9rj8.jpg'
   )
+  file = URI.open('https://res.cloudinary.com/arxmush/image/upload/v1553214529/Gallery/brianna_one_bb9rj8.jpg')
+  user1.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user2 = User.create(
   first_name: "Tanya",
@@ -22,8 +24,9 @@ user2 = User.create(
   location: "E1",
   email: "tanya_gibson@gmail.com",
   password: '123123',
-  avatar: 'https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80'
   )
+  file = URI.open('https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')
+  user2.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user3 = User.create(
   first_name: "Emily",
@@ -31,8 +34,9 @@ user3 = User.create(
   location: "TW1",
   email: "emily_wong@gmail.com",
   password: '123123',
-  avatar: 'https://media-exp1.licdn.com/dms/image/C4D03AQH-3X4Qx0gq_w/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=FOE9E-1DHa-cCwMA5RsMFXQWBiKR_7gLYj8br9Kwa4o'
   )
+  file = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQH-3X4Qx0gq_w/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=FOE9E-1DHa-cCwMA5RsMFXQWBiKR_7gLYj8br9Kwa4o')
+  user3.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user4 = User.create(
   first_name: "Mo",
@@ -40,8 +44,9 @@ user4 = User.create(
   location: "E10",
   email: "mo_1992@gmail.com",
   password: '123123',
-  avatar: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg'
   )
+  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg')
+  user4.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user5 = User.create(
   first_name: "Aleena",
@@ -49,8 +54,9 @@ user5 = User.create(
   location: "SE13",
   email: "asheraz@gmail.com",
   password: '123123',
-  avatar: 'https://images.unsplash.com/photo-1517945577684-acd9255116a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
   )
+  file = URI.open('https://images.unsplash.com/photo-1517945577684-acd9255116a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
+  user5.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user6 = User.create(
   first_name: "Scott",
@@ -58,8 +64,9 @@ user6 = User.create(
   location: "SE9",
   email: "scotty_b@gmail.com",
   password: '123123',
-  avatar: 'https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9c88e092-9691-11e8-85e3-d844d3177259.jpg?crop=3000%2C1687%2C0%2C31&resize=1180'
   )
+  file = URI.open('https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9c88e092-9691-11e8-85e3-d844d3177259.jpg?crop=3000%2C1687%2C0%2C31&resize=1180')
+  user6.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user7 = User.create(
   first_name: "Megan",
@@ -67,8 +74,9 @@ user7 = User.create(
   location: "E14",
   email: "meggie_love@hotmail.com",
   password: '123123',
-  avatar: 'https://images1.the-dots.com/763358/screen-shot-2017-03-17-at-15-51-22.png?p=socialSquare'
   )
+  file = URI.open('https://images1.the-dots.com/763358/screen-shot-2017-03-17-at-15-51-22.png?p=socialSquare')
+  user7.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user8 = User.create(
   first_name: "Vincent",
@@ -76,17 +84,19 @@ user8 = User.create(
   location: "N13",
   email: "vincent@hotmail.com",
   password: '123123',
-  avatar: 'https://media-exp1.licdn.com/dms/image/C4D03AQHjvcHDoU4YWw/profile-displayphoto-shrink_200_200/0?e=1587600000&v=beta&t=oaIDRBq9v6hOE5Xpdr4Tj2kQSuohRW-VW8hIDmQSK9Y'
   )
+  file = URI.open('https://c.stocksy.com/a/XJC000/z9/47339.jpg')
+  user8.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user9 = User.create(
   first_name: "Tahira",
   last_name: "Syed",
   location: "N1",
-  email: "ttofa@hotmail.com",
+  email: "tsyed@hotmail.com",
   password: '123123',
-  avatar: 'https://media-exp1.licdn.com/dms/image/C5603AQG8NdAhwfNgFQ/profile-displayphoto-shrink_200_200/0?e=1586995200&v=beta&t=5J5ipBQH6WrQXEERJIFSjfFBxjR9DhLMf8NxRBJvlgU'
   )
+  file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFIXM7lYTeqtw/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=BsWw9n7w5Poz8Y5Or6MeyxcblATuye93WZwq0RauuNo')
+  user9.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user10 = User.create(
   first_name: "Joe",
@@ -94,26 +104,29 @@ user10 = User.create(
   location: "W3",
   email: "joethomas@hotmail.com",
   password: '123123',
-  avatar: 'https://media-exp1.licdn.com/dms/image/C5103AQFnxqARR1yTWw/profile-displayphoto-shrink_200_200/0?e=1587600000&v=beta&t=YQFkMQDR8Qrpp-EmLlyRo20-Bvj6l-Qxe1E-7x-xIG8'
   )
+  file = URI.open('https://pbs.twimg.com/profile_images/426035427326189568/BXYWW0uz_400x400.jpeg')
+  user10.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user11 = User.create(
   first_name: "Luke",
   last_name: "Monroe",
   location: "E5",
-  email: "lbrrrown@hotmail.com",
+  email: "lmonroe@hotmail.com",
   password: '123123',
-  avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
   )
+  file = URI.open('https://media.istockphoto.com/videos/young-man-smiling-video-id1008268548?s=640x640')
+  user11.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user12 = User.create(
-  first_name: "Tia",
+  first_name: "Mia",
   last_name: "Nguyen",
   location: "E15",
-  email: "tian@hotmail.com",
+  email: "mian@hotmail.com",
   password: '123123',
-  avatar: 'https://media-exp1.licdn.com/dms/image/C4E03AQFLLevw_988cQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=MIXW_g67Lx3qaKfUijR58mcx_yNDCH-jYCAzSQ7VO0c'
   )
+  file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFLLevw_988cQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=MIXW_g67Lx3qaKfUijR58mcx_yNDCH-jYCAzSQ7VO0c')
+  user12.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user13 = User.create(
   first_name: "Halima",
@@ -121,17 +134,19 @@ user13 = User.create(
   location: "SW20",
   email: "halima12@hotmail.com",
   password: '123123',
-  avatar: 'https://www.cgu.edu/wp-content/uploads/2016/06/Ruqayya_Khan.jpg'
   )
+  file = URI.open('https://www.cgu.edu/wp-content/uploads/2016/06/Ruqayya_Khan.jpg')
+  user13.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 user14 = User.create(
   first_name: "Axel",
-  last_name: "Diaz",
+  last_name: "Lopez",
   location: "W10",
-  email: "axeldiaz@hotmail.com",
+  email: "axellopez@hotmail.com",
   password: '123123',
-  avatar: 'https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg'
   )
+  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+  user14.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 def api_hash
   @book_info["items"].select{ |item| item["volumeInfo"]["language"] == "en" }.first["volumeInfo"]
