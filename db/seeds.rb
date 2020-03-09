@@ -341,108 +341,126 @@ puts 'Creating book clubs...'
 
 Bookclub.create(name: 'Gangster Grandmas Book Club',
   genre: 'True Crime',
+  location: 'SL0 9AF',
   capacity: 10,
   description: 'For grandmas or anybody else that loves true crime.',
   user_id: User.first.id)
 
 Bookclub.create(name: 'It’s a Hardback Life',
   genre: 'Fantasy',
+  location: 'SS8 7EH',
   capacity: 18,
   description: 'Take a break from your boring life with a fantasy novel or ten.',
   user_id: User.first.id)
 
 Bookclub.create(name: 'Agree To Diss A Brie',
   genre: 'Any',
+  location: 'E1 7HS',
   capacity: 15,
   description: 'A classic book club for cheese lovers.',
   user_id: User.first.id)
 
 Bookclub.create(name: 'A Gouda Book',
   genre: 'Any',
+  location: 'SS8 7EH',
   capacity: 22,
   description: 'We love a pun and we love cheese. Come join the pun!',
   user_id: User.first.id)
 
 Bookclub.create(name: 'A Novel Idea',
   genre: 'Any',
+  location: 'SL3 7QP',
   capacity: 20,
   description: 'All books welcome. A community book club for all bookworms',
   user_id: User.first.id)
 
 Bookclub.create(name: 'Famished for fiction',
   genre: 'Any',
+  location: 'RG1 1HN',
   capacity: 15,
   description: 'A fiction only book club. We like to snack as we read - please bring food to share.',
   user_id: User.first.id)
 
 Bookclub.create(name: 'Better Read than Dead',
   genre: 'Any',
+  location: 'RG12 0TG',
   capacity: 18,
   description: 'Poetry is our jam. Both classic and modern',
   user_id: User.first.id)
 
 Bookclub.create(name: 'Great Expectations',
   genre: 'Any',
+  location: 'OX1 1DB',
   capacity: 18,
   description: "If you're into classic novels and love Dickens, join us!",
   user_id: User.first.id)
 
 Bookclub.create(name: 'Hooked on Books',
   genre: 'Any',
+  location: 'CV34 4BE',
   capacity: 21,
   description: 'Mostly Science fiction with a sprinkling of fantasy',
   user_id: User.first.id)
 
 Bookclub.create(name: 'Cover to Cover',
   genre: 'Any',
+  location: 'CV31 1BW',
   capacity: 35,
   description: 'Drama is our middle name',
   user_id: User.first.id)
 
 Bookclub.create(name: "What's in a name?",
   genre: 'Any',
+  location: 'E1 6NU',
   capacity: 30,
   description: 'We cannot get enough of classic plays',
   user_id: User.first.id)
 
 Bookclub.create(name: "Tattered Page Book Club",
   genre: 'Feminist',
+  location: 'E1 6BW',
   capacity: 30,
   description: 'We are all fairly new to reading regularly and support new members to read more',
   user_id: User.first.id)
 
 Bookclub.create(name: "Safari Book Club",
   genre: 'Any',
+  location: 'E1 6NU',
   capacity: 10,
   description: 'Want inspo for your next trip? Come read travel journals with us',
   user_id: User.first.id)
 
 Bookclub.create(name: "Just Read",
   genre: 'Feminist',
+  location: 'E1 6NU',
   capacity: 25,
   description: 'Modern feminist literature. All welcome.',
   user_id: User.first.id)
 
 Bookclub.create(name: "The Mighty Pen",
   genre: 'Fantasy',
+  location: 'E1 6NU',
   capacity: 15,
   description: 'Think Harry Potter meets Lord of the Rings',
   user_id: User.first.id)
 
 Bookclub.create(name: "Page Turner",
   genre: 'any',
+  location: 'E1 6NU',
   capacity: 22,
   description: 'A no pressure book club. We love to read and are open to members young and wise',
   user_id: User.first.id)
 
 Bookclub.create(name: "Fantastic Books and Where to Find Them",
   genre: 'any',
+  location: 'E1 6NU',
   capacity: 15,
   description: 'Delve into the world of magical creatures and wizardry',
   user_id: User.first.id)
 
 Bookclub.create(name: "S.P.E.W.",
   genre: 'Feminist',
+  location: 'E1 6NU',
   capacity: 25,
   description: 'Society for the Promotion of Empowered Women.',
   user_id: User.first.id)
@@ -450,6 +468,7 @@ Bookclub.create(name: "S.P.E.W.",
 
 Bookclub.create(name: "Prose for Pros",
   genre: 'any',
+  location: 'E1 6NU',
   capacity: 19,
   description: 'Everything fiction. All books, all people, all ideas welcome',
   user_id: User.first.id)
@@ -457,6 +476,7 @@ Bookclub.create(name: "Prose for Pros",
 
 Bookclub.create(name: "Cranial Crunch",
   genre: 'Non-fiction',
+  location: 'E1 6NU',
   capacity: 19,
   description: 'Strictly non-fiction.',
   user_id: User.first.id)

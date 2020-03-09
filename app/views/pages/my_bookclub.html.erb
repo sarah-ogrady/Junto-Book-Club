@@ -1,16 +1,16 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Your Current Bookclub</h1>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="books-banner-contents">
-  <h1><%= "#{@bookclub.name}" %></h1>
+ <h1><%= "#{@bookclub.name}" %></h1>
   <h2><%= @bookclub.genre %></h2>
   <p><%= @bookclub.location %></p>
   <p><%= @bookclub.description %></p>
-</div>
-<div class="mapbox-style">
+
+  <div class="mapbox-style">
   <div class="mapclass">
     <div id="map"
        style="width: 525px;
@@ -20,9 +20,3 @@
      </div>
    </div>
 </div>
-
-<%= link_to "Back to Book Clubs", bookclubs_path %>
-<%= link_to "Confirm", bookclub_confirmation_path(@bookclub) %>
-
-
-

@@ -3,7 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  belongs_to :bookclub, required: false, dependent: :destroy
+  # belongs_to :bookclub, required: false, dependent: :destroy
+  # member
+  belongs_to :bookclub, class_name: 'Bookclub', foreign_key: :bookclub_id, required: false, dependent: :destroy
+
+  has_one :created_bookclub, class_name: 'Bookclub', foreign_key: :user_id, required: false
   has_many :books
   has_many :giving_swaps, class_name: 'Swap', source: :giving_user
   has_many :receiving_swaps, class_name: 'Swap', source: :receiving_user, foreign_key: 'user_2_id'
