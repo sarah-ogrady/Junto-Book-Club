@@ -18,7 +18,7 @@
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="pending-swaps">
-              <% if @swaps.where.not(status: 'complete', rejected: true).empty? %>
+              <% if @swaps.where.not(status: 'complete', status: 'rejected').empty? %>
                 <p>You have no pending swaps!</p>
                 <%= link_to "Find a Book", books_path, class: "btn-salmon" %>
               <% end %>

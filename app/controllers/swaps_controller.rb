@@ -32,7 +32,7 @@ class SwapsController < ApplicationController
 
   def choose_book
     @swap = Swap.find(params[:id])
-    @user = @swap.giving_user
+    @user = @swap.receiving_user
     @books = @user.books
   end
 
