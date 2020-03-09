@@ -5,15 +5,15 @@ Book.destroy_all
 
 puts 'Repopulating database...'
 
-puts 'Creating books...'
+puts 'Creating users...'
 
 user1 = User.create(
   first_name: "Nadine",
-  last_name: "Smith",
+  last_name: "O'Hara",
   location: "E10",
-  email: "nsmith@gmail.com",
+  email: "nohara@gmail.com",
   password: '123123',
-  avatar: 'https://images.unsplash.com/photo-1551158390-3235cf6a4d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=934&q=80'
+  avatar: 'https://res.cloudinary.com/arxmush/image/upload/v1553214529/Gallery/brianna_one_bb9rj8.jpg'
   )
 
 user2 = User.create(
@@ -31,7 +31,7 @@ user3 = User.create(
   location: "TW1",
   email: "emily_wong@gmail.com",
   password: '123123',
-  avatar: 'https://images.unsplash.com/photo-1542200843-f8ee535b631f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
+  avatar: 'https://media-exp1.licdn.com/dms/image/C4D03AQH-3X4Qx0gq_w/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=FOE9E-1DHa-cCwMA5RsMFXQWBiKR_7gLYj8br9Kwa4o'
   )
 
 user4 = User.create(
@@ -40,13 +40,13 @@ user4 = User.create(
   location: "E10",
   email: "mo_1992@gmail.com",
   password: '123123',
-  avatar: 'https://images.unsplash.com/photo-1518779158850-b302524a03d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80'
+  avatar: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg'
   )
 
 user5 = User.create(
   first_name: "Aleena",
   last_name: "Sheraz",
-  location: "SL0",
+  location: "SE13",
   email: "asheraz@gmail.com",
   password: '123123',
   avatar: 'https://images.unsplash.com/photo-1517945577684-acd9255116a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
@@ -55,19 +55,82 @@ user5 = User.create(
 user6 = User.create(
   first_name: "Scott",
   last_name: "Buckland",
-  location: "SL0",
+  location: "SE9",
   email: "scotty_b@gmail.com",
   password: '123123',
-  avatar: 'https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+  avatar: 'https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9c88e092-9691-11e8-85e3-d844d3177259.jpg?crop=3000%2C1687%2C0%2C31&resize=1180'
   )
 
 user7 = User.create(
   first_name: "Megan",
   last_name: "Lovett",
-  location: "SL0",
+  location: "E14",
   email: "meggie_love@hotmail.com",
   password: '123123',
-  avatar: 'https://images.unsplash.com/photo-1499358517822-d8578907a095?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80'
+  avatar: 'https://images1.the-dots.com/763358/screen-shot-2017-03-17-at-15-51-22.png?p=socialSquare'
+  )
+
+user8 = User.create(
+  first_name: "Vincent",
+  last_name: "Onuegbu",
+  location: "N13",
+  email: "vincent@hotmail.com",
+  password: '123123',
+  avatar: 'https://media-exp1.licdn.com/dms/image/C4D03AQHjvcHDoU4YWw/profile-displayphoto-shrink_200_200/0?e=1587600000&v=beta&t=oaIDRBq9v6hOE5Xpdr4Tj2kQSuohRW-VW8hIDmQSK9Y'
+  )
+
+user9 = User.create(
+  first_name: "Tahira",
+  last_name: "Syed",
+  location: "N1",
+  email: "ttofa@hotmail.com",
+  password: '123123',
+  avatar: 'https://media-exp1.licdn.com/dms/image/C5603AQG8NdAhwfNgFQ/profile-displayphoto-shrink_200_200/0?e=1586995200&v=beta&t=5J5ipBQH6WrQXEERJIFSjfFBxjR9DhLMf8NxRBJvlgU'
+  )
+
+user10 = User.create(
+  first_name: "Joe",
+  last_name: "Thomas",
+  location: "W3",
+  email: "joethomas@hotmail.com",
+  password: '123123',
+  avatar: 'https://media-exp1.licdn.com/dms/image/C5103AQFnxqARR1yTWw/profile-displayphoto-shrink_200_200/0?e=1587600000&v=beta&t=YQFkMQDR8Qrpp-EmLlyRo20-Bvj6l-Qxe1E-7x-xIG8'
+  )
+
+user11 = User.create(
+  first_name: "Luke",
+  last_name: "Monroe",
+  location: "E5",
+  email: "lbrrrown@hotmail.com",
+  password: '123123',
+  avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+  )
+
+user12 = User.create(
+  first_name: "Tia",
+  last_name: "Nguyen",
+  location: "E15",
+  email: "tian@hotmail.com",
+  password: '123123',
+  avatar: 'https://media-exp1.licdn.com/dms/image/C4E03AQFLLevw_988cQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=MIXW_g67Lx3qaKfUijR58mcx_yNDCH-jYCAzSQ7VO0c'
+  )
+
+user13 = User.create(
+  first_name: "Halima",
+  last_name: "Khan",
+  location: "SW20",
+  email: "halima12@hotmail.com",
+  password: '123123',
+  avatar: 'https://www.cgu.edu/wp-content/uploads/2016/06/Ruqayya_Khan.jpg'
+  )
+
+user14 = User.create(
+  first_name: "Axel",
+  last_name: "Diaz",
+  location: "W10",
+  email: "axeldiaz@hotmail.com",
+  password: '123123',
+  avatar: 'https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg'
   )
 
 def api_hash
@@ -124,6 +187,8 @@ def scrape(isbn)
   cover_file = find_image
   @book.photo.attach(io: cover_file, filename: 'cover.jpg', content_type: 'image/jpg')
 end
+
+puts 'Creating books...'
 
 index1 = 0
 
@@ -209,73 +274,68 @@ isbn_array7 = [{genre: 'Classic', isbn: '185326041X'}, {genre: 'Classic', isbn: 
   index7 += 1
 end
 
+index8 = 0
 
-# User.create email: 'me@mail.com', password: '123456'
+isbn_array8 = [{genre: 'True Crime', isbn: '9781631494512'}, {genre: 'True Crime', isbn: '1786495988'}, {genre: 'Historical fiction', isbn: '1841883735'}, {genre: 'True Crime', isbn: '0385478003'}, {genre: 'True Crime', isbn: '1250001781'}]
+5.times do
+  p index8
+  @book = Book.new(genre: "#{isbn_array8[index8][:genre]}", user_id: user8.id, isbn: "#{isbn_array8[index8][:isbn]}")
+  scrape(isbn_array8[index8][:isbn])
+  @book.user_id = user8.id
+  @book.save
+  index8 += 1
+end
 
-# user1 = User.create(
-#   first_name: "Bob",
-#   last_name: "Smith",
-#   location: "E10",
-#   email: "bob@bob.com",
-#   password: '123123'
-#   )
-# book1 = Book.create(title: 'Pride and Prejudice',
-#   year: 1813,
-#   description: "Mr Bennet of Longbourn estate has five daughters, but his property is entailed and can only be passed to a male heir. His wife also lacks an inheritance, so his family will be destitute upon his death. Thus it is imperative that at least one of the girls marry well to support the others, which is a motivation that drives the plot. The novel revolves around the importance of marrying for love, not for money or social prestige, despite the communal pressure to make a wealthy match.",
-#   genre: 'Classic',
-#   author_name: 'Jane Austen', user_id: user1.id)
+index9 = 0
 
-# user2 = User.create(
-#   first_name: "kate",
-#   last_name: "Lansdale",
-#   location: "E1",
-#   email: "kate@kate.com",
-#   password: '123123'
-#   )
-# book2 = Book.create(title: "Harry Potter and the Philosopher's Stone",
-#   year: 1997,
-#   description: "Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. Harry makes close friends and a few enemies during his first year at the school, and with the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.",
-#   genre: 'Fantasy',
-#   author_name: 'J.K. Rowling', user_id: user2.id)
+isbn_array9 = [{genre: 'Historical fiction', isbn: '0241364906'}, {genre: 'Non-fiction', isbn: '1784741728'}, {genre: 'Classic', isbn: '9781853260209'}, {genre: 'Non-fiction', isbn: '9781784705039'}, {genre: 'Fantasy', isbn: '9781408855652'}]
+5.times do
+  p index9
+  @book = Book.new(genre: "#{isbn_array9[index9][:genre]}", user_id: user9.id, isbn: "#{isbn_array9[index9][:isbn]}")
+  scrape(isbn_array9[index9][:isbn])
+  @book.user_id = user9.id
+  @book.save
+  index9 += 1
+end
 
-# user3 = User.create(
-#   first_name: "Sarah",
-#   last_name: "Jones",
-#   location: "TW1",
-#   email: "sarah@sarah.com",
-#   password: '123123'
-#   )
-# book3 = Book.create(title: "A Midsummer Night's Dream",
-#   year: 1596,
-#   description: "Portrays the events surrounding the marriage of the Duke of Athens, Theseus, and Hippolyta. These include the adventures of four young Athenian lovers and a group of six amateur actors (mechanicals), who are controlled and manipulated by the fairies who inhabit the forest in which most of the play is set.",
-#   genre: 'Comedy',
-#   author_name: 'William Shakespeare', user_id: user3.id)
+index10 = 0
 
-# user4 = User.create(
-#   first_name: "Jake",
-#   last_name: "Marshall",
-#   location: "E10",
-#   email: "jake@jake.com",
-#   password: '123123'
-#   )
-# book4 = Book.create(title: 'All the Light We Cannot See',
-#   year: 2014,
-#   description: 'Set in occupied France during World War II, the novel centers on a blind French girl and a German boy whose paths eventually cross.',
-#   genre: 'Historical',
-#   author_name: 'Anthony Doerr', user_id: user4.id)
+isbn_array10 = [{genre: 'Fantasy', isbn: '1408855682'}, {genre: 'Fantasy', isbn: '1408855674'}, {genre: 'Classic', isbn: '9780099549482'}, {genre: 'Classic', isbn: '9781784752460'}, {genre: 'Drama', isbn: '9780747585893'}]
+5.times do
+  p index10
+  @book = Book.new(genre: "#{isbn_array10[index10][:genre]}", user_id: user10.id, isbn: "#{isbn_array10[index10][:isbn]}")
+  scrape(isbn_array10[index10][:isbn])
+  @book.user_id = user10.id
+  @book.save
+  index10 += 1
+end
 
-# user5 = User.create(
-#   first_name: "Carl",
-#   last_name: "Edwards",
-#   location: "SL0",
-#   email: "carl@carl.com",
-#   password: '123123'
-#   )
-# book5 = Book.create(title: 'The Picture of Dorian Gray',
-#   year: 1890,
-#   description: 'Newly understanding that his beauty will fade, Dorian Gray expresses the desire to sell his soul, to ensure that his picture, rather than he, will age and fade. The wish is granted, and Dorian pursues a libertine life of varied amoral experiences while staying young and beautiful; all the while, his portrait ages and records every sin.',
-#   genre: 'Gothic fiction',
-#   author_name: 'Oscar Wilde', user_id: user5.id)
+index11 = 0
+
+isbn_array11 = [{genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Historical fiction', isbn: '0141189576'}, {genre: 'Non-fiction', isbn: '0984699465'}, {genre: 'Non-fiction', isbn: '9780140276053'}, {genre: 'Non-fiction', isbn: '1982137274'}]
+5.times do
+  p index11
+  @book = Book.new(genre: "#{isbn_array11[index11][:genre]}", user_id: user11.id, isbn: "#{isbn_array11[index11][:isbn]}")
+  scrape(isbn_array11[index11][:isbn])
+  @book.user_id = user11.id
+  @book.save
+  index11 += 1
+end
+
+index12 = 0
+
+isbn_array12 = [{genre: 'Science fiction', isbn: '9780008117498'}, {genre: 'Historical fiction', isbn: '1447250931'}, {genre: 'Non-fiction', isbn: '1447250931'}, {genre: 'Fantasy', isbn: '0330519549'}, {genre: 'Historical fiction', isbn: '0099558785'}]
+5.times do
+  p index12
+  @book = Book.new(genre: "#{isbn_array12[index12][:genre]}", user_id: user12.id, isbn: "#{isbn_array12[index12][:isbn]}")
+  scrape(isbn_array12[index12][:isbn])
+  @book.user_id = user12.id
+  @book.save
+  index12 += 1
+end
+
+
+puts 'Books done...'
 
 puts 'Creating book clubs...'
 
@@ -291,11 +351,116 @@ Bookclub.create(name: 'It’s a Hardback Life',
   description: 'Take a break from your boring life with a fantasy novel or ten.',
   user_id: User.first.id)
 
-Bookclub.create(name: 'Agree To Diss A Brie Book Club',
+Bookclub.create(name: 'Agree To Diss A Brie',
   genre: 'Any',
   capacity: 15,
   description: 'A classic book club for cheese lovers.',
   user_id: User.first.id)
 
-puts 'Done.'
+Bookclub.create(name: 'A Gouda Book',
+  genre: 'Any',
+  capacity: 22,
+  description: 'We love a pun and we love cheese. Come join the pun!',
+  user_id: User.first.id)
+
+Bookclub.create(name: 'A Novel Idea',
+  genre: 'Any',
+  capacity: 20,
+  description: 'All books welcome. A community book club for all bookworms',
+  user_id: User.first.id)
+
+Bookclub.create(name: 'Famished for fiction',
+  genre: 'Any',
+  capacity: 15,
+  description: 'A fiction only book club. We like to snack as we read - please bring food to share.',
+  user_id: User.first.id)
+
+Bookclub.create(name: 'Better Read than Dead',
+  genre: 'Any',
+  capacity: 18,
+  description: 'Poetry is our jam. Both classic and modern',
+  user_id: User.first.id)
+
+Bookclub.create(name: 'Great Expectations',
+  genre: 'Any',
+  capacity: 18,
+  description: "If you're into classic novels and love Dickens, join us!",
+  user_id: User.first.id)
+
+Bookclub.create(name: 'Hooked on Books',
+  genre: 'Any',
+  capacity: 21,
+  description: 'Mostly Science fiction with a sprinkling of fantasy',
+  user_id: User.first.id)
+
+Bookclub.create(name: 'Cover to Cover',
+  genre: 'Any',
+  capacity: 35,
+  description: 'Drama is our middle name',
+  user_id: User.first.id)
+
+Bookclub.create(name: "What's in a name?",
+  genre: 'Any',
+  capacity: 30,
+  description: 'We cannot get enough of classic plays',
+  user_id: User.first.id)
+
+Bookclub.create(name: "Tattered Page Book Club",
+  genre: 'Feminist',
+  capacity: 30,
+  description: 'We are all fairly new to reading regularly and support new members to read more',
+  user_id: User.first.id)
+
+Bookclub.create(name: "Safari Book Club",
+  genre: 'Any',
+  capacity: 10,
+  description: 'Want inspo for your next trip? Come read travel journals with us',
+  user_id: User.first.id)
+
+Bookclub.create(name: "Just Read",
+  genre: 'Feminist',
+  capacity: 25,
+  description: 'Modern feminist literature. All welcome.',
+  user_id: User.first.id)
+
+Bookclub.create(name: "The Mighty Pen",
+  genre: 'Fantasy',
+  capacity: 15,
+  description: 'Think Harry Potter meets Lord of the Rings',
+  user_id: User.first.id)
+
+Bookclub.create(name: "Page Turner",
+  genre: 'any',
+  capacity: 22,
+  description: 'A no pressure book club. We love to read and are open to members young and wise',
+  user_id: User.first.id)
+
+Bookclub.create(name: "Fantastic Books and Where to Find Them",
+  genre: 'any',
+  capacity: 15,
+  description: 'Delve into the world of magical creatures and wizardry',
+  user_id: User.first.id)
+
+Bookclub.create(name: "S.P.E.W.",
+  genre: 'Feminist',
+  capacity: 25,
+  description: 'Society for the Promotion of Empowered Women.',
+  user_id: User.first.id)
+
+
+Bookclub.create(name: "Prose for Pros",
+  genre: 'any',
+  capacity: 19,
+  description: 'Everything fiction. All books, all people, all ideas welcome',
+  user_id: User.first.id)
+
+
+Bookclub.create(name: "Cranial Crunch",
+  genre: 'Non-fiction',
+  capacity: 19,
+  description: 'Strictly non-fiction.',
+  user_id: User.first.id)
+
+
+puts 'Finished seeding.'
 
