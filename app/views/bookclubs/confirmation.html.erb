@@ -3,9 +3,14 @@
 <br>
 <br>
 <br>
-<h1>Congratulations you have joined <%= @bookclub.name %> bookclub</h1>
-<p>An email will be sent to you confirming contact details</p>
-
-<%= link_to "My BookClub",  my_bookclub_path %>
+<div class="container">
+  <div class="bookclub_confirmation_card">
+    <h1>Congratulations! You have joined <%= @bookclub.name %> bookclub.</h1>
+    <p>An email will be sent to you confirming contact details and meetup times!</p>
+  </div>
+  <div class="bookclub_confirmation_btn">
+    <%= link_to "Discover your new bookclub",  my_bookclub_path %>
+  </div>
+</div>
 
 

@@ -1,0 +1,24 @@
+.bookclub_confirmation_card {
+  background: #D1EDBA;
+  padding: 16px;
+  box-shadow: 2px 2px 4px lightgrey;
+  text-align: center;
+}
+
+.bookclub_confirmation_btn {
+  background: #D1EDBA;
+  box-shadow: 2px 2px 4px lightgrey;
+  border-radius: 5px;
+  padding: 8px 16px;
+  width: 25%;
+  margin: 16px auto;
+  text-align: center;
+  &:hover {
+    font-weight: bolder;
+    background: #B6E292;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
