@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get :my_swaps, to: 'pages#my_swaps'
+
   get :my_bookclub, to: 'pages#my_bookclub'
+
+
+  get :my_books, to: 'pages#my_books'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :books, only: %i[index show new create destroy] do
