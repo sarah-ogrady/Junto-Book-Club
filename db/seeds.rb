@@ -205,6 +205,36 @@ end
 
 puts 'Creating books...'
 
+index13 = 0
+
+isbn_array13 = [{genre: 'Science fiction', isbn: '9780008117498'}, {genre: 'Fantasy', isbn: '071815780X'}, {genre: 'Drama', isbn: '9781447294832'}, {genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Historical fiction', isbn: '1408871777'}]
+5.times do
+  p index13
+  @book = Book.new(genre: "#{isbn_array13[index13][:genre]}", user_id: user13.id, isbn: "#{isbn_array13[index13][:isbn]}")
+  scrape(isbn_array13[index13][:isbn])
+  @book.user_id = user13.id
+  @book.save
+  index13 += 1
+end
+p "finished isbn_array13"
+
+sleep(10)
+
+index14 = 0
+
+isbn_array14 = [{genre: 'Thriller', isbn: '1503280780'}, {genre: 'Thriller', isbn: '1094710962'}, {genre: 'Romance', isbn: '9781447294832'}, {genre: 'Drama', isbn: '9781602707023'}, {genre: 'Drama', isbn: '014132970X'}]
+5.times do
+  p index14
+  @book = Book.new(genre: "#{isbn_array14[index14][:genre]}", user_id: user14.id, isbn: "#{isbn_array14[index14][:isbn]}")
+  scrape(isbn_array14[index14][:isbn])
+  @book.user_id = user14.id
+  @book.save
+  index14 += 1
+end
+p "finished isbn_array14"
+
+sleep(10)
+
 index1 = 0
 
 isbn_array1 = [{genre: 'Thriller', isbn: '1473676398'}, {genre: 'Historical fiction', isbn: '1447286030'}, {genre: 'Drama', isbn: '0552551643'}, {genre: 'Fantasy', isbn: '1408890046'}, {genre: 'Political fiction', isbn: '0241979064'}]
@@ -325,99 +355,69 @@ end
 
 p "finished isbn_array8"
 
-# sleep(10)
+sleep(10)
 
 
-# index9 = 0
+index9 = 0
 
-# isbn_array9 = [{genre: 'Historical fiction', isbn: '0241364906'}, {genre: 'Non-fiction', isbn: '1784741728'}, {genre: 'Classic', isbn: '9781853260209'}, {genre: 'Non-fiction', isbn: '9781784705039'}, {genre: 'Fantasy', isbn: '9781408855652'}]
-# 5.times do
-#   p index9
-#   @book = Book.new(genre: "#{isbn_array9[index9][:genre]}", user_id: user9.id, isbn: "#{isbn_array9[index9][:isbn]}")
-#   scrape(isbn_array9[index9][:isbn])
-#   @book.user_id = user9.id
-#   @book.save
-#   index9 += 1
-# end
+isbn_array9 = [{genre: 'Historical fiction', isbn: '0241364906'}, {genre: 'Non-fiction', isbn: '1784741728'}, {genre: 'Classic', isbn: '9781853260209'}, {genre: 'Non-fiction', isbn: '9781784705039'}, {genre: 'Fantasy', isbn: '9781408855652'}]
+5.times do
+  p index9
+  @book = Book.new(genre: "#{isbn_array9[index9][:genre]}", user_id: user9.id, isbn: "#{isbn_array9[index9][:isbn]}")
+  scrape(isbn_array9[index9][:isbn])
+  @book.user_id = user9.id
+  @book.save
+  index9 += 1
+end
 
-# p "finished isbn_array9"
+p "finished isbn_array9"
 
-# sleep(10)
+sleep(10)
 
-# index10 = 0
+index10 = 0
 
-# isbn_array10 = [{genre: 'Fantasy', isbn: '1408855682'}, {genre: 'Fantasy', isbn: '1408855674'}, {genre: 'Classic', isbn: '9780099549482'}, {genre: 'Classic', isbn: '9781784752460'}, {genre: 'Drama', isbn: '9780747585893'}]
-# 5.times do
-#   p index10
-#   @book = Book.new(genre: "#{isbn_array10[index10][:genre]}", user_id: user10.id, isbn: "#{isbn_array10[index10][:isbn]}")
-#   scrape(isbn_array10[index10][:isbn])
-#   @book.user_id = user10.id
-#   @book.save
-#   index10 += 1
-# end
-# p "finished isbn_array10"
+isbn_array10 = [{genre: 'Fantasy', isbn: '1408855682'}, {genre: 'Fantasy', isbn: '1408855674'}, {genre: 'Classic', isbn: '9780099549482'}, {genre: 'Classic', isbn: '9781784752460'}, {genre: 'Drama', isbn: '9780747585893'}]
+5.times do
+  p index10
+  @book = Book.new(genre: "#{isbn_array10[index10][:genre]}", user_id: user10.id, isbn: "#{isbn_array10[index10][:isbn]}")
+  scrape(isbn_array10[index10][:isbn])
+  @book.user_id = user10.id
+  @book.save
+  index10 += 1
+end
+p "finished isbn_array10"
 
-# sleep(5)
+sleep(5)
 
 
-# index11 = 0
+index11 = 0
 
-# isbn_array11 = [{genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Thriller', isbn: '9780857054036'}, {genre: 'Non-fiction', isbn: '0984699465'}, {genre: 'Non-fiction', isbn: '9780140276053'}, {genre: 'Non-fiction', isbn: '1982137274'}]
-# 5.times do
-#   p index11
-#   @book = Book.new(genre: "#{isbn_array11[index11][:genre]}", user_id: user11.id, isbn: "#{isbn_array11[index11][:isbn]}")
-#   scrape(isbn_array11[index11][:isbn])
-#   @book.user_id = user11.id
-#   @book.save
-#   index11 += 1
-# end
+isbn_array11 = [{genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Thriller', isbn: '9780857054036'}, {genre: 'Non-fiction', isbn: '0984699465'}, {genre: 'Non-fiction', isbn: '9780140276053'}, {genre: 'Non-fiction', isbn: '1982137274'}]
+5.times do
+  p index11
+  @book = Book.new(genre: "#{isbn_array11[index11][:genre]}", user_id: user11.id, isbn: "#{isbn_array11[index11][:isbn]}")
+  scrape(isbn_array11[index11][:isbn])
+  @book.user_id = user11.id
+  @book.save
+  index11 += 1
+end
 
-# p "finished isbn_array11"
+p "finished isbn_array11"
 
-# sleep(10)
+sleep(10)
 
-# index12 = 0
+index12 = 0
 
-# isbn_array12 = [{genre: 'Science fiction', isbn: '9780008117498'}, {genre: 'Historical fiction', isbn: '1447250931'}, {genre: 'Thriller', isbn: '1529002435'}, {genre: 'Fantasy', isbn: '0330519549'}, {genre: 'Historical fiction', isbn: '0099558785'}]
-# 5.times do
-#   p index12
-#   @book = Book.new(genre: "#{isbn_array12[index12][:genre]}", user_id: user12.id, isbn: "#{isbn_array12[index12][:isbn]}")
-#   scrape(isbn_array12[index12][:isbn])
-#   @book.user_id = user12.id
-#   @book.save
-#   index12 += 1
-# end
-# p "finished isbn_array12"
-
-# sleep(10)
-
-# index13 = 0
-
-# isbn_array13 = [{genre: 'Science fiction', isbn: '9780008117498'}, {genre: 'Fantasy', isbn: '071815780X'}, {genre: 'Drama', isbn: '9781447294832'}, {genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Historical fiction', isbn: '1408871777'}]
-# 5.times do
-#   p index13
-#   @book = Book.new(genre: "#{isbn_array13[index13][:genre]}", user_id: user13.id, isbn: "#{isbn_array13[index13][:isbn]}")
-#   scrape(isbn_array13[index13][:isbn])
-#   @book.user_id = user13.id
-#   @book.save
-#   index13 += 1
-# end
-# p "finished isbn_array13"
-
-# sleep(10)
-
-# index14 = 0
-
-# isbn_array14 = [{genre: 'Thriller', isbn: '1503280780'}, {genre: 'Thriller', isbn: '1094710962'}, {genre: 'Romance', isbn: '9781447294832'}, {genre: 'Drama', isbn: '9781602707023'}, {genre: 'Drama', isbn: '014132970X'}]
-# 5.times do
-#   p index14
-#   @book = Book.new(genre: "#{isbn_array14[index14][:genre]}", user_id: user14.id, isbn: "#{isbn_array14[index14][:isbn]}")
-#   scrape(isbn_array14[index14][:isbn])
-#   @book.user_id = user14.id
-#   @book.save
-#   index14 += 1
-# end
-# p "finished isbn_array14"
+isbn_array12 = [{genre: 'Science fiction', isbn: '9780008117498'}, {genre: 'Historical fiction', isbn: '1447250931'}, {genre: 'Thriller', isbn: '1529002435'}, {genre: 'Fantasy', isbn: '0330519549'}, {genre: 'Historical fiction', isbn: '0099558785'}]
+5.times do
+  p index12
+  @book = Book.new(genre: "#{isbn_array12[index12][:genre]}", user_id: user12.id, isbn: "#{isbn_array12[index12][:isbn]}")
+  scrape(isbn_array12[index12][:isbn])
+  @book.user_id = user12.id
+  @book.save
+  index12 += 1
+end
+p "finished isbn_array12"
 
 
 puts 'Books done...'
