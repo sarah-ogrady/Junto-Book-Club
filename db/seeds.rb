@@ -22,7 +22,7 @@ user2 = User.create(
   first_name: "Tanya",
   last_name: "Silverman",
   location: "E1",
-  email: "tanya_gibson@gmail.com",
+  email: "tanya_s@gmail.com",
   password: '123123',
   )
   file = URI.open('https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')
