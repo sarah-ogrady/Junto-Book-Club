@@ -1,13 +1,26 @@
 
 <div class="container" style="margin-top: 100px;">
-  <%= @book.title %>
-  <%= author_cleaning(@book.author_name) %>
-  <%= @book.year %>
-  <%= @book.genre %>
-  <%= @book.description %>
-  <% if @book.photo.attached? %>
-    <%= image_tag @book.photo.service_url, alt: "alttext" %>
-  <% end %>
-  <%= link_to 'Confirm?', book_path(@book), class: "btn-light-green"  %>
-  <%= link_to 'Reject?', book_path(@book), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-light-green"  %>
+  <div class="book_to_confirm">
+    <div class="styling_cover_left">
+      <% if @book.photo.attached? %>
+        <%= image_tag @book.photo.service_url, alt: "alttext" %>
+      <% end %>
+    </div>
+    <div class="book_details">
+      <div class="details_headers">
+        <%= @book.title %>
+        <div class="small_details">
+          <%= author_cleaning(@book.author_name) %>
+          (<%= @book.year %>, <%= @book.genre %>)
+        </div>
+      </div>
+      <div class="description">
+        <%= @book.description %>
+      </div>
+    </div>
+  </div>
+  <div class="confirmation_buttons">
+    <%= link_to 'Confirm?', book_path(@book), class: "btn-light-green"  %>
+    <%= link_to 'Reject?', book_path(@book), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-light-green"  %>
+  </div>
 </div>
