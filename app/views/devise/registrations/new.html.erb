@@ -24,17 +24,17 @@
           <%= f.input :email,
                       required: true,
                       autofocus: true,
-                      input_html: { autocomplete: "email" }, required: false%>
+                      input_html: { autocomplete: "email" }, required: true%>
           <%= f.input :password,
                       required: true,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                      input_html: { autocomplete: "new-password" }, required: false %>
+                      input_html: { autocomplete: "new-password" }, required: true %>
           <%= f.input :password_confirmation,
                       required: true,
-                      input_html: { autocomplete: "new-password" }, required: false %>
+                      input_html: { autocomplete: "new-password" }, required: true %>
           <%= f.input :location,
                        required: true, placeholder: "First Half Of Postcode" %>
-          <%= f.input :photo, as: :file %>
+          <%= f.input :photo, as: :file, required: true %>
         </div>
 
         <div class="form-actions">
