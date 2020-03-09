@@ -6,5 +6,8 @@ class BookclubsController < ApplicationController
 
   def index
     @bookclubs = Bookclub.all
+    if params[:filter].present?
+      @bookclubs = @bookclubs.where(genre: params[:filter])
+    end
   end
 end
