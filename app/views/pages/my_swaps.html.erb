@@ -112,7 +112,9 @@
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
                       <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover' %>
+                      <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar' %>
                       <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
+                      <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar' %>
                       <div class="bookswap-card-info">
                         <h4>Swap Complete</h4>
                         <p><%= "#{swap.receiving_user.first_name.capitalize} gave: #{swap.book_received.title}, #{swap.book_received.year}" %></p>
@@ -127,6 +129,7 @@
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
                       <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
+                      <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar' %>
                       <div class="bookswap-card-info">
                         <h4>Swap Rejected</h4>
                         <p><%= "We've notified #{swap.receiving_user.first_name.capitalize} that you rejected their request for #{swap.book_given.title}, #{swap.book_given.year}." %></p>
@@ -140,6 +143,7 @@
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
                       <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
+                      <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar' %>
                       <div class="bookswap-card-info">
                         <h4>Swap Rejected</h4>
                         <p><%= "Sorry, #{swap.giving_user.first_name.capitalize} rejected your request for #{swap.book_given.title}, #{swap.book_given.year}. Browse for a different book." %></p>
