@@ -4,25 +4,36 @@
 <br>
 <br>
 <br>
-<div class="books-banner-contents">
-  <h1><%= "#{@bookclub.name}" %></h1>
-  <h2><%= @bookclub.genre %></h2>
-  <p><%= @bookclub.location %></p>
-  <p><%= @bookclub.description %></p>
-</div>
-<div class="mapbox-style">
-  <div class="mapclass">
-    <div id="map"
-       style="width: 525px;
-       height: 350px;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-     </div>
-   </div>
+
+<h1 style="text-align: center; background-color: #D1EDBA; padding: 5px 20px;"><%= @bookclub.name %> Bookclub</h1>
+<br>
+<div class="row margin-show-mybookclub">
+  <div class="col-lg-6">
+    <div class="books-banner-contents-my-bookclubs">
+      <h1><%= "#{@bookclub.name}" %></h1>
+      <h2><%= @bookclub.genre %></h2>
+      <p><%= @bookclub.location %></p>
+      <p><%= @bookclub.description %></p>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="mapbox-style-show-my-bookclub">
+      <div class="mapclass-show-my-bookclub">
+        <div id="map"
+           style="width: 100%;
+           height: 350px;"
+           data-markers="<%= @markers.to_json %>"
+           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+         </div>
+       </div>
+    </div>
+  </div>
 </div>
 
-<%= link_to "Back to Book Clubs", bookclubs_path %>
-<%= link_to "Confirm", bookclub_confirmation_path(@bookclub) %>
+
+
+  <p class="center-mybookclub-show"><%= link_to "Back to Book Clubs", bookclubs_path, class: 'back-to-book-clubs'%></p>
+<p class="center-mybookclub-show"><%= link_to "Confirm", bookclub_confirmation_path(@bookclub), class: 'back-to-book-clubs' %></p>
 
 
 

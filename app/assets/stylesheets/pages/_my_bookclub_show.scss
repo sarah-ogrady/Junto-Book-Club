@@ -1,0 +1,40 @@
+.margin-show-mybookclub {
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.books-banner-contents-my-bookclubs {
+  box-shadow: 0 0 15px lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: #D1EDBA;
+  padding-left: 20px;
+}
+
+.mapbox-style-show-my-bookclub {
+  padding-top: 20px;
+}
+
+.back-to-book-clubs {
+  padding: 10px 30px;
+  background-color: #D1EDBA;
+  border-radius: 5px;
+  box-shadow: 0 0 10px lightgrey;
+  color: black;
+  text-decoration: none;
+}
+
+.back-to-book-clubs:hover {
+   background-color: #638D31;
+   transition: 1s;
+   text-decoration: none;
+   color: black;
+}
+
+.center-mybookclub-show {
+  text-align: center;
+  margin-top: 30px;
+}
