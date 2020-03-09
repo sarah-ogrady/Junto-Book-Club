@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   h2, p {
-    font-family: 'Spartan';
+    font-family: 'Nunito Sans';
     color: black;
     font-size: 16px;
   }
@@ -138,10 +138,10 @@
 
 .text-container {
   h1 {
-    font-family: 'Volkhov';
+    font-family: "Nunito Sans";
   }
   p {
-    font-family: 'Spartan';
+    font-family: "Nunito Sans";
   }
   display: flex;
   flex-direction: column;
@@ -188,7 +188,7 @@ form {
     margin-bottom: 0px;
   }
   h3, .dropdown-item {
-    font-family: 'Spartan';
+    font-family: "Nunito Sans";
   }
 }
 

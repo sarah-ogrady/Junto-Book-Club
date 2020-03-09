@@ -7,7 +7,7 @@
     <p>Your books are live on Junto and ready to swap!</p>
   <% end %>
 
-<%= link_to "Add a Book",  new_book_path, class: "btn-dark-green mb-4" %>
+<%= link_to "Add a Book",  new_book_path, class: "btn-salmon mb-4" %>
 
 
   <div class="cards">
@@ -22,7 +22,7 @@
             <h2><%= "#{book.title}" %></h2>
             <p id="author"><%= author_cleaning(book.author_name) %></p>
           </div>
-          <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary bottom-right" %>
+          <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-salmon bottom-right" %>
       </div>
     <% end %>
   </div>
