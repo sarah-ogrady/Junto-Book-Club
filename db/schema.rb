@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_105100) do
+
+ActiveRecord::Schema.define(version: 2020_03_09_111316) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +47,8 @@ ActiveRecord::Schema.define(version: 2020_03_09_105100) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.string "description"
+    t.float "longitude"
+    t.float "latitude"
     t.index ["user_id"], name: "index_bookclubs_on_user_id"
   end
 
@@ -98,6 +102,8 @@ ActiveRecord::Schema.define(version: 2020_03_09_105100) do
     t.string "last_name"
     t.float "latitude"
     t.float "longitude"
+    t.bigint "bookclub_id"
+    t.index ["bookclub_id"], name: "index_users_on_bookclub_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -109,4 +115,5 @@ ActiveRecord::Schema.define(version: 2020_03_09_105100) do
   add_foreign_key "messages", "users"
   add_foreign_key "swaps", "users"
   add_foreign_key "swaps", "users", column: "user_2_id"
+  add_foreign_key "users", "bookclubs"
 end
