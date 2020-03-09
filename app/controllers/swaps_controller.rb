@@ -14,21 +14,19 @@ class SwapsController < ApplicationController
     @book_given = @swap.book_given
   end
 
-  def accept
-    @swap = Swap.find(params[:id])
-    @swap.update(status: 'bookchosen')
-    redirect_to my_swaps_path
-  end
-
   def reject
     @swap = Swap.find(params[:id])
-    @swap.update(rejected: true)
+    @swap.update(status: 'rejected')
+    @book = @swap.book_given
+    @book.update(hidden: false)
+    flash[:notice] = 'Swap successfully rejected'
     redirect_to my_swaps_path
   end
 
   def complete
     @swap = Swap.find(params[:id])
     @swap.update(status: 'complete')
+    flash[:notice] = 'Swap marked as complete'
     redirect_to my_swaps_path
   end
 
@@ -44,6 +42,15 @@ class SwapsController < ApplicationController
     @swap.book_received = @book
     @book.update(hidden: true)
     @swap.update(status: 'bookchosen')
+    redirect_to my_swaps_path
+  end
+
+  def destroy
+    @swap = Swap.find(params[:id])
+    @book = @swap.book_given
+    @book.update(hidden: false)
+    @swap.destroy
+    flash[:notice] = 'Swap request cancelled'
     redirect_to my_swaps_path
   end
 

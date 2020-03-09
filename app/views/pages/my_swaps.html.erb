@@ -18,9 +18,7 @@
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="pending-swaps">
-
-              <h3>My Pending Swaps</h3>
-              <% if @swaps.where.not(status: 'complete').empty? %>
+              <% if @swaps.where.not(status: 'complete', rejected: true).empty? %>
                 <p>You have no pending swaps!</p>
               <% end %>
 
@@ -36,7 +34,7 @@
                         <p><%= "#{swap.receiving_user.first_name.capitalize}'s Location: #{swap.giving_user.location}" %></p>
                         <p><%= "Choose one of #{swap.receiving_user.first_name.capitalize}'s books or reject the request:" %></p>
                         <%= link_to "Choose a Book", choose_book_swap_path(swap), class: "btn-light-green" %>
-                        <%= link_to "Reject Request", root_path, class: "btn-light-green" %>
+                        <%= link_to "Reject Request", reject_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-light-green" %>
                       </div>
                     </div>
                   </div>
@@ -52,7 +50,7 @@
                         <p><%= "Book you would like: #{swap.book_given.title}, #{swap.book_given.year}" %></p>
                         <p><%= "#{swap.giving_user.first_name.capitalize}'s Location: #{swap.giving_user.location}" %></p>
                         <p><%= "Waiting for #{swap.giving_user.first_name.capitalize} to approve your request" %></p>
-                        <%= link_to "Cancel Request", root_path, class: "btn-light-green" %>
+                        <%= link_to "Cancel Request", swap_path(swap), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-light-green" %>
                       </div>
                     </div>
                   </div>
@@ -65,14 +63,14 @@
                       <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
                       <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover' %>
                       <div class="bookswap-card-info">
-                        <h4><%= "Ready to swap with #{swap.receiving_user.first_name.capitalize}!" %></h4>
+                        <h4><%= "You accepted #{swap.receiving_user.first_name.capitalize}'s request!" %></h4>
                         <p><%= "Book #{swap.receiving_user.first_name.capitalize} would like: #{swap.book_given.title}, #{swap.book_given.year}" %></p>
                         <p><%= "Book you would like: #{swap.book_received.title}, #{swap.book_received.year}" %></p>
                         <p><%= "#{swap.receiving_user.first_name.capitalize}'s Location: #{swap.receiving_user.location}" %></p>
                         <p><%= "Chat with #{swap.receiving_user.first_name.capitalize} to arrange a time and place to swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
                         <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-light-green" %>
-                        <%= link_to "Swap Complete", root_path, class: "btn-light-green" %>
+                        <%= link_to "Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-light-green" %>
                       </div>
                     </div>
                   </div>
@@ -93,20 +91,65 @@
                         <p><%= "Chat with #{swap.giving_user.first_name.capitalize} to arrange a time and place to swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
                         <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-light-green" %>
-                        <%= link_to "Swap Complete", root_path, class: "btn-light-green" %>
+                        <%= link_to "Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-light-green" %>
                       </div>
                     </div>
                   </div>
                 <% end %>
 
-                  </div>
-                </div>
               <% end %>
             </div>
-
+          </div>
           <div class="icon-with-text tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="complete-swaps">
-              <h3></h3>
+              <% if @swaps.where(status: 'complete', status: 'rejected').empty? %>
+                <p>You have no completed swaps!</p>
+              <% end %>
+
+              <% @swaps.each do |swap| %>
+
+                <% if (swap.giving_user == current_user || swap.receiving_user == current_user) && swap.status == 'complete' %>
+                  <div class="bookswap-card d-flex">
+                    <div class="d-flex">
+                      <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover' %>
+                      <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
+                      <div class="bookswap-card-info">
+                        <h4>Swap Complete</h4>
+                        <p><%= "#{swap.receiving_user.first_name.capitalize} gave: #{swap.book_received.title}, #{swap.book_received.year}" %></p>
+                        <p><%= "#{swap.giving_user.first_name.capitalize} gave: #{swap.book_given.title}, #{swap.book_given.year}" %></p>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+
+
+                <% if swap.giving_user == current_user && swap.status == 'rejected' %>
+                  <div class="bookswap-card d-flex">
+                    <div class="d-flex">
+                      <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
+                      <div class="bookswap-card-info">
+                        <h4>Swap Rejected</h4>
+                        <p><%= "We've notified #{swap.receiving_user.first_name.capitalize} that you rejected their request for #{swap.book_given.title}, #{swap.book_given.year}." %></p>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+
+
+                <% if swap.receiving_user == current_user && swap.status == 'rejected' %>
+                  <div class="bookswap-card d-flex">
+                    <div class="d-flex">
+                      <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
+                      <div class="bookswap-card-info">
+                        <h4>Swap Rejected</h4>
+                        <p><%= "Sorry, #{swap.giving_user.first_name.capitalize} rejected your request for #{swap.book_given.title}, #{swap.book_given.year}. Browse for a different book." %></p>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+
+              <% end %>
+
             </div>
           </div>
         </div>
