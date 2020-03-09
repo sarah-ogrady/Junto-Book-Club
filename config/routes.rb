@@ -11,11 +11,13 @@ Rails.application.routes.draw do
       get :confirmation
     end
   end
-  resources :swaps, only: :show do
+  resources :swaps, only: %i[show destroy] do
     member do
       get :chatroom
       get :choose_book
       patch :book_chosen
+      patch :reject
+      patch :complete
     end
     resources :messages, only: :create
   end
