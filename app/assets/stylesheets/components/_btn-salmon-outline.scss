@@ -1,0 +1,21 @@
+.btn-salmon-outline {
+  color: #FE7866 !important;
+  padding: 8px 24px;
+  background: white;
+  transition: 0.2s;
+  min-width: 100px;
+  text-align: center;
+  border: 0.5px solid #FE7866;
+}
+
+.btn-salmon-outline:hover {
+  background: #FE7866;
+  color: white !important;
+  transition: 0.2s;
+}
+
+.bottom-right{
+  bottom: 8px;
+  right: 8px;
+  position: absolute;
+}

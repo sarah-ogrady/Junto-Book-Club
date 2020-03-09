@@ -2,6 +2,6 @@
   <%= simple_form_for(@book , remote: true) do |form| %>
     <%= form.input :isbn %>
     <%= form.input :genre, collection: ["Humour", "Non-fiction", "Fantasy", "Drama", "Romance", "Crime", "Action", "Thriller", "Poetry", "Science fiction", "Historical fiction", "Political fiction", "Classic"], required: false %>
-    <%= form.button :submit, class: "btn-light-green" %>
+    <%= form.button :submit, class: "btn-salmon" %>
   <% end %>
 </div>

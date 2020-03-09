@@ -3,11 +3,12 @@
 }
 
 .login-h1-tag {
-  background-color: #D1EDBA;
+  background-color: white;
+  border: 2px solid #FE7866;
   height: 500px;
   width: 700px;
   padding-right: 40px;
-  box-shadow: 2px 3px 4px #D1EDBA;
+  // box-shadow: 2px 3px 4px #D1EDBA;
   margin-bottom: 10px;
 }
 
@@ -17,7 +18,6 @@
   right: 84px;
   top: 65px;
   font-size: 70px;
-  font-family: 'Volkhov', serif;
   padding-right: 20px;
 }
 
