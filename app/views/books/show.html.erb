@@ -9,7 +9,7 @@
     <div class="co-lg-5">
       <div class="mapclass">
         <div style="margin-bottom: 40px;">
-          <h2><%= @book.user.first_name %> <%= @book.user.last_name %> <%= image_tag "#{@book.user.avatar}", class: "avatarcard"%></h2>
+          <h2><%= @book.user.first_name %> <%= @book.user.last_name %> <%= cl_image_tag "#{@book.user.photo.key}", class: "avatarcard"%></h2>
          <div class="mapbox-style">
            <div id="map"
              style="width: 525px;
