@@ -29,20 +29,25 @@
 </div>
 
 <div class="container">
-  <div class="cards">
+  <div class="bookclub-cards">
     <% @bookclubs.each do |bookclub| %>
       <%= link_to(bookclub_path(bookclub), class: "card-links") do %>
         <div>
 
           <div class="card-trip">
-            <img src="https://www.wendywutours.co.uk/blog/wp-content/uploads/2017/11/8booksheader-730x410.jpg" />
+            <img src=" <%= bookclub.image_url %>", alt="Book Club photos" />
             <div class="card-trip-infos">
               <div class="card-design">
-                <h2><%= "#{bookclub.name}" %></h2>
+                <div class="bookclub-name-postcode">
+                  <h4><%= "#{bookclub.name}" %></h4>
+                  <p><%= "#{bookclub.location}" %></p>
+                </div>
+                <div class="lil-book-genre">
+                  <i class="fas fa-book-open"></i>
+
+                  <p><%= "#{bookclub.genre}" %></p>
+                </div>
                 <p><%= "#{bookclub.description}" %></p>
-                <p>Genre: <%= "#{bookclub.genre}" %></p>
-                <p>Capacity: <%= "#{bookclub.capacity}" %></p>
-                <p><%= "#{bookclub.location}" %></p>
               </div>
             </div>
           </div>
