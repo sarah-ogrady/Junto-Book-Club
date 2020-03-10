@@ -1,9 +1,11 @@
 .swaps-box {
-  padding: 20px;
-  width: 700px;
+  padding: 10px;
+  margin-top: 300px;
+  max-width: 600px;
   margin: 0 auto;
-  background-color: rgba(252, 252, 252, 0.7);
+  margin-top: 100px;
   border-radius: 6px;
+  color: #383838;
 }
 
 .swaps-box > h2 {
@@ -20,6 +22,7 @@
 .flex-title-swaps {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
   a {
     padding-top: 10px;
   }
@@ -27,12 +30,12 @@
 
 .bookswap-card {
   background-color: white;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   justify-content: space-between;
-  border-radius: 8px;
-  opacity: 0.9;
-  padding: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  // position: absolute;
 }
 
 #book-photo {
@@ -43,17 +46,15 @@
 }
 
 .bookswap-card-info {
+  color: #383838;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: white;
+  padding-left: 12px;
+  word-wrap: break-word;
   p {
-    margin-bottom: 0px;
-    padding-left: 20px;
-    color: black;
-  &:hover {
-    color: grey;
-    }
+    margin-bottom: 1px;
+
   }
 }
 
@@ -94,4 +95,15 @@
 
 #rejected-message {
   color: red;
+}
+
+.swap-buttons {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.pending-avatar {
+  position: absolute;
+  bottom: 23px;
+  left: 115px;
 }
