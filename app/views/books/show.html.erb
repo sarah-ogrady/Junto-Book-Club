@@ -4,19 +4,26 @@
 <!--   </div> -->
   <div class="fixed-bottom-card">
     <%= cl_image_tag "#{@book.user.photo.key}", class: "avatarcard"%>
-    <div class="map-text mapclass">
-      <h2 class="text-center"><%= @book.user.first_name %> <%= @book.user.last_name %></h2>
-      <h3 class="text-center"><%= @book.user.location %> </h3>
+    <div class="map-text book-show-user">
+      <h4 class="text-center mb-5"><%= @book.user.first_name %> <%= @book.user.last_name %> - <%= @book.user.location %></h4>
+      <p><%= @book.user.description %></p>
+      <p><strong><%= @book.user.first_name %>'s books:</strong></p>
+      <div class="all-mini-books">
+        <% @book.user.books.last(5).each do |book|%>
+          <%= link_to book_path(book) do %>
+            <%= cl_image_tag book.photo.key, class: 'mini-books' %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
-
-    <div class="mapbox-style mt-5">
+    <div class="mapbox-style mt-4">
       <div id="map"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
     <%= simple_form_for [@book, Swap.new], html: { class: 'form-class' } do |f| %>
-      <%= f.submit "Swap", class: "small-width-button" %>
+      <%= f.submit "Swap", class: "small-width-button"%>
     <% end %>
     <%= link_to "Find another book", books_path, class: "find-another" %>
   </div>

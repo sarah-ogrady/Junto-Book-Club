@@ -33,7 +33,9 @@
       <%= render 'shared/navbar' %>
       <div style="height: 56px;"></div>
       <%= yield %>
-      <%= render 'shared/footer' %>
+      <% unless params[:controller] == 'books' && params[:action] == 'show' %>
+        <%= render 'shared/footer' %>
+      <% end %>
     </div>
     <%= render 'shared/flashes' %>
   </body>

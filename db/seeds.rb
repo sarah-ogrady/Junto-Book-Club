@@ -11,9 +11,10 @@ puts 'Creating users...'
 user1 = User.create(
   first_name: "Nadine",
   last_name: "O'Hara",
-  location: "E10",
+  location: "E9 5EN",
   email: "nohara@gmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://res.cloudinary.com/arxmush/image/upload/v1553214529/Gallery/brianna_one_bb9rj8.jpg')
   user1.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -21,9 +22,10 @@ user1 = User.create(
 user2 = User.create(
   first_name: "Tanya",
   last_name: "Silverman",
-  location: "E1",
+  location: "E1 6QR",
   email: "tanya_s@gmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')
   user2.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -31,9 +33,10 @@ user2 = User.create(
 user3 = User.create(
   first_name: "Emily",
   last_name: "Wong",
-  location: "TW1",
+  location: "TW1 1AG",
   email: "emily_wong@gmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQH-3X4Qx0gq_w/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=FOE9E-1DHa-cCwMA5RsMFXQWBiKR_7gLYj8br9Kwa4o')
   user3.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -41,9 +44,10 @@ user3 = User.create(
 user4 = User.create(
   first_name: "Mo",
   last_name: "Hussain",
-  location: "E10",
+  location: "E10 7QZ",
   email: "mo_1992@gmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg')
   user4.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -51,9 +55,10 @@ user4 = User.create(
 user5 = User.create(
   first_name: "Aleena",
   last_name: "Sheraz",
-  location: "SE13",
+  location: "SE13 6RD",
   email: "asheraz@gmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://images.unsplash.com/photo-1517945577684-acd9255116a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
   user5.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -61,9 +66,10 @@ user5 = User.create(
 user6 = User.create(
   first_name: "Scott",
   last_name: "Buckland",
-  location: "SE9",
+  location: "SE7 7HY",
   email: "scotty_b@gmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9c88e092-9691-11e8-85e3-d844d3177259.jpg?crop=3000%2C1687%2C0%2C31&resize=1180')
   user6.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -71,9 +77,10 @@ user6 = User.create(
 user7 = User.create(
   first_name: "Megan",
   last_name: "Lovett",
-  location: "E14",
+  location: "E14 2BE",
   email: "meggie_love@hotmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://images1.the-dots.com/763358/screen-shot-2017-03-17-at-15-51-22.png?p=socialSquare')
   user7.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -81,9 +88,10 @@ user7 = User.create(
 user8 = User.create(
   first_name: "Vincent",
   last_name: "Onuegbu",
-  location: "N13",
+  location: "N13 5UD",
   email: "vincent@hotmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://c.stocksy.com/a/XJC000/z9/47339.jpg')
   user8.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -91,9 +99,10 @@ user8 = User.create(
 user9 = User.create(
   first_name: "Tahira",
   last_name: "Syed",
-  location: "N1",
+  location: "N1 6SH",
   email: "tsyed@hotmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFIXM7lYTeqtw/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=BsWw9n7w5Poz8Y5Or6MeyxcblATuye93WZwq0RauuNo')
   user9.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -101,9 +110,10 @@ user9 = User.create(
 user10 = User.create(
   first_name: "Joe",
   last_name: "Thomas",
-  location: "W3",
+  location: "W3 7RU",
   email: "joethomas@hotmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://pbs.twimg.com/profile_images/426035427326189568/BXYWW0uz_400x400.jpeg')
   user10.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -111,9 +121,10 @@ user10 = User.create(
 user11 = User.create(
   first_name: "Luke",
   last_name: "Monroe",
-  location: "E5",
+  location: "E5 0LH",
   email: "lmonroe@hotmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://media.istockphoto.com/videos/young-man-smiling-video-id1008268548?s=640x640')
   user11.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -121,9 +132,10 @@ user11 = User.create(
 user12 = User.create(
   first_name: "Mia",
   last_name: "Nguyen",
-  location: "E15",
+  location: "E15 2LB",
   email: "mian@hotmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFLLevw_988cQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=MIXW_g67Lx3qaKfUijR58mcx_yNDCH-jYCAzSQ7VO0c')
   user12.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -131,9 +143,10 @@ user12 = User.create(
 user13 = User.create(
   first_name: "Halima",
   last_name: "Khan",
-  location: "SW20",
+  location: "SW20 9NS",
   email: "halima12@hotmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://www.cgu.edu/wp-content/uploads/2016/06/Ruqayya_Khan.jpg')
   user13.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -141,9 +154,10 @@ user13 = User.create(
 user14 = User.create(
   first_name: "Axel",
   last_name: "Lopez",
-  location: "W10",
+  location: "W10 6RP",
   email: "axellopez@hotmail.com",
   password: '123123',
+  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user14.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -426,142 +440,142 @@ Bookclub.create(name: 'Gangster Grandmas Book Club',
   location: 'SL0 9AF',
   capacity: 10,
   description: 'For grandmas or anybody else that loves true crime.',
-  user_id: User.first.id)
+  user_id: user1.id)
 
 Bookclub.create(name: 'It’s a Hardback Life',
   genre: 'Fantasy',
-  location: 'SS8 7EH',
+  location: 'TW13 6DH',
   capacity: 18,
   description: 'Take a break from your boring life with a fantasy novel or ten.',
-  user_id: User.first.id)
+  user_id: user2.id)
 
 Bookclub.create(name: 'Agree To Diss A Brie',
-  genre: 'Any',
+  genre: 'Classic',
   location: 'E1 7HS',
   capacity: 15,
   description: 'A classic book club for cheese lovers.',
-  user_id: User.first.id)
+  user_id: user3.id)
 
 Bookclub.create(name: 'A Gouda Book',
-  genre: 'Any',
-  location: 'SS8 7EH',
+  genre: 'Romance',
+  location: 'E9 5EN',
   capacity: 22,
   description: 'We love a pun and we love cheese. Come join the pun!',
-  user_id: User.first.id)
+  user_id: user4.id)
 
 Bookclub.create(name: 'A Novel Idea',
-  genre: 'Any',
+  genre: 'Drama',
   location: 'SL3 7QP',
   capacity: 20,
   description: 'All books welcome. A community book club for all bookworms',
-  user_id: User.first.id)
+  user_id: user5.id)
 
 Bookclub.create(name: 'Famished for fiction',
-  genre: 'Any',
-  location: 'RG1 1HN',
+  genre: 'Historical fiction',
+  location: 'W3 6RT',
   capacity: 15,
   description: 'A fiction only book club. We like to snack as we read - please bring food to share.',
-  user_id: User.first.id)
+  user_id: user6.id)
 
 Bookclub.create(name: 'Better Read than Dead',
-  genre: 'Any',
-  location: 'RG12 0TG',
+  genre: 'Classic',
+  location: 'N21 3RS',
   capacity: 18,
-  description: 'Poetry is our jam. Both classic and modern',
-  user_id: User.first.id)
+  description: 'Classic novels are bread and butter.',
+  user_id: user7.id)
 
 Bookclub.create(name: 'Great Expectations',
-  genre: 'Any',
-  location: 'OX1 1DB',
+  genre: 'Thriller',
+  location: 'SW14 8QE',
   capacity: 18,
-  description: "If you're into classic novels and love Dickens, join us!",
-  user_id: User.first.id)
+  description: "If you love thrillers, join us!",
+  user_id: user8.id)
 
 Bookclub.create(name: 'Hooked on Books',
-  genre: 'Any',
-  location: 'CV34 4BE',
+  genre: 'Fantasy',
+  location: 'WD25 7JN',
   capacity: 21,
   description: 'Mostly Science fiction with a sprinkling of fantasy',
-  user_id: User.first.id)
+  user_id: user9.id)
 
 Bookclub.create(name: 'Cover to Cover',
-  genre: 'Any',
-  location: 'CV31 1BW',
+  genre: 'Drama',
+  location: 'SE22 0RX',
   capacity: 35,
   description: 'Drama is our middle name',
-  user_id: User.first.id)
+  user_id: user10.id)
 
 Bookclub.create(name: "What's in a name?",
-  genre: 'Any',
+  genre: 'Political fiction',
   location: 'E1 6NU',
   capacity: 30,
-  description: 'We cannot get enough of classic plays',
-  user_id: User.first.id)
+  description: 'We cannot get enough of political fiction',
+  user_id: user11.id)
 
 Bookclub.create(name: "Tattered Page Book Club",
   genre: 'Feminist',
-  location: 'E1 6BW',
+  location: 'EC2A 4SH',
   capacity: 30,
   description: 'We are all fairly new to reading regularly and support new members to read more',
-  user_id: User.first.id)
+  user_id: user12.id)
 
 Bookclub.create(name: "Safari Book Club",
-  genre: 'Any',
+  genre: 'Travel',
   location: 'E1 6NU',
   capacity: 10,
   description: 'Want inspo for your next trip? Come read travel journals with us',
-  user_id: User.first.id)
+  user_id: user13.id)
 
 Bookclub.create(name: "Just Read",
-  genre: 'Feminist',
-  location: 'E1 6NU',
+  genre: 'Non-fiction',
+  location: 'W12 7GF',
   capacity: 25,
-  description: 'Modern feminist literature. All welcome.',
-  user_id: User.first.id)
+  description: 'All things philosophical. All welcome.',
+  user_id: user14.id)
 
 Bookclub.create(name: "The Mighty Pen",
   genre: 'Fantasy',
-  location: 'E1 6NU',
+  location: 'NW3 2PT',
   capacity: 15,
   description: 'Think Harry Potter meets Lord of the Rings',
-  user_id: User.first.id)
+  user_id: user14.id)
 
 Bookclub.create(name: "Page Turner",
-  genre: 'Any',
-  location: 'E1 6NU',
+  genre: 'Political fiction',
+  location: 'E5 0LH',
   capacity: 22,
   description: 'A no pressure book club. We love to read and are open to members young and wise',
-  user_id: User.first.id)
+  user_id: user14.id)
 
 Bookclub.create(name: "Fantastic Books and Where to Find Them",
-  genre: 'Any',
-  location: 'E1 6NU',
+  genre: 'Fantasy',
+  location: 'SW15 2DD',
   capacity: 15,
   description: 'Delve into the world of magical creatures and wizardry',
-  user_id: User.first.id)
+  user_id: user14.id)
 
 Bookclub.create(name: "S.P.E.W.",
   genre: 'Feminist',
-  location: 'E1 6NU',
+  location: 'W2 1LA',
   capacity: 25,
   description: 'Society for the Promotion of Empowered Women.',
-  user_id: User.first.id)
+  user_id: user14.id)
 
 
 Bookclub.create(name: "Prose for Pros",
-  genre: 'Any',
-  location: 'E1 6NU',
+  genre: 'Drama',
+  location: 'SE11 4NT',
   capacity: 19,
   description: 'Everything fiction. All books, all people, all ideas welcome',
-  user_id: User.first.id)
+  user_id: user14.id)
 
 
 Bookclub.create(name: "Cranial Crunch",
   genre: 'Non-fiction',
-  location: 'E1 6NU',
+  location: 'N1 4BZ',
   capacity: 19,
   description: 'Strictly non-fiction.',
-  user_id: User.first.id)
+  user_id: user14.id)
 
 
 puts 'Finished seeding.'
