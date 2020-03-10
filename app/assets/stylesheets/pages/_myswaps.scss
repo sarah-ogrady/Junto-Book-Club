@@ -1,5 +1,6 @@
 .swaps-box {
   padding: 10px;
+  height: 100vh;
   margin-top: 300px;
   max-width: 600px;
   margin: 0 auto;
@@ -35,6 +36,7 @@
   justify-content: space-between;
   padding: 22px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  min-height: 215px !important;
   // position: absolute;
 }
 
@@ -50,7 +52,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-left: 12px;
   word-wrap: break-word;
   p {
     margin-bottom: 1px;
@@ -58,11 +59,15 @@
   }
 }
 
+.bookswap-card-info-onebook {
+  padding-left: 135px;
+}
+
 #book-title {
   font-weight: bold;
 }
 
-.link-to-performers {
+.link-to-books {
   &:hover{
   text-decoration: none;
   }
@@ -102,8 +107,16 @@
   text-align: right;
 }
 
-.pending-avatar {
+.giving-book {
   position: absolute;
-  bottom: 23px;
-  left: 115px;
+}
+
+.giving-avatar {
+  position: relative;
+  bottom: 40px;
+  left: 92px;
+}
+
+.book-cover {
+  max-height: 170px;
 }
