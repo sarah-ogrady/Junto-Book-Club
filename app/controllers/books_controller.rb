@@ -22,7 +22,7 @@ class BooksController < ApplicationController
     @markers = [{
       lat: @user.latitude,
       lng: @user.longitude,
-      image_url: helpers.asset_url('marker.png')
+      image_url: helpers.asset_url('map-icon.png')
     }]
   end
 
