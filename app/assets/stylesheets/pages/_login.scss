@@ -1,61 +1,5 @@
-// .login-page {
-//   margin-top: 150px;
-// }
 
-// .login-h1-tag {
-//   background-color: #D1EDBA;
-//   height: 500px;
-//   width: 700px;
-//   padding-right: 40px;
-//   box-shadow: 2px 3px 4px #D1EDBA;
-//   margin-bottom: 10px;
-// }
 
-// .login-h1-tag h1 {
-//   z-index: 1000;
-//   position: relative;
-//   right: 84px;
-//   top: 65px;
-//   font-size: 70px;
-//   font-family: 'Volkhov', serif;
-//   padding-right: 20px;
-// }
-
-// .login-form-position {
-//   padding-left: 30px;
-//   margin-top: 10px;
-//   border-radius: 10px;
-//   padding-top: 30px;
-//   padding-right: 30px;
-//   box-shadow: 2px 3px 8px lightgrey;
-//   padding-bottom: 20px;
-//   p {
-//     font-size: 20px;
-//   }
-// }
-
-// .form-actions {
-//   margin-bottom: 20px;
-// }
-
-// .devise-links {
-//   text-align: center;
-// }
-
-// .devise-links a {
-//   text-decoration: none;
-//   color: #222121 !important;
-// }
-
-// .devise-links a:hover {
-//   text-decoration: none;
-//   color: black !important;
-// }
-
-// .login-button:hover {
-//   text-decoration: none;
-//   opacity: 0.6;
-// }
 .background-picture {
    height: 100vh;
    background-image: linear-gradient(rgba(255,255,255,.8)), url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=841&q=80);
@@ -79,7 +23,9 @@
   margin-top: 100px;
   padding-top: 20px;
   padding-left: 20px;
-  padding-right: 20px;
+
+.login-page {
+  margin-top: 150px;
 }
 
 .login-form-inputs h1 {
@@ -129,20 +75,4 @@
   opacity: 0.7;
   text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  

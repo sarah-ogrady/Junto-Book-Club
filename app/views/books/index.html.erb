@@ -12,7 +12,7 @@
               # class: "form-control",
               placeholder: "Find a book"
             %>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
+            <%= submit_tag "Search", class: "btn-salmon" %>
           <% end %>
         </div>
       </div>
@@ -54,9 +54,9 @@
             <p id="author"><%= author_cleaning(book.author_name) %></p>
             <!--- need to add a link_to above that links author's name to the author show page --->
           </div>
-          <%= cl_image_tag "#{book.user.photo.key}", class: "card-avatar"%>
+          <%= cl_image_tag "#{book.user.photo.key}", class: "card-avatar card-avatar-index"%>
           <!-- <img src="https://wallpaperaccess.com/full/1278457.jpg" alt="profile picture" class="card-avatar"> -->
-          <%= link_to "Choose", book_path(book), class: "btn btn-primary bottom-right" %>
+          <%= link_to "Choose", book_path(book), class: "btn btn-salmon-outline bottom-right" %>
         </div>
       <% end %>
     <% else %>
@@ -73,9 +73,9 @@
             <p id="author"><%= author_cleaning(book.author_name) %></p>
             <!--- need to add a link_to above that links author's name to the author show page --->
           </div>
-          <%= cl_image_tag "#{book.user.photo.key}", class: "card-avatar"%>
+          <%= cl_image_tag "#{book.user.photo.key}", class: "card-avatar card-avatar-index"%>
           <!-- <img src="https://wallpaperaccess.com/full/1278457.jpg" alt="profile picture" class="card-avatar"> -->
-          <%= link_to "Choose", book_path(book), class: "btn btn-primary bottom-right" %>
+          <%= link_to "Choose", book_path(book), class: "btn btn-salmon-outline bottom-right" %>
         </div>
       <% end %>
     <% end %>
