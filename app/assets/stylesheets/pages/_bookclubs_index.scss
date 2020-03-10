@@ -21,10 +21,14 @@
 
 .card-trip {
   overflow: hidden;
+  min-height: 330px;
   background: white;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  position: relative;
+  top: 0;
+  transition: 0.4s;
   &:hover {
-    text-decoration: none;
+    text-decoration: none !important;
     transition: 0.4s;
     box-shadow: 0 3px 17px rgba(0,0,0,0.3);
     top: -3px;
@@ -44,13 +48,15 @@
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 13px;
   opacity: .7;
   margin: 0;
 }
 
 .card-trip .card-trip-infos {
   padding: 16px;
+  padding-top: 12px;
+  padding-bottom: 6px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -63,4 +69,8 @@
   top: -20px;
   width: 40px;
 
+}
+
+.card-links:hover {
+  text-decoration: none;
 }
