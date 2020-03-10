@@ -1,35 +1,32 @@
 <div class="banner-index">
-  <div class="row banner-contents">
-    <div class="col-xs-0 col-md-6 col-lg-6">
-      <div class="text-container">
-        <br>
-        <br>
-        <br>
-        <h1>Discover your next book club...</h1>
-        <p>Search by genre...</p>
-        <div class="filter-bar">
-          <h3>Filter</h3>
-          <div class="dropdown">
-            <button class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= params[:filter].present? ? params[:filter] : 'Genre' %>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to 'Fantasy', bookclubs_path(query: params[:query], filter: 'Fantasy'), class: "dropdown-item"  %>
-              <%= link_to 'Feminist', bookclubs_path(query: params[:query], filter: 'Feminist'), class: "dropdown-item"  %>
-              <%= link_to 'Non-fiction', bookclubs_path(query: params[:query], filter: 'Non-fiction'), class: "dropdown-item"  %>
-              <%= link_to 'True Crime', bookclubs_path(query: params[:query], filter: 'True Crime'), class: "dropdown-item"  %>
-              <%= link_to 'Classic', bookclubs_path(query: params[:query], filter: 'Classic'), class: "dropdown-item"  %>
-              <%= link_to 'All Fiction', bookclubs_path(query: params[:query], filter: 'All Fiction'), class: "dropdown-item"  %>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row banner-contents">
+      <div class="col-lg-12 col-md-8 col-xs-4 align-items-center">
+        <div id="header-container-bookclubs">
+          <h1>Discover your next book club...</h1>
+          <p>Click on a book club to learn more</p>
         </div>
       </div>
-    <div class="col-xs-12 col-md-6 col-lg-6 justify-content-center form-container">
+    </div>
+
+    <div class="filter-bar">
+      <h3>Filter</h3>
+      <div class="dropdown">
+        <button class="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= params[:filter].present? ? params[:filter] : 'Genre' %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to 'Fantasy', bookclubs_path(query: params[:query], filter: 'Fantasy'), class: "dropdown-item"  %>
+          <%= link_to 'Feminist', bookclubs_path(query: params[:query], filter: 'Feminist'), class: "dropdown-item"  %>
+          <%= link_to 'Non-fiction', bookclubs_path(query: params[:query], filter: 'Non-fiction'), class: "dropdown-item"  %>
+          <%= link_to 'True Crime', bookclubs_path(query: params[:query], filter: 'True Crime'), class: "dropdown-item"  %>
+          <%= link_to 'Classic', bookclubs_path(query: params[:query], filter: 'Classic'), class: "dropdown-item"  %>
+          <%= link_to 'Any', bookclubs_path(query: params[:query], filter: 'Any'), class: "dropdown-item"  %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-
 
 <div class="container">
   <div class="cards">
@@ -40,14 +37,12 @@
           <div class="card-trip">
             <img src="https://www.wendywutours.co.uk/blog/wp-content/uploads/2017/11/8booksheader-730x410.jpg" />
             <div class="card-trip-infos">
-              <div>
-                <div class="card-design">
-                  <h2><%= "#{bookclub.name}" %></h2>
-                  <p><%= "#{bookclub.description}" %></p>
-                  <p>Genre: <%= "#{bookclub.genre}" %></p>
-                  <p>Capacity: <%= "#{bookclub.capacity}" %></p>
-                  <p><%= "#{bookclub.location}" %></p>
-                </div>
+              <div class="card-design">
+                <h2><%= "#{bookclub.name}" %></h2>
+                <p><%= "#{bookclub.description}" %></p>
+                <p>Genre: <%= "#{bookclub.genre}" %></p>
+                <p>Capacity: <%= "#{bookclub.capacity}" %></p>
+                <p><%= "#{bookclub.location}" %></p>
               </div>
             </div>
           </div>
