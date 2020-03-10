@@ -1,43 +1,68 @@
 // Specific CSS for your home-page
 
+.homepage_banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+  min-height: 100vh;
+  width: 100%;
+  h1 {
+    color: #383838;
+    font-size: 64px;
+    font-weight: bolder;
+  }
+  img {
+    object-fit: cover;
+    height: 100vh;
+    width: 40%;
+  }
+}
+
+.flex-right {
+  padding: 16px;
+  margin: 16px;
+  // border-bottom: 1px solid #383838;
+  flex: 1;
+  min-height: calc(100vh - 56px);
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  top: 100px;
+  left: -175px;
+}
+
+.banner_btns {
+  position: absolute;
+  bottom: 50px;
+  right: 24px;
+}
+
+.carousel {
+  position: absolute;
+  bottom: 150px;
+  right: 24px;
+  // border-top: 1px solid #383838;
+  border-bottom: 1px solid #383838;
+  max-width: 52%;
+}
+
+.carousel-item {
+  p {
+    font-style: italic;
+  }
+}
+
 .btn-signup {
-  z-index: 1000;
-    margin-top: 20px;
-    display: inline-block;
-    font-size: 30px;
-    padding: 20px 40px;
+  display: inline-block;
+  font-size: 24px;
+  padding: 15px 25px;
 }
 
 .btn-signup:hover {
   text-decoration: none;
-}
-
-.buttonposition {
-  position: relative;
-  left: 298px;
-    bottom: 171px;
-}
-
-
-.image-background {
-  margin-right: 40px;
-  margin-left: 378px;
-   img {
-    width: 80%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 5px;
-     box-shadow: 3px 4px 4px grey;
-   }
-      h1 {
-            position: relative;
-    top: 332px;
-    right: 106px;
-    width: 318px;
-    font-size: 65px;
-    font-weight: bold;
-    color: #383838;
- }
 }
 
 .grow:hover {
@@ -74,7 +99,7 @@
 }
 
 .icon-card #swap-image {
-  width: 60px;
+  width: 50px;
   transition: top ease 0.5s;
   position: absolute;
   bottom: 220px;
