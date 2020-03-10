@@ -1,16 +1,32 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-  <div class="bookclub_confirmation_card">
-    <h1>Congratulations! You have joined <%= @bookclub.name %> bookclub.</h1>
-    <p>An email will be sent to you confirming contact details and meetup times!</p>
-  </div>
-  <div class="bookclub_confirmation_btn">
-    <%= link_to "Discover your new bookclub",  my_bookclub_path %>
-  </div>
-</div>
 
 
+ <div class="image-confirmation">
+   <img src="https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80" alt="">
+ </div>
+    <div class="bookclub_confirmation_card">
+      <h1>Congratulations! You have joined <%= @bookclub.name %> bookclub.</h1>
+      <p>An email will be sent to you confirming contact details and meetup times!</p>
+    </div>
+
+
+
+
+    <div class="bookclub_confirmation_btn">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2>All we have to decide is what to do with the time that is given us.</h2>
+            <p>– The Fellowship of the Ring</p>
+          </div>
+          <div class="carousel-item">
+            <h2>It sounds plausible enough tonight, but wait until tomorrow. Wait for the common sense of the morning.</h2>
+            <p>– The Time Machine</p>
+          </div>
+          <div class="carousel-item">
+            <h2>And now that you don't have to be perfect, you can be good.</h2>
+            <p>– East of Eden</p>
+          </div>
+        </div>
+      </div>
+    </div>
+             <%= link_to "Discover your new bookclub",  my_bookclub_path, class: 'link-button-confirmation'%>
