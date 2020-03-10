@@ -1,8 +1,14 @@
 .btn-filter {
   width: auto;
   height: auto;
-  background: #85B95A;
+  background: #FE7866;
   text-align: center;
-  font-family: 'Spartan';
+  border-radius: 0;
+  transition: background 0.3s ease;
+  color: white;
+}
+
+.btn-filter:hover {
+  background: #FF614C;
   color: white;
 }
