@@ -1,0 +1,36 @@
+<div class="container image-background">
+  <h1 style="margin-top: 10px;">Share the stories you love.</h1>
+</div>
+<div class="button_position">
+  <%= link_to "Find a Book",  books_path, class: "btn-salmon btn-signup" %>
+  <%= link_to "Add a Book",  new_book_path, class: "btn-salmon btn-signup ml-3" %>
+</div>
+
+  <br>
+  <br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-4 flex-item">
+      <div class="icon-card" style="text-align: left;">
+        <%= image_tag("/assets/find-icon.png",  alt: "Find icon", id: "find-image") %>
+        <h2>Find</h2>
+        <p>Find a book and request to swap.</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4 flex-item">
+      <div class="icon-card" style="text-align: left;">
+        <%= image_tag("/assets/swap-icon.png",  alt: "Swap icon", id: "swap-image") %>
+        <h2>Swap</h2>
+        <p>Meet the owner and swap books.</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4 flex-item">
+      <div class="icon-card" style="text-align: left;">
+        <%= image_tag("/assets/book-icon.png",  alt: "Read icon", id: "read-image") %>
+        <h2>Read</h2>
+        <p>Sit back and enjoy your new book!</p>
+      </div>
+    </div>
+  </div>
+</div>

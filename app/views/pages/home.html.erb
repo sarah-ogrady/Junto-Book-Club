@@ -1,29 +1,40 @@
-
-
-
-<div class="container image-background">
-  <h1 style="margin-top: 10px;">Share the stories you love.</h1>
-   <img src="https://images.unsplash.com/photo-1450107579224-2d9b2bf1adc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="#">
+<div class="homepage_banner">
+  <img src="https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="books-homepage">
+  <div class="flex-right">
+    <div class="banner-text">
+      <h1>Share the stories</h1>
+      <h1>you love.</h1>
+    </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2>All we have to decide is what to do with the time that is given us.</h2>
+          <p>– The Fellowship of the Ring</p>
+        </div>
+        <div class="carousel-item">
+          <h2>It sounds plausible enough tonight, but wait until tomorrow. Wait for the common sense of the morning.</h2>
+          <p>– The Time Machine</p>
+        </div>
+        <div class="carousel-item">
+          <h2>And now that you don't have to be perfect, you can be good.</h2>
+          <p>– East of Eden</p>
+        </div>
+      </div>
+    </div>
+    <div class="banner_btns">
+      <%= link_to "Find a Book",  books_path, class: "btn-salmon btn-signup" %>
+      <%= link_to "Add a Book",  new_book_path, class: "btn-salmon btn-signup ml-3" %>
+    </div>
+  </div>
 </div>
-<div class="buttonposition">
-  <%= link_to "Find a Book",  books_path, class: "btn-salmon btn-signup" %>
-  <%= link_to "Add a Book",  new_book_path, class: "btn-salmon btn-signup ml-3" %>
-
-</div>
-
-  <br>
-  <br>
-
 <div class="container">
-  <div class="row">
+  <div class="about_cards row">
     <div class="col-sm-12 col-md-4 col-lg-4 flex-item">
       <div class="icon-card" style="text-align: left;">
         <%= image_tag("/assets/find-icon.png",  alt: "Find icon", id: "find-image") %>
         <h2>Find</h2>
         <p>Find a book and request to swap.</p>
       </div>
-
-
     </div>
     <div class="col-sm-12 col-md-4 col-lg-4 flex-item">
       <div class="icon-card" style="text-align: left;">
@@ -41,12 +52,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
