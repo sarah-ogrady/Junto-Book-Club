@@ -3,17 +3,26 @@
   position: relative;
 }
 
+.junto-logo {
+    width: 500px;
+    position: absolute;
+    top: 136px;
+    right: 95px;
+}
+
 .card-for-map {
   box-shadow: 0 0 20px grey;
   width:400px;
   background-color: white;
   position: absolute;
   top: 100px;
-  left: 26px;
+  left: 63px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-top: 10px solid #FE7866;
+  margin-top: 40px;
 
 }
 
@@ -44,7 +53,6 @@
   text-align: center;
   color: #FE7866;
   padding-top: 5px;
-
 }
 
 .thinging-2:hover {
