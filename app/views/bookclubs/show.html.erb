@@ -4,7 +4,7 @@
     <div class="mapclass-show-my-bookclub">
       <div id="map"
          style="width: 100%;
-         height: 700px;"
+         height: 800px;"
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
        </div>
@@ -12,18 +12,23 @@
   </div>
 
 </div>
-<div class="card-for-map">
-  <h1><%= @bookclub.name %></h1>
-  <img src="https://www.wendywutours.co.uk/blog/wp-content/uploads/2017/11/8booksheader-730x410.jpg" alt="" style="width: 100%;">
-  <div class="divider mt-2"></div>
-  <div class="d-flex w-100 justify-content-between align-items-center mt-4">
-    <h2 class='m-0'><%= @bookclub.genre %></h2>
-    <p class='m-0'><%= @bookclub.location %></p>
+
+  <div class="card-for-map">
+    <h1><%= @bookclub.name %></h1>
+    <img src="https://www.wendywutours.co.uk/blog/wp-content/uploads/2017/11/8booksheader-730x410.jpg" alt="" style="width: 100%;">
+    <div class="divider mt-2"></div>
+    <div class="d-flex w-100 justify-content-between align-items-center mt-4">
+      <h2 class='m-0'><%= @bookclub.genre %></h2>
+      <p class='m-0'><%= @bookclub.location %></p>
+    </div>
+    <p class="mt-3"><%= @bookclub.description %></p>
+    <%= link_to "Confirm", bookclub_confirmation_path(@bookclub), class: 'back-to-book-clubs'%>
+    <%= link_to "Back to Book Clubs", bookclubs_path, class: 'thinging-2'%>
   </div>
-  <p class="mt-3"><%= @bookclub.description %></p>
-  <%= link_to "Confirm", bookclub_confirmation_path(@bookclub), class: 'back-to-book-clubs'%>
-  <%= link_to "Back to Book Clubs", bookclubs_path, class: 'thinging-2'%>
 </div>
+  <div>
+    <img src="../assets/logo.png" alt="#" class="junto-logo">
+  </div>
 
 
 
