@@ -1,18 +1,21 @@
+.book-show-page-div {
+display:flex;
+justify-content: space-between;
+height: 610px;
+}
+
 .fixed-bottom-card {
-  position: fixed;
   bottom: 0;
-  left: 50%;
-  margin: 0;
-  transform: translateX(-50%);
-  width: 573px;
-  background-color: #d0edba;
+  width: 500px;
+  height: 100%;
+  background-color: #F0F0F0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 120px;
-  border-radius: 6px 6px 0 0;
+  height: 100%;
   align-items: center;
-  padding-top: 16px;
+  display: flex;
+  padding: 60px 30px 30px 30px;
+  position: relative;
 
   a {
     margin-top: -22px;
@@ -21,9 +24,9 @@
   }
 }
 
-
 .whole-book-title-container {
-  margin: 95px 100px;
+  width: 100%;
+  padding-top: 30px;
 }
 
 .flex-box-show {
@@ -43,34 +46,37 @@
 .title-font {
   font-family: 'Nunito Sans', sans-serif;
   text-align: center;
+  color: #383838;
 }
 
 .author {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .change-font {
-  font-family: 'Spartan';
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .book-image {
   object-fit: contain;
   width: 100%;
-  max-height: 280px;
+  max-height: 350px;
+  margin: 30px 0;
 }
 
 .form-class {
   display: flex;
   flex-direction: column;
-  font-family: 'Spartan';
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .find-another {
   text-decoration: none;
-  color: black;
+  color: #383838;
+  margin: 20px;
   &:hover {
     text-decoration: none;
-    color: grey;
+    color: #383838;
   }
 }
 
@@ -203,9 +209,9 @@ html.w-mod-touch * {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
-  width: 560px;
-  height: 480px;
+
+  width: 100%;
+  height: 42vw;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -261,8 +267,8 @@ html.w-mod-touch * {
   flex: 1;
   border-top-left-radius: 4%;
   border-bottom-left-radius: 4%;
-  background-color: #2e1800;
-  box-shadow: inset 4px -4px 4px 1px #635648, inset 7px -7px 4px 0 #221b14;
+  background-color: #383838;
+  box-shadow: inset 4px -4px 4px 1px #383838, inset 7px -7px 4px 0 #383838;
   -webkit-perspective: 4000px;
   perspective: 4000px;
   -webkit-transform: translate3d(0px, 0px, -1px);
@@ -278,8 +284,8 @@ html.w-mod-touch * {
   flex: 1;
   border-top-right-radius: 4%;
   border-bottom-right-radius: 4%;
-  background-color: #2e1800;
-  box-shadow: inset -4px -4px 4px 1px #635648, inset -7px -7px 4px 0 #221b14;
+  background-color: #383838;
+  box-shadow: inset -4px -4px 4px 1px #383838, inset -7px -7px 4px 0 #383838;
 }
 
 .layer1 {
@@ -420,8 +426,8 @@ html.w-mod-touch * {
 
 .center {
   width: 3%;
-  background-image: -webkit-radial-gradient(circle farthest-corner at 56% -8%, #fff 8%, transparent 0), -webkit-radial-gradient(circle farthest-corner at 50% 108%, #fff 8%, transparent 0), -webkit-linear-gradient(0deg, #635648, #2e1800 21%, #635648 30%, #2e1800 48%, #635648 68%, #2e1800 79%, #635648);
-  background-image: radial-gradient(circle farthest-corner at 56% -8%, #fff 8%, transparent 0), radial-gradient(circle farthest-corner at 50% 108%, #fff 8%, transparent 0), linear-gradient(90deg, #635648, #2e1800 21%, #635648 30%, #2e1800 48%, #635648 68%, #2e1800 79%, #635648);
+  background-image: -webkit-radial-gradient(circle farthest-corner at 56% -8%, #fff 8%, transparent 0), -webkit-radial-gradient(circle farthest-corner at 50% 108%, #fff 8%, transparent 0), -webkit-linear-gradient(0deg, #383838, #383838 21%, #383838 30%, #383838 48%, #383838 68%, #383838 79%, #383838);
+  background-image: radial-gradient(circle farthest-corner at 56% -8%, #fff 8%, transparent 0), radial-gradient(circle farthest-corner at 50% 108%, #fff 8%, transparent 0), linear-gradient(90deg, #383838, #383838 21%, #383838 30%, #383838 48%, #383838 68%, #383838 79%, #383838);
 }
 
 .corner-fold {
@@ -466,31 +472,31 @@ html.w-mod-touch * {
   margin-top: 25px;
   margin-right: auto;
   margin-left: auto;
-  font-family: 'Spartan';
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .page-text p {
   padding: 0 0 0 16px;
   margin: 0;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
 .page-text h3 {
   margin-top: 0;
   padding-left: 16px;
-  font-size: 18px;
-  font-family: 'Spartan';
+  font-size: 30px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .page-text h6 {
-  font-family: 'Spartan';
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 9px;
   text-decoration: none;
 }
 
 .page-text a {
-  color: #da5a13;
+  color: #383838;
 }
 
 .layer2 {
