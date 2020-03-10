@@ -1,12 +1,12 @@
 .margin-above {
-  margin-top: 200px;
+  padding-top: 260px;
 }
 
 .card-product {
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
   display: flex;
   align-items: center;
 }
@@ -31,12 +31,17 @@
   margin-top: 8px;
 }
 
+.card-product-infos {
+    background-image: linear-gradient(to right, #FE7866, white );
+    width: 100vh;
+
+}
+
 .card-product .card-product-infos {
   padding: 16px;
 }
 
 .swap-margin-right {
-
 }
 
 .swap-margin-left h2 {
@@ -47,15 +52,16 @@
 
 .swap-margin-left {
   margin-left: 60px;
-  background-color: #D1EDBA;
+  background-image: linear-gradient(to bottom, #FE7866, white );
   width: 80%;
   height: 300px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
 }
 
 .index-link-from-show {
   text-align: center;
   padding: 8px 30px;
-  background-color: #638D31;
+  background-color: #FE7866;
   border-radius: 5px;
   color: white;
   font-size: 18px;
@@ -65,9 +71,22 @@
 
 .index-link-from-show:hover {
   transition: 1s;
-  background-color: #D1EDBA;
+  background-color: #FE7866;
   color: white;
   text-decoration: none;
+  opacity: 0.6;
+}
+
+.card-product {
+  .card-product-infos {
+    padding: 20px;
+  }
+}
+
+.background-picture-swap {
+  height: 100vh;
+   background-image: linear-gradient(rgba(255,255,255,.9)), url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=841&q=80);
+   background-size: cover;
 }
 
 

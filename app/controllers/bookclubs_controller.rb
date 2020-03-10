@@ -4,7 +4,8 @@ class BookclubsController < ApplicationController
     @bookclub = Bookclub.find(params[:id])
     @markers = [{
       lat: @bookclub.latitude,
-      lng: @bookclub.longitude
+      lng: @bookclub.longitude,
+      image_url: helpers.asset_url('marker.png')
     }]
   end
 
