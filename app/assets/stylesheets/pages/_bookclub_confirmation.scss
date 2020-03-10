@@ -1,24 +1,52 @@
+
+
+.image-confirmation {
+  position: relative;
+  img {
+    width: 590px;
+    height: 666px;
+    object-fit: cover;
+  }
+}
+
 .bookclub_confirmation_card {
-  background: #D1EDBA;
-  padding: 16px;
-  box-shadow: 2px 2px 4px lightgrey;
-  text-align: center;
+  position: absolute;
+      top: 123px;
+    left: 430px;
+  width: 300px;
+  h1 {
+    font-size: 50px;
+  }
 }
 
 .bookclub_confirmation_btn {
-  background: #D1EDBA;
-  box-shadow: 2px 2px 4px lightgrey;
-  border-radius: 5px;
-  padding: 8px 16px;
-  width: 25%;
-  margin: 16px auto;
-  text-align: center;
-  &:hover {
-    font-weight: bolder;
-    background: #B6E292;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  }
+  position: relative;
+  margin-left: 380px;
 }
+
+.link-button-confirmation {
+  position: absolute;
+  right: 300px;
+  bottom: 200px;
+  font-size: 24px;
+  padding: 15px 25px;
+  color: white;
+  background-color: #FE7866;
+}
+
+.link-button-confirmation:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     @markers = [{
         lat: @bookclub.latitude,
         lng: @bookclub.longitude,
-        image_url: helpers.asset_url('marker.png')
+        image_url: helpers.asset_url('map-icon.png')
       }]
   end
 
