@@ -1,35 +1,39 @@
-<div class="margin-above">
+<div class="background-picture-swap">
+  <div class="margin-above" style="margin-bottom: 100px;">
 
 
-<div class="container">
-    <div class="row">
+  <div class="container">
+      <div class="row">
 
-      <div class="col-lg-5 swap-margin-left">
-        <h2>“I do believe something very magical can happen when you read a good book”</h2>
-        <p style="margin-top: 30px;"><em>J.K. Rowling</em></p>
-      </div>
-      <div class="col-lg-1">
-
-      </div>
-      <div class="col-lg-5 swap-margin-right">
-        <h2 style="text-align: center; margin-top: 10px;">Congratulations</h2>
-        <p style="text-align: center;"><%="Your book request has been sent to #{@swap.giving_user.first_name.capitalize}!"%></p>
-        <div class="card-product">
-          <img src="https://image.flaticon.com/icons/png/512/130/130304.png" />
-          <div class="card-product-infos">
-            <h3><%= @book_given.title %></h3>
-            <p><%= @book_given.year %></p>
-            <p><%= @book_given.genre %></p>
-          </div>
+        <div class="col-lg-5 swap-margin-left">
+          <h2>“I do believe something very magical can happen when you read a good book”</h2>
+          <p style="margin-top: 30px;"><em>J.K. Rowling</em></p>
         </div>
-        <p style="text-align: center; margin-top: 30px;"><%="You will be notified when #{@swap.giving_user.first_name.capitalize} accepts your request!"%></p>
-        <div style=" text-align: center;">
-           <%= link_to "My Swaps", my_swaps_path, class: "index-link-from-show"%>
+        <div class="col-lg-1">
+
+        </div>
+        <div class="col-lg-5 swap-margin-right">
+          <h2 style="text-align: center; margin-top: 10px;">Congratulations</h2>
+          <p style="text-align: center;"><%="Your book request has been sent to #{@swap.giving_user.first_name.capitalize}!"%></p>
+          <div class="card-product">
+            <%= cl_image_tag @book_given.photo.key, class: 'book-image' %>
+            <div class="card-product-infos">
+              <h3><%= @book_given.title %></h3>
+              <p><%= @book_given.year %></p>
+              <p><%= @book_given.genre %></p>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 30px;"><%="You will be notified when #{@swap.giving_user.first_name.capitalize} accepts your request!"%></p>
+          <div style=" text-align: center;">
+             <%= link_to "My Swaps", my_swaps_path, class: "index-link-from-show"%>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </div>
+
 
 
 
