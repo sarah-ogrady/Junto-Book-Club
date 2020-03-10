@@ -311,8 +311,8 @@ sleep(5)
 
 index7 = 0
 
-isbn_array7 = [{genre: 'Classic', isbn: '185326041X'}, {genre: 'Classic', isbn: '9780141187761'}, {genre: 'Classic', isbn: '1853260010'}, {genre: 'Classic', isbn: '0141182709'}, {genre: 'Classic', isbn: '1840227788'}]
-5.times do
+isbn_array7 = [{genre: 'Classic', isbn: '185326041X'}, {genre: 'Classic', isbn: '9780141187761'}, {genre: 'Classic', isbn: '0141182709'}, {genre: 'Classic', isbn: '1840227788'}]
+4.times do
   p index7
   @book = Book.new(genre: "#{isbn_array7[index7][:genre]}", user_id: user7.id, isbn: "#{isbn_array7[index7][:isbn]}")
   scrape(isbn_array7[index7][:isbn])
@@ -374,8 +374,8 @@ sleep(5)
 
 index11 = 0
 
-isbn_array11 = [{genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Thriller', isbn: '9780857054036'}, {genre: 'Non-fiction', isbn: '0984699465'}, {genre: 'Non-fiction', isbn: '9780140276053'}, {genre: 'Non-fiction', isbn: '1982137274'}]
-5.times do
+isbn_array11 = [{genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Thriller', isbn: '9780857054036'}, {genre: 'Non-fiction', isbn: '0984699465'}, {genre: 'Non-fiction', isbn: '9780140276053'}]
+4.times do
   p index11
   @book = Book.new(genre: "#{isbn_array11[index11][:genre]}", user_id: user11.id, isbn: "#{isbn_array11[index11][:isbn]}")
   scrape(isbn_array11[index11][:isbn])
@@ -435,139 +435,177 @@ puts 'Books done...'
 
 puts 'Creating book clubs...'
 
-Bookclub.create(name: 'Gangster Grandmas Book Club',
-  genre: 'True Crime',
-  location: 'SL0 9AF',
-  capacity: 10,
-  description: 'For grandmas or anybody else that loves true crime.',
-  user_id: user1.id)
-
 Bookclub.create(name: 'It’s a Hardback Life',
   genre: 'Fantasy',
   location: 'TW13 6DH',
   capacity: 18,
   description: 'Take a break from your boring life with a fantasy novel or ten.',
-  user_id: user2.id)
+  user_id: user2.id,
+  image_url: 'https://live.staticflickr.com/1838/43781428232_f93e7a5320_b.jpg'
+  )
 
 Bookclub.create(name: 'Agree To Diss A Brie',
   genre: 'Classic',
   location: 'E1 7HS',
   capacity: 15,
   description: 'A classic book club for cheese lovers.',
-  user_id: user3.id)
+  user_id: user3.id,
+  image_url: 'https://media-cdn.tripadvisor.com/media/photo-s/12/93/41/f5/gulshan-the-book-shop.jpg'
+  )
+
+Bookclub.create(name: 'A Novel Idea',
+  genre: 'Drama',
+  location: 'SL3 7QP',
+  capacity: 20,
+  description: 'All books welcome. A community book club for all bookworms.',
+  user_id: user5.id,
+  image_url: 'https://therabbiisin.files.wordpress.com/2015/08/book-774837_640.jpg?w=640'
+  )
+
+Bookclub.create(name: 'Gangster Grandmas',
+  genre: 'True Crime',
+  location: 'SL0 9AF',
+  capacity: 10,
+  description: 'For grandmas or anybody else that loves true crime.',
+  user_id: user1.id,
+  image_url: 'https://static.timesofisrael.com/jewishwdev/uploads/2018/06/7483010074_8d159cecc2_k.jpg'
+  )
 
 Bookclub.create(name: 'A Gouda Book',
   genre: 'Romance',
   location: 'E9 5EN',
   capacity: 22,
   description: 'We love a pun and we love cheese. Come join the pun!',
-  user_id: user4.id)
-
-Bookclub.create(name: 'A Novel Idea',
-  genre: 'Drama',
-  location: 'SL3 7QP',
-  capacity: 20,
-  description: 'All books welcome. A community book club for all bookworms',
-  user_id: user5.id)
+  user_id: user4.id,
+  image_url: 'https://www.litro.co.uk/wp-content/uploads/2011/10/bookshop-cum-cafe.jpg'
+  )
 
 Bookclub.create(name: 'Famished for fiction',
   genre: 'Historical fiction',
   location: 'W3 6RT',
   capacity: 15,
   description: 'A fiction only book club. We like to snack as we read - please bring food to share.',
-  user_id: user6.id)
+  user_id: user6.id,
+  image_url: 'https://specials-images.forbesimg.com/imageserve/499373254/960x0.jpg?fit=scale'
+  )
 
 Bookclub.create(name: 'Better Read than Dead',
   genre: 'Classic',
   location: 'N21 3RS',
   capacity: 18,
   description: 'Classic novels are bread and butter.',
-  user_id: user7.id)
+  user_id: user7.id,
+  image_url: 'https://www.kilkennypeople.ie/resizer/-1/-1/true/1567072816821.jpg--.jpg?1567072816000'
+  )
 
 Bookclub.create(name: 'Great Expectations',
   genre: 'Thriller',
   location: 'SW14 8QE',
   capacity: 18,
   description: "If you love thrillers, join us!",
-  user_id: user8.id)
+  user_id: user8.id,
+  image_url: 'https://shoppeblack.us/wp-content/uploads/2018/04/tealees-int-01.jpg'
+  )
 
 Bookclub.create(name: 'Hooked on Books',
   genre: 'Fantasy',
   location: 'WD25 7JN',
   capacity: 21,
-  description: 'Mostly Science fiction with a sprinkling of fantasy',
-  user_id: user9.id)
+  description: 'Mostly Science fiction with a sprinkling of fantasy.',
+  user_id: user9.id,
+  image_url: 'https://bigseventravel.com/wp-content/uploads/2020/03/Books-and-Beans.jpg'
+  )
 
 Bookclub.create(name: 'Cover to Cover',
   genre: 'Drama',
   location: 'SE22 0RX',
   capacity: 35,
-  description: 'Drama is our middle name',
-  user_id: user10.id)
+  description: 'Drama is our middle name.',
+  user_id: user10.id,
+  image_url: 'https://images.unsplash.com/photo-1528402772935-4134bc18b474?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'
+  )
 
 Bookclub.create(name: "What's in a name?",
   genre: 'Political fiction',
   location: 'E1 6NU',
   capacity: 30,
-  description: 'We cannot get enough of political fiction',
-  user_id: user11.id)
+  description: 'We cannot get enough of political fiction.',
+  user_id: user11.id,
+  image_url: 'https://images.squarespace-cdn.com/content/v1/58e7ac39e3df286cf6db3b43/1498798016804-4QKGLJ816G0X6R1KU0NC/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/A82A2262.jpg'
+  )
 
-Bookclub.create(name: "Tattered Page Book Club",
+Bookclub.create(name: "Tattered Page",
   genre: 'Feminist',
   location: 'EC2A 4SH',
   capacity: 30,
-  description: 'We are all fairly new to reading regularly and support new members to read more',
-  user_id: user12.id)
+  description: 'We are all fairly new to reading regularly and support new members to read more.',
+  user_id: user12.id,
+  image_url: 'https://bookriot.com/wp-content/uploads/2017/02/BookClub-HEADER-1280x720.jpg'
+  )
 
 Bookclub.create(name: "Safari Book Club",
   genre: 'Travel',
   location: 'E1 6NU',
   capacity: 10,
-  description: 'Want inspo for your next trip? Come read travel journals with us',
-  user_id: user13.id)
+  description: 'Want inspo for your next trip? Come read travel journals with us.',
+  user_id: user13.id,
+  image_url: 'https://static01.nyt.com/images/2019/04/20/books/00POWERNICHEBOOKCLUB3/merlin_153693897_740181d2-95c3-4c1b-8c8f-286101f0c279-superJumbo.jpg'
+  )
 
 Bookclub.create(name: "Just Read",
   genre: 'Non-fiction',
   location: 'W12 7GF',
   capacity: 25,
   description: 'All things philosophical. All welcome.',
-  user_id: user14.id)
+  user_id: user14.id,
+  image_url: 'https://wpcdn.us-midwest-1.vip.tn-cloud.net/www.rimonthly.com/content/uploads/2019/01/JA9EC50CUR-1024x683.jpg'
+  )
 
 Bookclub.create(name: "The Mighty Pen",
   genre: 'Fantasy',
   location: 'NW3 2PT',
   capacity: 15,
-  description: 'Think Harry Potter meets Lord of the Rings',
-  user_id: user14.id)
+  description: 'Think Harry Potter meets Lord of the Rings.',
+  user_id: user14.id,
+  image_url: 'https://compote.slate.com/images/3c13ee18-6c75-440d-a6e5-4b2ab9ff893f.jpg'
+  )
 
 Bookclub.create(name: "Page Turner",
   genre: 'Political fiction',
   location: 'E5 0LH',
   capacity: 22,
-  description: 'A no pressure book club. We love to read and are open to members young and wise',
-  user_id: user14.id)
+  description: 'A no pressure book club. We love to read and are open to members young and wise.',
+  user_id: user14.id,
+  image_url: 'https://video-images.vice.com/articles/5d44c9622980b0000824a7e3/lede/1564789576071-GettyImages-949118068.jpeg?crop=1xw%3A0.8419xh%3B0xw%2C0.1581xh&resize=2000%3A*'
+  )
 
-Bookclub.create(name: "Fantastic Books and Where to Find Them",
+Bookclub.create(name: "Fantastic Books...",
   genre: 'Fantasy',
   location: 'SW15 2DD',
   capacity: 15,
-  description: 'Delve into the world of magical creatures and wizardry',
-  user_id: user14.id)
+  description: '...and Where to Find Them. Delve into the world of magical creatures and wizardry.',
+  user_id: user14.id,
+  image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUAPWR11WtvJ-XpFNKaf2fhgAMOJGo1SFGr4COPW1f1XeKug4q'
+  )
 
 Bookclub.create(name: "S.P.E.W.",
   genre: 'Feminist',
   location: 'W2 1LA',
   capacity: 25,
   description: 'Society for the Promotion of Empowered Women.',
-  user_id: user14.id)
+  user_id: user14.id,
+  image_url: 'https://www.rd.com/wp-content/uploads/2016/12/04_how_start_book_club_location_monkeybusinessimages.jpg'
+  )
 
 
 Bookclub.create(name: "Prose for Pros",
   genre: 'Drama',
   location: 'SE11 4NT',
   capacity: 19,
-  description: 'Everything fiction. All books, all people, all ideas welcome',
-  user_id: user14.id)
+  description: 'Everything fiction. All books, all people, all ideas welcome.',
+  user_id: user14.id,
+  image_url: 'https://fastertomaster.com/wp-content/uploads/2019/03/best-books-on-social-people-communications-skills.jpg'
+  )
 
 
 Bookclub.create(name: "Cranial Crunch",
@@ -575,7 +613,9 @@ Bookclub.create(name: "Cranial Crunch",
   location: 'N1 4BZ',
   capacity: 19,
   description: 'Strictly non-fiction.',
-  user_id: user14.id)
+  user_id: user14.id,
+  image_url: 'https://reformedforum.org/wp-content/blogs.dir/1/files/2016/06/best-books-book-youll-ever-read.jpg'
+  )
 
 
 puts 'Finished seeding.'

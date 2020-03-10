@@ -16,11 +16,16 @@
   }
   p {
     font-family: "Nunito Sans";
-    color: #878787;
-    font-size: 18px;
+    color: #383838;
     margin-bottom: 30px;
 
   }
+}
+
+.bookclub-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 18px;
 }
 
 .card-trip {
@@ -31,6 +36,7 @@
   position: relative;
   top: 0;
   transition: 0.4s;
+  color: #383838;
   &:hover {
     text-decoration: none !important;
     transition: 0.4s;
@@ -45,26 +51,38 @@
   object-fit: cover;
 }
 
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
+.card-trip > h4 {
   margin: 0;
+  color: #383838;
 }
 
-.card-trip p {
+.card-trip > p {
   font-size: 13px;
-  opacity: .7;
   margin: 0;
+  font-family: "Nunito Sans";
 }
 
 .card-trip .card-trip-infos {
   padding: 16px;
-  padding-top: 12px;
-  padding-bottom: 6px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   position: absolute;
+}
+
+.bookclub-name-postcode {
+  width: 330px;
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+}
+
+.lil-book-genre {
+  display: flex;
+  direction: row;
+}
+
+.lil-book-genre > p {
+  margin-bottom: 0;
+  padding-left: 6px;
 }
 
 .btn-bookclubs {
