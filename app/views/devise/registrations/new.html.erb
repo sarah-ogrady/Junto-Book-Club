@@ -1,48 +1,44 @@
 
 
+<div class="background-picture-sign-up">
+  <br>
+    <br>
+      <br>
+        <br>
+          <br>
 
-
-<div class="sign-up-page">
-  <div class="row" style="margin-right: 60px; margin-left: 170px;">
-    <div class="col-lg-5 h1-tag" style="margin-left: 20px;">
-      <h1>Sign up now, </h1>
-      <h1>Book today...</h1>
-    </div>
-    <div class="col-lg-1">
-
-    </div>
-    <div class="col-lg-5 form-position" >
-      <p>
-        <em>
-         Enter your email address and create a password below to join Junto...
-        </em>
-      </p>
+<div class="margin-signup-center">
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
 
-        <div class="form-inputs">
+        <div class="signup-form-inputs">
+          <h1 style="text-align: center; font-weight: bolder;">Sign up</h1>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
+                      label: false,
+                      placeholder: 'Email...',
                       input_html: { autocomplete: "email" }, required: true%>
           <%= f.input :password,
                       required: true,
+                      label: false,
+                      placeholder: 'Password',
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" }, required: true %>
           <%= f.input :password_confirmation,
                       required: true,
+                      label: false,
+                      placeholder: 'Password Confirmation',
                       input_html: { autocomplete: "new-password" }, required: true %>
           <%= f.input :location,
-                       required: true, placeholder: "First half of postcode" %>
+                       required: true, placeholder: "First half of postcode",
+                       label: false %>
           <%= f.input :photo, as: :file, label: 'Upload a profile photo', required: true %>
+          <%= f.button :submit, "Sign up", class: "submit-signup"%>
+           <% end %>
         </div>
-
-        <div class="form-actions">
-          <%= f.button :submit, "Sign up", class: "btn-salmon btn-block"%>
-        </div>
-      <% end %>
+      </div>
 
 
-    </div>
-  </div>
+
 </div>

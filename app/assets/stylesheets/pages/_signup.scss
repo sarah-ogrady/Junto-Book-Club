@@ -1,35 +1,55 @@
-
-.sign-up-page {
-  margin-top: 150px;
+.background-picture-sign-up {
+  height: 100vh;
+   background-image: linear-gradient(rgba(255,255,255,.8)), url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=841&q=80);
+   background-size: cover;
 }
 
-.h1-tag {
-  background-color: #D1EDBA;
-  height: 500px;
-  width: 700px;
-  padding-right: 40px;
-  box-shadow: 2px 3px 4px #D1EDBA;
-  margin-bottom: 10px;
+.margin-signup-center {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-items: center;
 }
 
-.h1-tag h1 {
-  z-index: 1000;
-  position: relative;
-  right: 84px;
-  top: 65px;
-  font-size: 70px;
-  font-family: "Nunito Sans", sans-serif;
+.signup-form-inputs {
+  border-top: 10px solid #FE7866;
+  width: 500px;
+  box-shadow: 0 0 10px grey;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  background-color: white;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
   padding-right: 20px;
 }
 
-.form-position {
-  padding-left: 30px;
-  margin-top: 10px;
+.submit-signup {
+  width: 100%;
+  background-color: #FE7866;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
   border-radius: 10px;
-  padding-top: 30px;
-  padding-right: 30px;
-  box-shadow: 2px 3px 8px lightgrey;
-  p {
-    font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.submit-signup:hover {
+  color: white;
+  opacity: 0.7;
+  transition: 0.6s;
+}
+
+.signup-form-inputs {
+  .form-group {
+    padding-bottom: 15px;
   }
+}
+
+.signup-form-inputs h1 {
+  padding-bottom: 15px;
+  font-weight: bolder;
+  font-size: 44px;
+  color: #3a3535;
 }
