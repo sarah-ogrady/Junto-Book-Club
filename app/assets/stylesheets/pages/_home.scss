@@ -40,12 +40,21 @@
   right: 24px;
 }
 
+#quote-image {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 225px;
+  left: 350px;
+  z-index: 1000;
+}
+
 .carousel {
   position: absolute;
   bottom: 150px;
   right: 24px;
-  // border-top: 1px solid #383838;
-  border-bottom: 1px solid #383838;
+  border-top: 1px solid #383838;
+  // border-bottom: 1px solid #383838;
   max-width: 52%;
 }
 
@@ -114,4 +123,12 @@
 
 .flex-item {
   justify-content: space-between;
+}
+
+.carousel-text {
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 16px;
 }

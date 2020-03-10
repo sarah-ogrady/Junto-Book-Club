@@ -5,25 +5,32 @@
       <h1>Share the stories</h1>
       <h1>you love.</h1>
     </div>
+    <%= image_tag("/assets/quote-icon.png",  alt: "Quote icon", id: "quote-image") %>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <h2>All we have to decide is what to do with the time that is given us.</h2>
-          <p>– The Fellowship of the Ring</p>
+          <div class="carousel-text">
+            <h2>All we have to decide is what to do with the time that is given us.</h2>
+            <p>– The Fellowship of the Ring</p>
+          </div>
         </div>
         <div class="carousel-item">
-          <h2>It sounds plausible enough tonight, but wait until tomorrow. Wait for the common sense of the morning.</h2>
-          <p>– The Time Machine</p>
+          <div class="carousel-text">
+            <h2>It sounds plausible enough tonight, but wait until tomorrow. Wait for the common sense of the morning.</h2>
+            <p>– The Time Machine</p>
+          </div>
         </div>
         <div class="carousel-item">
-          <h2>And now that you don't have to be perfect, you can be good.</h2>
-          <p>– East of Eden</p>
+          <div class="carousel-text">
+            <h2>And now that you don't have to be perfect, you can be good.</h2>
+            <p>– East of Eden</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="banner_btns">
-      <%= link_to "Find a Book",  books_path, class: "btn-salmon btn-signup" %>
-      <%= link_to "Add a Book",  new_book_path, class: "btn-salmon btn-signup ml-3" %>
+      <%= link_to "Find a Book",  books_path, class: "btn-salmon-outline btn-signup" %>
+      <%= link_to "Add a Book",  new_book_path, class: "btn-salmon-outline btn-signup ml-3" %>
     </div>
   </div>
 </div>
