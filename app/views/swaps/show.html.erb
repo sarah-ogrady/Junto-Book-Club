@@ -1,38 +1,38 @@
-<div class="background-picture-swap">
-  <div class="margin-above" style="margin-bottom: 100px;">
 
 
-  <div class="container">
-      <div class="row">
+<div class="image-show-confirmation">
+  <img src="https://images.unsplash.com/photo-1529158062015-cad636e205a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=691&q=80" alt="#">
+</div>
 
-        <div class="col-lg-5 swap-margin-left">
-          <h2>“I do believe something very magical can happen when you read a good book”</h2>
-          <p style="margin-top: 30px;"><em>J.K. Rowling</em></p>
-        </div>
-        <div class="col-lg-1">
 
-        </div>
-        <div class="col-lg-5 swap-margin-right">
-          <h2 style="text-align: center; margin-top: 10px;">Congratulations</h2>
-          <p style="text-align: center;"><%="Your book request has been sent to #{@swap.giving_user.first_name.capitalize}!"%></p>
-          <div class="card-product">
-            <%= cl_image_tag @book_given.photo.key, class: 'book-image' %>
-            <div class="card-product-infos">
-              <h3><%= @book_given.title %></h3>
-              <p><%= @book_given.year %></p>
-              <p><%= @book_given.genre %></p>
-            </div>
-          </div>
-          <p style="text-align: center; margin-top: 30px;"><%="You will be notified when #{@swap.giving_user.first_name.capitalize} accepts your request!"%></p>
-          <div style=" text-align: center;">
-             <%= link_to "My Swaps", my_swaps_path, class: "index-link-from-show"%>
-          </div>
+    <div class="info-show-confirmation">
+      <h2>“I do believe something very magical can happen when you read a good book”</h2>
+      <p><em>J.K. Rowling</em></p>
+    </div>
+
+
+
+  <div class="info-show-content">
+    <h2 style="text-align: center;">Congratulations</h2>
+    <br>
+      <p style="text-align: center;"><%="Your book request has been sent to #{@swap.giving_user.first_name.capitalize}!"%></p>
+
+      <div class="card-product-show">
+        <%= cl_image_tag @book_given.photo.key, class: 'book-image' %>
+        <div class="card-product-infos-show">
+          <h3><%= @book_given.title %></h3>
+          <p><%= @book_given.year %></p>
+          <p><%= @book_given.genre %></p>
         </div>
       </div>
+        <br>
+        <p style="text-align: center;"><%="You will be notified when #{@swap.giving_user.first_name.capitalize} accepts your request!"%></p>
+        <%= link_to "My Swaps", my_swaps_path, class: 'submit-button-confirmation' %>
     </div>
-  </div>
 
-</div>
+
+
+
 
 
 
