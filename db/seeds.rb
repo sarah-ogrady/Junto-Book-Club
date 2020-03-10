@@ -527,14 +527,14 @@ Bookclub.create(name: "The Mighty Pen",
   user_id: User.first.id)
 
 Bookclub.create(name: "Page Turner",
-  genre: 'any',
+  genre: 'Any',
   location: 'E1 6NU',
   capacity: 22,
   description: 'A no pressure book club. We love to read and are open to members young and wise',
   user_id: User.first.id)
 
 Bookclub.create(name: "Fantastic Books and Where to Find Them",
-  genre: 'any',
+  genre: 'Any',
   location: 'E1 6NU',
   capacity: 15,
   description: 'Delve into the world of magical creatures and wizardry',
@@ -549,7 +549,7 @@ Bookclub.create(name: "S.P.E.W.",
 
 
 Bookclub.create(name: "Prose for Pros",
-  genre: 'any',
+  genre: 'Any',
   location: 'E1 6NU',
   capacity: 19,
   description: 'Everything fiction. All books, all people, all ideas welcome',
