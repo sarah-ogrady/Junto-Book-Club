@@ -1,20 +1,17 @@
 #messages {
-  padding: 5px;
-  margin: 16px;
-  margin-top: 100px;
+  margin-top: 16px;
 }
 
 .message-container {
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px lightgrey;
-    background: lighten(#D1EDBA, 10%);
-    color: black;
-    width: 60%;
-    margin: 8px 0px;
-  }
+  padding: 5px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  color: black;
+  width: 60%;
+  margin: 8px 0px;
+}
 
-.back-button-swaps {
-  border: 1px
+.btn-back {
+  &:hover {
+    text-decoration: none;
+  }
 }

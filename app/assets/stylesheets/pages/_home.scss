@@ -21,7 +21,6 @@
 .flex-right {
   padding: 16px;
   margin: 16px;
-  // border-bottom: 1px solid #383838;
   flex: 1;
   min-height: calc(100vh - 56px);
   position: relative;
@@ -43,8 +42,8 @@
   width: 50px;
   height: auto;
   position: absolute;
-  top: 225px;
-  left: 350px;
+  top: 200px;
+  left: 300px;
   z-index: 1000;
 }
 
@@ -53,7 +52,6 @@
   bottom: 150px;
   right: 24px;
   border-top: 1px solid #383838;
-  // border-bottom: 1px solid #383838;
   max-width: 52%;
 }
 
