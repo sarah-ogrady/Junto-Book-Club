@@ -4,13 +4,12 @@
 }
 
 .whole-card-show {
+  padding: 60px 30px 30px 30px;
   background-color: #EBEBEB;
   padding-top: 20px;
   text-align: center;
   position: relative;
-  padding-right: 20px;
-  padding-left: 20px;
-  width: 550px;
+  width: 500px;
 
 
     display: flex;
@@ -25,14 +24,15 @@
 }
 
 .bookclub-owner-image {
-  width: 85px;
-  height: 85px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 8px solid white;
-  position: absolute;
-  top: 30px;
-  right: -39px;
+     width: 110px;
+    height: 110px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    position: absolute;
+    top: 30px;
+    right: -58px;
 }
 
 .margin-map {
@@ -46,20 +46,47 @@
 
 .capacity-show {
   border-bottom: 1px solid black;
-  margin-bottom: 5px;
+  margin-bottom: 22px;
+  margin-top: 10px;
   font-size: 16px;
 }
 
 
 .other {
+  position: sticky;
+  height: 100vh;
+  top: 56px;
   display: flex;
   flex-direction: column;
   flex: 1;
+  // h1 {
+  //   position: absolute;
+  // }
+}
+
+.badge-show {
+  text-align: center;
+    color: white;
+    position: absolute;
+    left: 681px;
+    top: 109px;
+    z-index: 1000;
+    width: 200px;
+    height: 200px;
+    background: #FE7866;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+
 }
 
 .flex-info {
-  padding-left: 44px;
+
   display: flex;
   flex-direction: column;
   align-items: self-end;
+  width: 400px;
 }

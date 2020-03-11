@@ -1,38 +1,34 @@
 
 <div class="whole-flex">
-    <div class="whole-card-show">
-      <h1><%= @bookclub.name %> - <%= @bookclub.location %></h1>
-      <div class="margin-map">
-        <div class="mapbox-style-show-my-bookclub">
-          <div class="mapclass-show-my-bookclub">
-            <div id="map"
-               style="width: 400px;
-               height: 250px;"
-               data-markers="<%= @markers.to_json %>"
-               data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-             </div>
+  <div class="whole-card-show">
+    <h1><%= @bookclub.name %> - <%= @bookclub.location %></h1>
+    <div class="margin-map">
+      <div class="mapbox-style-show-my-bookclub">
+        <div class="mapclass-show-my-bookclub">
+          <div id="map"
+             style="width: 400px;
+             height: 250px;"
+             data-markers="<%= @markers.to_json %>"
+             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
            </div>
-        </div>
+         </div>
       </div>
-      <img src=" <%= @bookclub.image_url %>", alt="Book Club photos", class="bookclub-owner-image" />
-
-      <div class="flex-info">
-        <p class="capacity-show">Capacity: <%= "#{@bookclub.capacity}" %></p>
-        <% User.all.limit(5).each do |user| %>
-        <div class="d-flex">
-          <%= cl_image_tag user.photo.key, alt: "alttext", class: "avatar" %>
-          <p style="border-bottom: 1px solid black; margin-bottom: 5px;"><%= user.description %></p>
-        </div>
-        <% end %>
-           <h2><%= @bookclub.genre %></h2>
-            <p><%= @bookclub.description %></p>
-              <%= link_to "Confirm", bookclub_confirmation_path(@bookclub) %>
-                <%= link_to "Back to Book Clubs", bookclubs_path %>
-              </div>
-            </div>
-
-
+    </div>
+    <img src=" <%= @bookclub.image_url %>", alt="Book Club photos", class="bookclub-owner-image" />
+    <%= link_to "Confirm", bookclub_confirmation_path(@bookclub), class: 'small-width-button', style: 'width: 400px' %>
+    <div class="flex-info">
+      <p class="capacity-show">Capacity: <%= "#{@bookclub.capacity}" %></p>
+      <% User.all.limit(5).each do |user| %>
+      <div class="d-flex align-items-start justify-content-start">
+        <%= cl_image_tag user.photo.key, alt: "alttext", class: "avatar" %>
+        <p class="text-left" style="border-bottom: 1px solid black; margin-bottom: 15px; padding-bottom: 15px; margin-left: 15px; width: 355px;"><%= user.description %></p>
+      </div>
+      <% end %>
+      <%= link_to "Back to Book Clubs", bookclubs_path %>
+    </div>
+  </div>
   <div class="other">
+    <div class="badge-show" style="text-align: center;">Book of the week...</div>
        <%= render "books/book-3d" %>
   </div>
 </div>
