@@ -1,3 +1,5 @@
+# USE THIS ISBN FOR DEMO: 9780857054036 - thriller
+
 # genre: 'Thriller', isbn: '0008234183'
 require "open-uri"
 puts 'Deleting'
@@ -358,8 +360,8 @@ sleep(10)
 
 index5 = 0
 
-isbn_array5 = [{genre: 'Action', isbn: '0995693307'}, {genre: 'Thriller', isbn: '9781444720723'}, {genre: 'Thriller', isbn: '0008358923'}, {genre: 'Historical fiction', isbn: '1784707244'}, {genre: 'Drama', isbn: '154204118X'}]
-5.times do
+isbn_array5 = [{genre: 'Thriller', isbn: '0008234183'}, {genre: 'Thriller', isbn: '0008358923'}, {genre: 'Historical fiction', isbn: '1784707244'}, {genre: 'Drama', isbn: '154204118X'}]
+4.times do
   p index5
   @book = Book.new(genre: "#{isbn_array5[index5][:genre]}", user_id: user5.id, isbn: "#{isbn_array5[index5][:isbn]}")
   scrape(isbn_array5[index5][:isbn])
@@ -451,7 +453,7 @@ sleep(5)
 
 index11 = 0
 
-isbn_array11 = [{genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Thriller', isbn: '9780857054036'}, {genre: 'Non-fiction', isbn: '0984699465'}, {genre: 'Non-fiction', isbn: '9780140276053'}]
+isbn_array11 = [{genre: 'Thriller', isbn: '9781444720723'}, {genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Non-fiction', isbn: '0984699465'}, {genre: 'Non-fiction', isbn: '9780140276053'}]
 4.times do
   p index11
   @book = Book.new(genre: "#{isbn_array11[index11][:genre]}", user_id: user11.id, isbn: "#{isbn_array11[index11][:isbn]}")
@@ -467,7 +469,7 @@ sleep(10)
 
 index12 = 0
 
-isbn_array12 = [{genre: 'Science fiction', isbn: '9780008117498'}, {genre: 'Historical fiction', isbn: '1447250931'}, {genre: 'Thriller', isbn: '1529002435'}, {genre: 'Fantasy', isbn: '0330519549'}, {genre: 'Historical fiction', isbn: '0099558785'}]
+isbn_array12 = [ {genre: 'Thriller', isbn: '0995693307'}, {genre: 'Historical fiction', isbn: '1447250931'}, {genre: 'Thriller', isbn: '1529002435'}, {genre: 'Fantasy', isbn: '0330519549'}, {genre: 'Historical fiction', isbn: '0099558785'}]
 5.times do
   p index12
   @book = Book.new(genre: "#{isbn_array12[index12][:genre]}", user_id: user12.id, isbn: "#{isbn_array12[index12][:isbn]}")
@@ -482,8 +484,8 @@ sleep(10)
 
 index13 = 0
 
-isbn_array13 = [{genre: 'Science fiction', isbn: '9780008117498'}, {genre: 'Fantasy', isbn: '071815780X'}, {genre: 'Drama', isbn: '9781447294832'}, {genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Historical fiction', isbn: '1408871777'}]
-5.times do
+isbn_array13 = [{genre: 'Science fiction', isbn: '9780008117498'}, {genre: 'Fantasy', isbn: '071815780X'}, {genre: 'Non-fiction', isbn: '0141189576'}, {genre: 'Historical fiction', isbn: '1408871777'}]
+4.times do
   p index13
   @book = Book.new(genre: "#{isbn_array13[index13][:genre]}", user_id: user13.id, isbn: "#{isbn_array13[index13][:isbn]}")
   scrape(isbn_array13[index13][:isbn])
@@ -531,7 +533,7 @@ Bookclub.create(name: 'Agree To Diss A Brie',
   )
 
 Bookclub.create(name: 'A Novel Idea',
-  genre: 'Drama',
+  genre: 'Thriller',
   location: 'SL3 7QP',
   capacity: 20,
   description: 'All books welcome. A community book club for all bookworms.',
