@@ -14,7 +14,7 @@ user1 = User.create(
   location: "E9 5EN",
   email: "nohara@gmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: 'I read all kinds of books both fiction and non-fiction. I am a fast reader so tend to have a few on the go so I never get bored!',
   )
   file = URI.open('https://res.cloudinary.com/arxmush/image/upload/v1553214529/Gallery/brianna_one_bb9rj8.jpg')
   user1.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -25,7 +25,7 @@ user2 = User.create(
   location: "E1 6QR",
   email: "tanya_s@gmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: 'Science fiction and dramatic novels are my bread and butter. There is nothing better than lighting some candles and reading in the bath',
   )
   file = URI.open('https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')
   user2.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -36,7 +36,7 @@ user3 = User.create(
   location: "TW1 1AG",
   email: "emily_wong@gmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: 'I am a very calm and peaceful person which is why I love to read historical fiction in my free time. I am a yoga teacher and always read with a nice cup of tea.',
   )
   file = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQH-3X4Qx0gq_w/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=FOE9E-1DHa-cCwMA5RsMFXQWBiKR_7gLYj8br9Kwa4o')
   user3.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -47,7 +47,7 @@ user4 = User.create(
   location: "E10 7QZ",
   email: "mo_1992@gmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: 'My job is very hectic so reading is my escape into another world. I read mainly romance novels and non-fiction.',
   )
   file = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg')
   user4.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -69,7 +69,7 @@ user6 = User.create(
   location: "SE7 7HY",
   email: "scotty_b@gmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: 'Ever since my wife lent me one of her romance novels I am hooked. What can I say, I am a sucker for romance',
   )
   file = URI.open('https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9c88e092-9691-11e8-85e3-d844d3177259.jpg?crop=3000%2C1687%2C0%2C31&resize=1180')
   user6.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -80,7 +80,7 @@ user7 = User.create(
   location: "E14 2BE",
   email: "meggie_love@hotmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: "Any Dickens or Bronte send them my way! There is nothing better than a classic novel. I can't wait to read more",
   )
   file = URI.open('https://images1.the-dots.com/763358/screen-shot-2017-03-17-at-15-51-22.png?p=socialSquare')
   user7.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -91,7 +91,7 @@ user8 = User.create(
   location: "N13 5UD",
   email: "vincent@hotmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: "I have three kids so when I have time alone I like to hideaway with a good true crime novel and try to work out 'who dunnit'.",
   )
   file = URI.open('https://c.stocksy.com/a/XJC000/z9/47339.jpg')
   user8.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -102,7 +102,7 @@ user9 = User.create(
   location: "N1 6SH",
   email: "tsyed@hotmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: "I discovered recently that I am most engaged in a book when it's based on something that really happened. Historical fiction is far more interesting to me than any drama.",
   )
   file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFIXM7lYTeqtw/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=BsWw9n7w5Poz8Y5Or6MeyxcblATuye93WZwq0RauuNo')
   user9.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -113,7 +113,7 @@ user10 = User.create(
   location: "W3 7RU",
   email: "joethomas@hotmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: 'I have read the first Harry Potter with my granddaughter at least three times. I am also interested in non-fiction.  ',
   )
   file = URI.open('https://pbs.twimg.com/profile_images/426035427326189568/BXYWW0uz_400x400.jpeg')
   user10.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -124,7 +124,7 @@ user11 = User.create(
   location: "E5 0LH",
   email: "lmonroe@hotmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: "I don't really enjoy novels so I stick to what I love which is non-fiction. I have lots of recommendations.",
   )
   file = URI.open('https://media.istockphoto.com/videos/young-man-smiling-video-id1008268548?s=640x640')
   user11.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -135,7 +135,7 @@ user12 = User.create(
   location: "E15 2LB",
   email: "mian@hotmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: 'I tend to read books about women who have inspiring stories. I read in coffee shops and go to a bookclub everyweek.',
   )
   file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFLLevw_988cQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=MIXW_g67Lx3qaKfUijR58mcx_yNDCH-jYCAzSQ7VO0c')
   user12.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -146,7 +146,7 @@ user13 = User.create(
   location: "SW20 9NS",
   email: "halima12@hotmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: 'EDIT',
   )
   file = URI.open('https://www.cgu.edu/wp-content/uploads/2016/06/Ruqayya_Khan.jpg')
   user13.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -157,7 +157,7 @@ user14 = User.create(
   location: "W10 6RP",
   email: "axellopez@hotmail.com",
   password: '123123',
-  description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
+  description: 'EDIT',
   )
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user14.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
