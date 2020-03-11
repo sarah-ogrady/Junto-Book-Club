@@ -66,10 +66,6 @@
   box-shadow: 0 3px 12px rgba(0,0,0,0.3);
 }
 
-// .btn-search:active, btn-search:focus {
-//   border: none;
-// }
-
 .btn-search:focus, .btn-search:active {
   outline: none !important;
   box-shadow: none !important;
@@ -87,7 +83,6 @@
   color: #FF614C;
   transition: 0.3s;
 }
-
 
 #avatar-book-index {
   position: absolute;
