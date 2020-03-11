@@ -1,4 +1,58 @@
-.new-book-container {
-  margin: 100px auto;
-  padding: 20px;
+.new-book-banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  h1 {
+    color: #383838;
+    font-size: 64px;
+    font-weight: bolder;
+  }
+  img {
+    object-fit: cover;
+    height: 100vh;
+    width: 40%;
+  }
+}
+
+.flex-right {
+  padding: 16px;
+  margin: 16px;
+  flex: 1;
+  min-height: calc(100vh - 56px);
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  top: 150px;
+  left: -175px;
+}
+
+.new-book-form {
+  position: absolute;
+  bottom: 280px;
+  right: 8vw;
+  color: #383838;
+  p {
+    font-size: 18px;
+    color: #878787;
+    text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+  }
+}
+
+.new-book-input {
+  width: 300px;
+  border: none;
+  border-radius: 0 !important;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  height: 50px;
+  padding-left: 12px;
+  margin-right: 12px;
+
+}
+
+.btn-new-book {
+  height: 50px;
 }
