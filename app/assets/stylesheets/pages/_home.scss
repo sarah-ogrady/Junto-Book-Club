@@ -38,15 +38,6 @@
   right: 40px;
 }
 
-#quote-image {
-  width: 50px;
-  height: auto;
-  position: absolute;
-  top: 200px;
-  left: 300px;
-  z-index: 1000;
-}
-
 .carousel {
   position: absolute;
   bottom: 150px;
@@ -105,7 +96,7 @@
 }
 
 .icon-card #swap-image {
-  width: 50px;
+  width: 58px;
   transition: top ease 0.5s;
   position: absolute;
   bottom: 220px;
@@ -128,4 +119,13 @@
   flex-direction: column;
   justify-content: flex-start;
   padding-top: 16px;
+}
+
+#quote-image {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  z-index: 1000;
 }
