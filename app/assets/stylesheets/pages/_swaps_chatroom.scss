@@ -2,12 +2,34 @@
   margin-top: 16px;
 }
 
+.all-messages-container {
+  margin: 0 450px;
+}
+
+.message-box {
+  width: 100%;
+  display: flex;
+  direction: row;
+}
+
 .message-container {
-  padding: 5px;
+  padding: 5px 25px;
+  border-radius: 50px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
-  color: black;
-  width: 60%;
+  color: white;
+  width: 100%;
   margin: 8px 0px;
+  background: #FE7866;
+}
+
+.btn-send {
+  border: none;
+  height: 2.4em;
+  margin: 0 !important;
+}
+
+.type-space-message {
+  flex: grow;
 }
 
 .btn-back {
