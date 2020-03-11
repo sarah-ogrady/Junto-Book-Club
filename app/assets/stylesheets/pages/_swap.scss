@@ -19,7 +19,7 @@
 
 .info-show-content {
   position: absolute;
-  top: 250px;
+  top: 206px;
   right: 150px;
   background-color: white;
   box-shadow: 0 0 20px grey;
@@ -33,7 +33,7 @@
 
 .card-product-show {
   overflow: hidden;
-  height: 120px;
+  height: 183px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -48,13 +48,13 @@
 }
 
 .card-product-show h3 {
-  font-size: 16px;
+  font-size: 30px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product-show p {
-  font-size: 12px;
+  font-size: 20px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
