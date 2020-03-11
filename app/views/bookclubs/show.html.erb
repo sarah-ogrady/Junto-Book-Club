@@ -17,9 +17,9 @@
     </div>
     <img src=" <%= @bookclub.image_url %>", alt="Book Club photos", class="bookclub-owner-image" />
     <% if @bookclub != current_user.bookclub  %>
-      <%= link_to "Confirm", bookclub_confirmation_path(@bookclub), class: 'wide-width-button', style: 'width: 400px;' %>
+      <%= link_to "Join Book Club", bookclub_confirmation_path(@bookclub), class: 'wide-width-button', style: 'width: 400px;' %>
     <% else %>
-      <%= link_to 'Find a new bookclub', bookclubs_path, class: 'wide-width-button', style: 'width: 400px;'  %>
+      <%= link_to 'Change my book club', bookclubs_path, class: 'wide-width-button', style: 'width: 400px;'  %>
     <% end %>
     <div class="flex-info">
       <p class="capacity-show">Capacity: <%= "#{@bookclub.capacity}" %></p>
