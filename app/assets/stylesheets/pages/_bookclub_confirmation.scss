@@ -1,55 +1,29 @@
-
-
 .image-confirmation {
-  position: relative;
   img {
-    width: 590px;
-    height: 666px;
-    object-fit: cover;
+  object-fit: cover;
+  min-height: 100vh;
+  width: 40%;
   }
 }
 
 .bookclub_confirmation_card {
   position: absolute;
-      top: 123px;
-    left: 430px;
-  width: 300px;
+  top: 125px;
+  left: 380px;
   h1 {
+    color: #383838;
     font-size: 50px;
   }
-}
-
-.bookclub_confirmation_btn {
-  position: relative;
-  margin-left: 380px;
+  p {
+    color: #383838;
+    font-size: 24px;
+  }
 }
 
 .link-button-confirmation {
   position: absolute;
-  right: 300px;
-  bottom: 164px;
+  bottom: 50px;
+  right: 24px;
   font-size: 24px;
   padding: 15px 25px;
 }
-
-.link-button-confirmation:hover {
-  text-decoration: none;
-}
-
-.junto-logo {
-    width: 500px;
-    position: absolute;
-    top: 136px;
-    right: 95px;
-}
-
-
-
-
-
-
-
-
-
-
-
