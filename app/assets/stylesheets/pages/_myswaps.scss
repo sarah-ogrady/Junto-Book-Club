@@ -1,10 +1,9 @@
 .swaps-box {
   padding: 10px;
-  height: 100vh;
-  margin-top: 300px;
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 60px;
+  margin-bottom: 30px;
   border-radius: 6px;
   color: #383838;
   h2 {
@@ -39,9 +38,9 @@
   position: relative;
 }
 
-.book-cover {
-  max-height: 170px;
-  margin-bottom: 25px;
+.book-cover-swaps {
+  max-height: 170px !important;
+  margin-bottom: 25px !important;
 }
 
 .bookswap-card-info {

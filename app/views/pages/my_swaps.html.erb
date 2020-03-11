@@ -29,7 +29,7 @@
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
                       <div class="book-images-1">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover book-cover-swaps giving-book' %>
                         <div class="avatar-images-1">
                           <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
                         </div>
@@ -53,7 +53,7 @@
                   <div class="bookswap-card">
                     <div class="d-flex">
                       <div class="book-images-1">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover book-cover-swaps giving-book' %>
                         <div class="avatar-images-1">
                           <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
                         </div>
@@ -77,8 +77,8 @@
                     <div class="d-flex">
 
                       <div class="book-images-2">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
-                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover receiving-book' %>
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover book-cover-swaps giving-book' %>
+                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover book-cover-swaps receiving-book' %>
                         <div class="avatar-images-2">
                           <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
                           <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
@@ -89,7 +89,7 @@
                         <p><%= "Book #{swap.receiving_user.first_name.capitalize} would like: #{swap.book_given.title}, #{swap.book_given.year}" %></p>
                         <p><%= "Book you would like: #{swap.book_received.title}, #{swap.book_received.year}" %></p>
                         <p><%= "#{swap.receiving_user.first_name.capitalize}'s Location: #{swap.receiving_user.location}" %></p>
-                        <p><%= "Chat with #{swap.receiving_user.first_name.capitalize} to arrange a time and place to swap" %></p>
+                        <p><%= "Chat with #{swap.receiving_user.first_name.capitalize} to arrange the swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
                         <div class="swap-buttons">
                           <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
@@ -105,8 +105,8 @@
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
                       <div class="book-images-2">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
-                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover receiving-book' %>
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover book-cover-swaps giving-book' %>
+                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover book-cover-swaps receiving-book' %>
                         <div class="avatar-images-2">
                           <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
                           <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
@@ -144,8 +144,8 @@
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
                       <div class="book-images-2">
-                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover receiving-book' %>
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover book-cover-swaps receiving-book' %>
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover book-cover-swaps giving-book' %>
                         <div class="avatar-images-2">
                           <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
                           <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
@@ -165,7 +165,7 @@
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
                       <div class="book-images-1">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover book-cover-swaps giving-book' %>
                         <div class="avatar-images-1">
                           <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
                         </div>
@@ -183,7 +183,7 @@
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
                       <div class="book-images-1">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover book-cover-swaps giving-book' %>
                         <div class="avatar-images-1">
                           <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
                         </div>
