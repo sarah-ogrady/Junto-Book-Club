@@ -1,12 +1,17 @@
-<div class="container">
-  <h2><%= "#{@user.first_name}'s Books" %></h2>
+<div class="container choose-book-container">
 
-  <p>Choose a book to complete the switch!</p>
+  <div id="choose-book-header">
+    <h2><%= "#{@user.first_name}'s Books" %></h2>
 
+    <p>Choose a book to complete the switch!</p>
+
+    <%= link_to "Back to My Swaps",  new_book_path, class: "btn-salmon" %>
+
+  </div>
 
   <div class="cards">
     <% @books.where(:hidden => false).each do |book| %>
-      <div class="card">
+      <div class="card-book">
         <% if book.photo.attached? %>
           <%= cl_image_tag book.photo.key, class: 'book-cover' %>
         <% else %>
@@ -15,9 +20,12 @@
           <div class="card-items">
             <h2><%= "#{book.title}" %></h2>
             <p id="author"><%= author_cleaning(book.author_name) %></p>
+            <p id="year"><%= book.year %></p>
           </div>
-          <%= cl_image_tag book.user.photo.key, class: 'card-avatar' %>
-          <%= link_to "Choose", book_chosen_swap_path(@swap, book_id: book.id), method: :patch, class: "btn-salmon" %>
+          <div id="avatar-choose-book">
+            <%= cl_image_tag book.user.photo.key, class: 'card-avatar' %>
+          </div>
+          <%= link_to "Choose", book_chosen_swap_path(@swap, book_id: book.id), method: :patch, class: "btn-salmon-outline bottom-right" %>
       </div>
     <% end %>
   </div>

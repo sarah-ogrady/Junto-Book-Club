@@ -59,7 +59,9 @@
             <p id="year"><%= book.year %></p>
             <!--- need to add a link_to above that links author's name to the author show page --->
           </div>
-          <%= cl_image_tag "#{book.user.photo.key}", class: "card-avatar card-avatar-index"%>
+          <div id='avatar-book-index'>
+            <%= cl_image_tag book.user.photo.key, class: 'card-avatar' %>
+          </div>
           <!-- <img src="https://wallpaperaccess.com/full/1278457.jpg" alt="profile picture" class="card-avatar"> -->
           <%= link_to "Choose", book_path(book), class: "btn btn-salmon-outline bottom-right" %>
         </div>
@@ -79,7 +81,9 @@
             <p id="year"><%= book.year %></p>
             <!--- need to add a link_to above that links author's name to the author show page --->
           </div>
-          <%= cl_image_tag "#{book.user.photo.key}", class: "card-avatar card-avatar-index"%>
+          <div id="avatar-book-index">
+            <%= cl_image_tag book.user.photo.key, class: 'card-avatar' %>
+          </div>
           <!-- <img src="https://wallpaperaccess.com/full/1278457.jpg" alt="profile picture" class="card-avatar"> -->
           <%= link_to "Choose", book_path(book), class: "btn btn-salmon-outline bottom-right" %>
         </div>
