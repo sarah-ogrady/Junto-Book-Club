@@ -11,7 +11,7 @@
   background: #FF614C;
 }
 
-.small-width-button {
+.wide-width-button {
   color: white !important;
   padding: 8px 24px;
   background: #FE7866;
@@ -20,4 +20,8 @@
   text-align: center;
   margin: 20px auto;
   width: 100%;
+}
+
+.wide-width-button:hover {
+  background: #FF614C;
 }
