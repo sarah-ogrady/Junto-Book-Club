@@ -1,18 +1,21 @@
 <div class="container my-books-container">
-  <h2><%= "My Books" %></h2>
 
-  <% if @books.where(hidden: false).empty? %>
-    <p>You haven't listed any books on Junto yet! Why not add one today?</p>
-  <% else %>
-    <p>Your books are live on Junto and ready to swap!</p>
-  <% end %>
+  <div id="my-books-header">
+    <h2><%= "My Books" %></h2>
+    <% if @books.where(hidden: false).empty? %>
+      <p>You haven't listed any books on Junto yet! Why not add one today?</p>
+    <% else %>
+      <p>Your books are live on Junto and ready to swap!</p>
+    <% end %>
 
-<%= link_to "Add a Book",  new_book_path, class: "btn-salmon mb-4" %>
+    <%= link_to "Add a Book",  new_book_path, class: "btn-salmon mb-10" %>
+
+  </div>
 
 
   <div class="cards">
     <% @books.where(hidden: false).each do |book| %>
-      <div class="card">
+      <div class="card-book">
         <% if book.photo.attached? %>
           <%= cl_image_tag book.photo.key, class: 'book-cover' %>
         <% else %>
@@ -21,8 +24,9 @@
           <div class="card-items">
             <h2><%= "#{book.title}" %></h2>
             <p id="author"><%= author_cleaning(book.author_name) %></p>
+            <p id="year"><%= book.year %></p>
           </div>
-          <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-salmon bottom-right" %>
+          <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline bottom-right" %>
       </div>
     <% end %>
   </div>
