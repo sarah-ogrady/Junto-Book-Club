@@ -26,3 +26,19 @@
   background: #FF614C;
   text-decoration: none;
 }
+
+.small-button {
+  color: white !important;
+  padding: 8px 24px;
+  background: #FE7866;
+  transition: background 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+  margin: 20px auto;
+  width: 75px;
+}
+
+.small-button:hover {
+  background: #FF614C;
+  text-decoration: none;
+}
