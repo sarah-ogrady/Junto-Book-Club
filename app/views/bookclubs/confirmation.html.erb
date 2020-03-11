@@ -6,5 +6,5 @@
     <h1>Congratulations! You have joined <%= @bookclub.name %> bookclub.</h1>
     <p>An email will be sent to you confirming contact details and meetup times!</p>
   </div>
-  <%= link_to "Discover your new bookclub",  my_bookclub_path, class: 'btn-salmon-outline link-button-confirmation'%>
+  <%= link_to "Discover your new bookclub",  bookclub_path(@bookclub), class: 'btn-salmon-outline link-button-confirmation'%>
 </div>
