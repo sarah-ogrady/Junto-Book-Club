@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 18px;
+  margin-bottom: 50px;
   h2, p {
     font-family: 'Nunito Sans';
     color: #383838;
@@ -27,7 +28,7 @@
   max-width: 600px;
   height: 320px;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 25px;
   text-align: center;
   display: flex;
   flex-direction: column;
