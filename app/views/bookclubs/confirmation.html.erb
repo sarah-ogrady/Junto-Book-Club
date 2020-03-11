@@ -1,10 +1,15 @@
-<div class="image-confirmation">
-  <img src="https://images.unsplash.com/photo-1510922903530-28ecf3f00362?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="">
+<div class="image-bookclub-confirmation">
+  <img src="https://images.unsplash.com/photo-1543497415-75c0a27177c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="">
 </div>
-<div class="container">
-  <div class="bookclub_confirmation_card">
-    <h1>Congratulations! You have joined <%= @bookclub.name %> bookclub.</h1>
-    <p>An email will be sent to you confirming contact details and meetup times!</p>
-  </div>
+
+
+<div class="bookclub-confirmation-message">
+  <h2>Congratulations! You have joined <%= @bookclub.name %> book club.</h2>
+  <p>An email will be sent to you confirming contact details and meetup times!</p>
+</div>
+
+
+
+</div>
   <%= link_to "Discover your new bookclub",  bookclub_path(@bookclub), class: 'btn-salmon-outline link-button-confirmation'%>
 </div>
