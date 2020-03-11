@@ -3,37 +3,26 @@
 </div>
 
 
-    <div class="info-show-confirmation">
-      <h2>“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.”</h2>
-      <p><em>Haruki Murakami</em></p>
+<div class="info-show-confirmation">
+  <h2>“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.”</h2>
+  <p><em>Haruki Murakami</em></p>
+</div>
+
+
+<div class="info-show-content">
+  <h2 style="text-align: center;">Congratulations</h2>
+  <br>
+  <p style="text-align: center;"><%="Your book request has been sent to #{@swap.giving_user.first_name.capitalize}!"%></p>
+
+  <div class="card-product-show">
+    <%= cl_image_tag @book_given.photo.key, class: 'book-image' %>
+    <div class="card-product-infos-show">
+      <h3><%= @book_given.title %></h3>
+      <p><%= @book_given.year %></p>
+      <p><%= @book_given.genre %></p>
     </div>
-
-
-  <div class="info-show-content">
-    <h2 style="text-align: center;">Congratulations</h2>
+  </div>
     <br>
-      <p style="text-align: center;"><%="Your book request has been sent to #{@swap.giving_user.first_name.capitalize}!"%></p>
-
-      <div class="card-product-show">
-        <%= cl_image_tag @book_given.photo.key, class: 'book-image' %>
-        <div class="card-product-infos-show">
-          <h3><%= @book_given.title %></h3>
-          <p><%= @book_given.year %></p>
-          <p><%= @book_given.genre %></p>
-        </div>
-      </div>
-        <br>
-        <p style="text-align: center;"><%="You will be notified when #{@swap.giving_user.first_name.capitalize} accepts your request!"%></p>
-        <%= link_to "My Swaps", my_swaps_path, class: 'btn-salmon btn-block' %>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
+    <p style="text-align: center;"><%="You will be notified when #{@swap.giving_user.first_name.capitalize} accepts your request!"%></p>
+    <%= link_to "My Swaps", my_swaps_path, class: 'btn-salmon btn-block' %>
+</div>

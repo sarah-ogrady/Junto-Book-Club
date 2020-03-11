@@ -1,4 +1,4 @@
-.image-confirmation {
+.image-bookclub-confirmation {
   img {
   object-fit: cover;
   min-height: 100vh;
@@ -6,15 +6,17 @@
   }
 }
 
-.bookclub_confirmation_card {
+.bookclub-confirmation-message {
+  width: 500px;
   position: absolute;
-  top: 125px;
-  left: 380px;
-  h1 {
-    color: #383838;
-    font-size: 50px;
+  bottom: 50vh;
+  left: 35vw;
+  h2 {
+    font-size: 45px;
+    color: black;
   }
   p {
+    padding-top: 20px;
     color: #383838;
     font-size: 24px;
   }
@@ -22,8 +24,8 @@
 
 .link-button-confirmation {
   position: absolute;
-  bottom: 50px;
-  right: 24px;
+  bottom: 35vh;
+  right: 25vw;
   font-size: 24px;
   padding: 15px 25px;
 }
