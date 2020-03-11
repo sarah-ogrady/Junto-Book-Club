@@ -2,16 +2,13 @@
 <div class="background-picture">
   <br>
   <br>
-  <br>
-  <br>
-  <br>
 
 
 
   <div class="margin-login-center">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="login-form-inputs">
-        <h1 style="text-align: center; font-weight: bolder;">Login</h1>
+        <h2 class="pb-2", style="text-align: center; color: #383838">Login</h2>
         <%= f.input :email,
                     required: false,
                     autofocus: true,
@@ -24,16 +21,11 @@
                     placeholder: 'Password...',
                     input_html: { autocomplete: "current-password" }, class: 'input-login' %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        <%= f.button :submit, "Log in", class: 'submit-login' %>
+        <%= f.button :submit, "Log in", class: 'btn-salmon btn-block btn-login' %>
         <% end %>
+        <%= link_to "Sign up", new_user_registration_path, class: "btn-salmon-outline btn-block" %>
+       <%= link_to "Forgot your Password?",   new_user_password_path, class: "btn-block btn-salmon-outline btn-block" %>
       </div>
-
-<br>
-<br>
-     <div class="devise-links center-link-login">
-      <p>---<%= link_to "Sign up", new_user_registration_path, class: "red" %>---</p>
-       <p>---<%= link_to "Forgot your Password?",   new_user_password_path, class: "red" %>---</p>
-     </div>
   </div>
 </div>
 
