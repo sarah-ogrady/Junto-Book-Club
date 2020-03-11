@@ -12,9 +12,9 @@
 }
 
 .signup-form-inputs {
-  border-top: 10px solid #FE7866;
+  border-top: 2px solid #FE7866;
   width: 500px;
-  box-shadow: 0 0 10px grey;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.3);
   border-radius: 2px;
   padding-bottom: 30px;
   background-color: white;
@@ -22,23 +22,6 @@
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.submit-signup {
-  width: 100%;
-  background-color: #FE7866;
-  color: white;
-  font-weight: bolder;
-  font-size: 20px;
-  border-radius: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.submit-signup:hover {
-  color: white;
-  opacity: 0.7;
-  transition: 0.6s;
 }
 
 .signup-form-inputs {
@@ -52,4 +35,9 @@
   font-weight: bolder;
   font-size: 55px;
   color: #3a3535;
+}
+
+.btn-signup {
+  margin: 0 !important;
+  border-radius: 0 !important;
 }
