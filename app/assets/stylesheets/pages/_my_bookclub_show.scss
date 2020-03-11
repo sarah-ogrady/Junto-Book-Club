@@ -1,56 +1,65 @@
 
-.margin-map {
-  position: relative;
+.whole-flex {
+  display: flex;
 }
 
-.junto-logo {
-    width: 500px;
-    position: absolute;
-    top: 136px;
-    right: 95px;
-}
-
-.card-for-map {
-  box-shadow: 0 0 20px grey;
-  width:400px;
-  background-color: white;
-  position: absolute;
-  top: 100px;
-  left: 63px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-top: 10px solid #FE7866;
-  margin-top: 40px;
-
-}
-
-.card-for-map h1 {
-  border-bottom: 2px solid #FE7866;
-  padding-bottom: 10px;
-  padding-right: 10px;
-}
-
-.choose-book-club {
-  padding: 5px 20px;
-  display: block;
-}
-
-.thinging-2 {
-  display: block;
+.whole-card-show {
+  background-color: #EBEBEB;
+  padding-top: 20px;
   text-align: center;
-  color: #383838;
-  padding-top: 5px;
-  text-decoration: none;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 550px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  h1 {
+    margin-top: 30px;
+    margin-bottom:30px;
+    font-size: 30px;
+  }
 }
 
-.thinging-2:hover {
-  color: grey;
-  text-decoration: none;
+.bookclub-owner-image {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid white;
+  position: absolute;
+  top: 30px;
+  right: -39px;
 }
 
-.divider {
-  border-bottom: 2px solid #FE7866;
-  width: 100%;
+.margin-map {
+  margin-bottom: 10px;
+}
+
+.mapbox-style-show-my-bookclub {
+  display: flex;
+  justify-content: center;
+}
+
+.capacity-show {
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+
+.other {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.flex-info {
+  padding-left: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
 }

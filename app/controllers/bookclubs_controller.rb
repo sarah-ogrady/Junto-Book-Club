@@ -7,6 +7,7 @@ class BookclubsController < ApplicationController
       lng: @bookclub.longitude,
       image_url: helpers.asset_url('map-icon.png')
     }]
+    @book = @bookclub.users[0].books[0]
   end
 
   def index
