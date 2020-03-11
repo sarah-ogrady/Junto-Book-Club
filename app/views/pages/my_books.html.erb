@@ -26,6 +26,9 @@
             <p id="author"><%= author_cleaning(book.author_name) %></p>
             <p id="year"><%= book.year %></p>
           </div>
+          <div id="avatar-my-books">
+            <%= cl_image_tag book.user.photo.key, class: 'card-avatar' %>
+          </div>
           <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline bottom-right" %>
       </div>
     <% end %>
