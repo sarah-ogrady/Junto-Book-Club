@@ -50,9 +50,19 @@
   height: 50px;
   padding-left: 12px;
   margin-right: 12px;
-
+  background-color: white !important;
 }
 
 .btn-new-book {
   height: 50px;
+}
+
+.new-book-input:focus, .new-book-input:active {
+  outline: none !important;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+}
+
+.btn-new-book:focus, .btn-new-book:active {
+  outline: none !important;
+  box-shadow: none !important;
 }

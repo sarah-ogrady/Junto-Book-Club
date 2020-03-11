@@ -6,12 +6,11 @@
       <h1>to swap.</h1>
     </div>
 
-    </div>
     <div class="new-book-form">
       <p>Enter the book's ISBN (barcode number) and genre, then click search...</p>
       <br>
       <%= simple_form_for(@book , remote: true) do |form| %>
-      <%= form.input :isbn, label: false, placeholder: 'ISBN', input_html: { class: 'new-book-input' } %>
+      <%= form.input :isbn, label: false, placeholder: 'ISBN', input_html: { class: 'new-book-input', autocomplete: "off" } %>
       <%= form.input :genre, label: false, prompt: 'Genre',collection: ["Humour", "Non-fiction", "Fantasy", "Drama", "Romance", "Crime", "Action", "Thriller", "Poetry", "Science fiction", "Historical fiction", "Political fiction", "Classic"], input_html: { class: 'new-book-input' }, required: false %>
        <%= button_tag :type => "submit", :class => "btn btn-sm btn-search btn-new-book" do %>
           <i class="fa fa-search search-icon"></i>

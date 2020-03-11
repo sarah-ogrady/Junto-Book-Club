@@ -1,30 +1,60 @@
-.book_to_confirm {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid black;
-  padding: 16px;
-  .details_headers {
-    font-size: 24px;
-    font-weight: bold;
-  }
-}
-
-.small_details {
-  font-size: 16px;
-  font-weight: lighter;
-  font-style: italic;
-}
-
-.confirmation_buttons {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
 .btn-salmon {
   margin: 0px 3px;
   &:hover {
     text-decoration: none;
   }
+}
+
+.card-confirmation {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  max-height: 300px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  color: #383838;
+  p {
+    font-size: 18px;
+    color: #878787;
+  }
+
+  #title {
+    font-size: 20px;
+    margin-bottom: 2px;
+    overflow-wrap: break-word;
+  }
+
+  #description {
+    font-size: 16px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.card-confirmation-items {
+  padding: 23px;
+}
+
+.confirmation-book-cover {
+  height: auto;
+  width: 100%;
+  max-width: 175px;
+  object-fit: fill;
+}
+
+.book_to_confirm {
+  h2 {
+    text-align: center;
+    color: #383838;
+    padding-bottom: 30px;
+    font-weight: bold;
+  }
+
+    margin: 0 auto;
+}
+
+.confirmation-buttons {
+  padding-top: 50px;
+  text-align: center;
 }
