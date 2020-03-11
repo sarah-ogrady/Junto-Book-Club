@@ -23,7 +23,7 @@
     <% end %>
     <div class="flex-info">
       <p class="capacity-show">Capacity: <%= "#{@bookclub.capacity}" %></p>
-      <% User.all.limit(5).each do |user| %>
+      <% User.all.order(:id)[7..11].each do |user| %>
       <div class="d-flex align-items-start justify-content-start">
         <%= cl_image_tag user.photo.key, alt: "alttext", class: "avatar" %>
         <p class="text-left" style="border-bottom: 1px solid black; margin-bottom: 15px; padding-bottom: 15px; margin-left: 15px; width: 355px;"><%= user.description %></p>
@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="other">
-    <div class="badge-show" style="text-align: center;">Book of the week...</div>
+    <div class="badge-show" style="text-align: center;">Book of the month...</div>
        <%= render "books/book-3d" %>
   </div>
 </div>
