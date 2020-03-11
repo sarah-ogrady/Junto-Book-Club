@@ -29,14 +29,15 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <div style="min-height: 100vh">
+    <div style="height: 56px;"></div>
+    <div style="min-height: calc(100vh - 166px)">
       <%= render 'shared/navbar' %>
-      <div style="height: 56px;"></div>
       <%= yield %>
-      <% unless params[:controller] == 'books' && params[:action] == 'show' %>
-        <%= render 'shared/footer' %>
-      <% end %>
     </div>
+    <% unless (params[:controller] == 'books' && params[:action] == 'show') ||
+      (params[:controller] == 'bookclubs' && params[:action] == 'show') %>
+      <%= render 'shared/footer' %>
+    <% end %>
     <%= render 'shared/flashes' %>
   </body>
 </html>
