@@ -1,12 +1,15 @@
 <div class="all-messages-container">
+  <div class="message-recipient ">
+    <%= cl_image_tag @other_user.photo.key, alt: "alttext", class: "message-avatar" %>
+    <p class="m-0 ml-3"><%= @other_user.first_name + " " + @other_user.last_name %></p>
+  </div>
   <div id="messages" data-chatroom-id="<%= @swap.id %>">
     <% @swap.messages.each do |message| %>
-      <div class="message-container">
-        <i class="author">
-          <span><%#= message.user.first_name %></span>
-          <small><%= message.created_at.strftime("%l:%M %p") %></small>
-        </i>
+      <div class="message-container <%= message.user_id == current_user.id ? 'my-message' : 'their-message' %>">
         <p><%= message.content %></p>
+        <i class="author">
+          <small class="time-right"><%= message.created_at.strftime("%H:%M") %></small>
+        </i>
       </div>
     <% end %>
   </div>

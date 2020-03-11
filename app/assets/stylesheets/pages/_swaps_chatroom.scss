@@ -3,13 +3,26 @@
 }
 
 .all-messages-container {
-  margin: 0 450px;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: calc(100vh - 166px);
+  position: relative;
 }
 
 .message-box {
   width: 100%;
   display: flex;
   direction: row;
+  position: absolute;
+  bottom: 40px;
+}
+
+.new_message {
+  width: 100%;
+}
+
+.message_content {
+  flex: 1;
 }
 
 .message-container {
@@ -17,9 +30,24 @@
   border-radius: 50px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
   color: white;
-  width: 100%;
-  margin: 8px 0px;
+  max-width: 400px;
+  min-width: 200px;
+  margin: 12px 0px;
   background: #FE7866;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.message-recipient {
+  display: flex;
+  border-bottom: 1px solid #383838;
+  // border-top: 1px solid grey;
+  padding: 10px 20px;
+  align-items: center;
+  p {
+  font-size: 25px;
+  }
 }
 
 .btn-send {
@@ -33,7 +61,33 @@
 }
 
 .btn-back {
-  &:hover {
-    text-decoration: none;
-  }
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  width: 200px;
+}
+
+.their-message {
+  background-color: #F0F0F0;
+  color: #383838;
+}
+
+.my-message {
+  margin-left:  auto
+}
+
+.message-avatar {
+  width: 70px;
+  height:70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.time-right {
+  text-align: right;
+  width: 100%;
+  display: block;
+  font-size: 13px;
 }
