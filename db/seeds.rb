@@ -162,6 +162,83 @@ user14 = User.create(
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user14.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+  user15 = User.create(
+  first_name: "Axel",
+  last_name: "Lopez",
+  location: "W10 6RP",
+  email: "Hello@hotmail.com",
+  password: '123123',
+  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+  )
+  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+  user15.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+ user16 = User.create(
+  first_name: "Carl",
+  last_name: "Lopez",
+  location: "W10 6RP",
+  email: "chicken@hotmail.com",
+  password: '123123',
+  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+  )
+  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+  user16.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+ user16 = User.create(
+  first_name: "Charlie",
+  last_name: "Smith",
+  location: "W10 6RP",
+  email: "snake@hotmail.com",
+  password: '123123',
+  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+  )
+  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+  user16.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+   user17 = User.create(
+  first_name: "Alex",
+  last_name: "Lopez",
+  location: "W10 6RP",
+  email: "why@hotmail.com",
+  password: '123123',
+  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+  )
+  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+  user17.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+   user18 = User.create(
+  first_name: "Tony",
+  last_name: "Lopez",
+  location: "W10 6RP",
+  email: "popcorn@hotmail.com",
+  password: '123123',
+  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+  )
+  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+  user18.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+   user19 = User.create(
+  first_name: "Ruth",
+  last_name: "Lopez",
+  location: "W10 6RP",
+  email: "car@hotmail.com",
+  password: '123123',
+  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+  )
+  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+  user19.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+   user20 = User.create(
+  first_name: "Sam",
+  last_name: "Lopez",
+  location: "W10 6RP",
+  email: "Sam@hotmail.com",
+  password: '123123',
+  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+  )
+  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+  user20.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
 def api_hash
   @book_info["items"].select{ |item| item["volumeInfo"]["language"] == "en" }.first["volumeInfo"]
 end
@@ -566,7 +643,7 @@ Bookclub.create(name: "The Mighty Pen",
   location: 'NW3 2PT',
   capacity: 15,
   description: 'Think Harry Potter meets Lord of the Rings.',
-  user_id: user14.id,
+  user_id: user15.id,
   image_url: 'https://compote.slate.com/images/3c13ee18-6c75-440d-a6e5-4b2ab9ff893f.jpg'
   )
 
@@ -575,7 +652,7 @@ Bookclub.create(name: "Page Turner",
   location: 'E5 0LH',
   capacity: 22,
   description: 'A no pressure book club. We love to read and are open to members young and wise.',
-  user_id: user14.id,
+  user_id: user16.id,
   image_url: 'https://video-images.vice.com/articles/5d44c9622980b0000824a7e3/lede/1564789576071-GettyImages-949118068.jpeg?crop=1xw%3A0.8419xh%3B0xw%2C0.1581xh&resize=2000%3A*'
   )
 
@@ -584,7 +661,7 @@ Bookclub.create(name: "Fantastic Books...",
   location: 'SW15 2DD',
   capacity: 15,
   description: '...and Where to Find Them. Delve into the world of magical creatures and wizardry.',
-  user_id: user14.id,
+  user_id: user17.id,
   image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUAPWR11WtvJ-XpFNKaf2fhgAMOJGo1SFGr4COPW1f1XeKug4q'
   )
 
@@ -593,7 +670,7 @@ Bookclub.create(name: "S.P.E.W.",
   location: 'W2 1LA',
   capacity: 25,
   description: 'Society for the Promotion of Empowered Women.',
-  user_id: user14.id,
+  user_id: user18.id,
   image_url: 'https://www.rd.com/wp-content/uploads/2016/12/04_how_start_book_club_location_monkeybusinessimages.jpg'
   )
 
@@ -603,7 +680,7 @@ Bookclub.create(name: "Prose for Pros",
   location: 'SE11 4NT',
   capacity: 19,
   description: 'Everything fiction. All books, all people, all ideas welcome.',
-  user_id: user14.id,
+  user_id: user19.id,
   image_url: 'https://fastertomaster.com/wp-content/uploads/2019/03/best-books-on-social-people-communications-skills.jpg'
   )
 
@@ -613,7 +690,7 @@ Bookclub.create(name: "Cranial Crunch",
   location: 'N1 4BZ',
   capacity: 19,
   description: 'Strictly non-fiction.',
-  user_id: user14.id,
+  user_id: user20.id,
   image_url: 'https://reformedforum.org/wp-content/blogs.dir/1/files/2016/06/best-books-book-youll-ever-read.jpg'
   )
 
