@@ -32,7 +32,7 @@
   margin-top: 20px;
   margin-bottom: 10px;
   justify-content: space-between;
-  padding: 22px;
+  padding: 30px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
   min-height: 215px !important;
   position: relative;
@@ -50,9 +50,12 @@
   flex-direction: column;
   word-wrap: break-word;
   padding-left: 40px;
+  padding-right: 20px;
   p {
-    margin-bottom: 1px;
-
+    margin-bottom: 5px;
+  }
+  h4 {
+    margin-bottom: 28px;
   }
 }
 
@@ -64,10 +67,6 @@
   &:hover{
   text-decoration: none;
   }
-}
-
-#rejected-message {
-  color: red;
 }
 
 .book-images-1 {
@@ -82,6 +81,7 @@
 
 .book-images-2 {
   position: relative;
+  max-width: 113px;
 }
 
 .avatar-images-2 {
@@ -99,4 +99,17 @@
 
 .book-images-3 {
   position: relative;
+  max-width: 113px;
+}
+
+.swap-buttons {
+  flex-direction: column;
+  max-width: 300px;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  a {
+    margin-left: 0 !important;
+  }
+
 }

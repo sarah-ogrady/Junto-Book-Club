@@ -63,7 +63,7 @@
                         <p><%= "Book you would like: #{swap.book_given.title}, #{swap.book_given.year}" %></p>
                         <p><%= "#{swap.giving_user.first_name.capitalize}'s Location: #{swap.giving_user.location}" %></p>
                         <p><%= "Waiting for #{swap.giving_user.first_name.capitalize} to approve your request" %></p>
-                        <div class=">swap-buttons">
+                        <div class="swap-buttons">
                           <%= link_to "Cancel Request", swap_path(swap), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-salmon btn-block" %>
                         </div>
                       </div>
@@ -118,7 +118,7 @@
                         <p><%= "Book #{swap.giving_user.first_name.capitalize} would like: #{swap.book_received.title}, #{swap.book_received.year}" %></p>
                         <p><%= "#{swap.giving_user.first_name.capitalize}'s Location: #{swap.giving_user.location}" %></p>
                         <p><%= "Great news, #{swap.giving_user.first_name.capitalize} has approved your request and chosen one of your books!" %></p>
-                        <p><%= "Chat with #{swap.giving_user.first_name.capitalize} to arrange a time and place to swap" %></p>
+                        <p><%= "Chat with #{swap.giving_user.first_name.capitalize} to arrange the swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
                         <div class="swap-buttons">
                           <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
