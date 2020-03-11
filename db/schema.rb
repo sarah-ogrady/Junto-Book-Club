@@ -75,17 +75,6 @@ ActiveRecord::Schema.define(version: 2020_03_10_183924) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "owners", force: :cascade do |t|
-    t.string "current"
-    t.boolean "reading"
-    t.bigint "user_id", null: false
-    t.bigint "book_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["book_id"], name: "index_owners_on_book_id"
-    t.index ["user_id"], name: "index_owners_on_user_id"
-  end
-
   create_table "swaps", force: :cascade do |t|
     t.integer "book_1_id"
     t.integer "book_2_id"
