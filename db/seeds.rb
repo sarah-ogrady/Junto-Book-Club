@@ -146,7 +146,7 @@ user13 = User.create(
   location: "SW20 9NS",
   email: "halima12@hotmail.com",
   password: '123123',
-  description: 'EDIT',
+  description: 'I love reading insightful literature. Anything that gets me thinking or inspires my love of cooking is right up my street.',
   )
   file = URI.open('https://www.cgu.edu/wp-content/uploads/2016/06/Ruqayya_Khan.jpg')
   user13.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -157,7 +157,7 @@ user14 = User.create(
   location: "W10 6RP",
   email: "axellopez@hotmail.com",
   password: '123123',
-  description: 'EDIT',
+  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
   )
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user14.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
