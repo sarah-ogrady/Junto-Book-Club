@@ -7,10 +7,9 @@
   margin-top: 100px;
   border-radius: 6px;
   color: #383838;
-}
-
-.swaps-box > h2 {
-  align-text: center;
+  h2 {
+    align-text: center;
+  }
 }
 
 .nav-link {
@@ -37,14 +36,12 @@
   padding: 22px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
   min-height: 215px !important;
-  // position: absolute;
+  position: relative;
 }
 
-#book-photo {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+.book-cover {
+  max-height: 170px;
+  margin-bottom: 25px;
 }
 
 .bookswap-card-info {
@@ -53,14 +50,11 @@
   justify-content: center;
   flex-direction: column;
   word-wrap: break-word;
+  padding-left: 40px;
   p {
     margin-bottom: 1px;
 
   }
-}
-
-.bookswap-card-info-onebook {
-  padding-left: 135px;
 }
 
 #book-title {
@@ -73,50 +67,37 @@
   }
 }
 
-.icon-with-text {
-  align-text: center;
-  padding: 30px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.microphone {
-  font-size: 72px;
-  padding-bottom: 10px;
-}
-
-#price {
-  position: relative;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  font-size: 20px;
-}
-
-.price {
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 #rejected-message {
   color: red;
 }
 
-.swap-buttons {
-  margin-top: 20px;
-  text-align: right;
-}
-
-.giving-book {
-  position: absolute;
-}
-
-.giving-avatar {
+.book-images-1 {
   position: relative;
-  bottom: 40px;
-  left: 92px;
 }
 
-.book-cover {
-  max-height: 170px;
+.avatar-images-1 {
+  position: absolute;
+  top: 140px;
+  left: 80px;
+}
+
+.book-images-2 {
+  position: relative;
+}
+
+.avatar-images-2 {
+  .receiving-avatar {
+    position: absolute;
+    top: 140px;
+    left: 80px;
+  }
+  .giving-avatar {
+    position: absolute;
+    top: 335px;
+    left: 80px;
+  }
+}
+
+.book-images-3 {
+  position: relative;
 }

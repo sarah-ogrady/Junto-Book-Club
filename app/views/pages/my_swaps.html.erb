@@ -28,20 +28,20 @@
                 <% if swap.giving_user == current_user && swap.status == 'pending' %>
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
-                      <div class="giving-book">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
-                        <div class="receiving-avatar">
-                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar pending-avatar' %>
+                      <div class="book-images-1">
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <div class="avatar-images-1">
+                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
                         </div>
                       </div>
-                      <div class="bookswap-card-info bookswap-card-info-onebook">
+                      <div class="bookswap-card-info">
                         <h4><%= "New request received from #{swap.receiving_user.first_name.capitalize}" %></h4>
                         <p><%= "Book #{swap.receiving_user.first_name.capitalize} would like: #{swap.book_given.title}, #{swap.book_given.year}" %></p>
                         <p><%= "#{swap.receiving_user.first_name.capitalize}'s Location: #{swap.giving_user.location}" %></p>
                         <p><%= "Choose one of #{swap.receiving_user.first_name.capitalize}'s books or reject the request:" %></p>
                         <div class="swap-buttons">
                           <%= link_to "Choose a Book", choose_book_swap_path(swap), class: "btn-salmon btn-block" %>
-                          <%= link_to "Reject Request", reject_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon btn-block" %>
+                          <%= link_to "Reject Request", reject_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline btn-block" %>
                         </div>
                       </div>
                     </div>
@@ -52,19 +52,19 @@
                 <% if swap.receiving_user == current_user && swap.status == 'pending' %>
                   <div class="bookswap-card">
                     <div class="d-flex">
-                      <div class="giving-book">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
-                        <div class="giving-avatar">
-                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar' %>
+                      <div class="book-images-1">
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <div class="avatar-images-1">
+                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
                         </div>
                       </div>
-                      <div class="bookswap-card-info bookswap-card-info-onebook">
+                      <div class="bookswap-card-info">
                         <h4><%= "Request sent to #{swap.giving_user.first_name.capitalize}" %></h4>
                         <p><%= "Book you would like: #{swap.book_given.title}, #{swap.book_given.year}" %></p>
                         <p><%= "#{swap.giving_user.first_name.capitalize}'s Location: #{swap.giving_user.location}" %></p>
                         <p><%= "Waiting for #{swap.giving_user.first_name.capitalize} to approve your request" %></p>
-                        <div class="swap-buttons">
-                          <%= link_to "Cancel Request", swap_path(swap), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-salmon" %>
+                        <div class=">swap-buttons">
+                          <%= link_to "Cancel Request", swap_path(swap), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-salmon btn-block" %>
                         </div>
                       </div>
                     </div>
@@ -76,16 +76,12 @@
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
 
-                      <div class="giving-book">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
-                        <div class="giving-avatar">
-                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar' %>
-                        </div>
-                      </div>
-                      <div class="receiving-book">
-                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover' %>
-                        <div class="receiving-avatar">
-                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar' %>
+                      <div class="book-images-2">
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover receiving-book' %>
+                        <div class="avatar-images-2">
+                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
+                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
                         </div>
                       </div>
                       <div class="bookswap-card-info">
@@ -97,7 +93,7 @@
                         <p>Remember to follow the safety guidelines</p>
                         <div class="swap-buttons">
                           <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
-                          <%= link_to "Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon btn-block" %>
+                          <%= link_to "Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline btn-block" %>
                         </div>
                       </div>
                     </div>
@@ -108,16 +104,12 @@
                 <% if swap.receiving_user == current_user && swap.status == 'bookchosen' %>
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
-                      <div class="giving-book">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
-                        <div class="giving-avatar">
-                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar' %>
-                        </div>
-                      </div>
-                      <div class="receiving-book">
-                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover' %>
-                        <div class="receiving-avatar">
-                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar' %>
+                      <div class="book-images-2">
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover receiving-book' %>
+                        <div class="avatar-images-2">
+                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
+                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
                         </div>
                       </div>
                       <div class="bookswap-card-info">
@@ -130,7 +122,7 @@
                         <p>Remember to follow the safety guidelines</p>
                         <div class="swap-buttons">
                           <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
-                          <%= link_to "Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon btn-block" %>
+                          <%= link_to "Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline btn-block" %>
                         </div>
                       </div>
                     </div>
@@ -151,16 +143,12 @@
                 <% if (swap.giving_user == current_user || swap.receiving_user == current_user) && swap.status == 'complete' %>
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
-                      <div class="receiving-book">
-                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover' %>
-                        <div class="receiving-avatar">
-                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar' %>
-                        </div>
-                      </div>
-                      <div class="giving-book">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
-                        <div class="giving-avatar">
-                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar' %>
+                      <div class="book-images-2">
+                        <%= cl_image_tag swap.book_received.photo.key, class: 'book-cover receiving-book' %>
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <div class="avatar-images-2">
+                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
+                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
                         </div>
                       </div>
                       <div class="bookswap-card-info">
@@ -176,13 +164,13 @@
                 <% if swap.giving_user == current_user && swap.status == 'rejected' %>
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
-                      <div class="giving-book">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
-                        <div class="receiving-avatar">
-                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar pending-avatar' %>
+                      <div class="book-images-1">
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <div class="avatar-images-1">
+                          <%= cl_image_tag swap.receiving_user.photo.key, class: 'card-avatar receiving-avatar' %>
                         </div>
                       </div>
-                      <div class="bookswap-card-info bookswap-card-info-onebook">
+                      <div class="bookswap-card-info">
                         <h4>Swap Rejected</h4>
                         <p><%= "We've notified #{swap.receiving_user.first_name.capitalize} that you rejected their request for #{swap.book_given.title}, #{swap.book_given.year}." %></p>
                       </div>
@@ -194,13 +182,13 @@
                 <% if swap.receiving_user == current_user && swap.status == 'rejected' %>
                   <div class="bookswap-card d-flex">
                     <div class="d-flex">
-                      <div class="giving-book">
-                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover' %>
-                        <div class="giving-avatar">
-                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar' %>
+                      <div class="book-images-1">
+                        <%= cl_image_tag swap.book_given.photo.key, class: 'book-cover giving-book' %>
+                        <div class="avatar-images-1">
+                          <%= cl_image_tag swap.giving_user.photo.key, class: 'card-avatar giving-avatar' %>
                         </div>
                       </div>
-                      <div class="bookswap-card-info bookswap-card-info-onebook">
+                      <div class="bookswap-card-info">
                         <h4>Swap Rejected</h4>
                         <p><%= "Sorry, #{swap.giving_user.first_name.capitalize} rejected your request for #{swap.book_given.title}, #{swap.book_given.year}. Browse for a different book." %></p>
                       </div>
