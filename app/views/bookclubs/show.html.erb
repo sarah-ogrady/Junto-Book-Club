@@ -15,7 +15,7 @@
       </div>
     </div>
     <img src=" <%= @bookclub.image_url %>", alt="Book Club photos", class="bookclub-owner-image" />
-    <%= link_to "Confirm", bookclub_confirmation_path(@bookclub), class: 'small-width-button', style: 'width: 400px' %>
+    <%= link_to "Confirm", bookclub_confirmation_path(@bookclub), class: 'small-width-button', style: 'width: 400px; background: #FE7866; color: white; padding: 5px; font-size: 20px; margin-top: 10px;' %>
     <div class="flex-info">
       <p class="capacity-show">Capacity: <%= "#{@bookclub.capacity}" %></p>
       <% User.all.limit(5).each do |user| %>
