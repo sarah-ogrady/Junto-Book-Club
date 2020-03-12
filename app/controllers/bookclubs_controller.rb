@@ -11,9 +11,12 @@ class BookclubsController < ApplicationController
   end
 
   def index
-    @bookclubs = Bookclub.all
-    if params[:filter].present?
-      @bookclubs = @bookclubs.where(genre: params[:filter])
+    # @bookclubs = Bookclub.where(genre: params.dig(:search, :genre))
+    # @bookclubs = Bookclub.all if @bookclubs.empty)
+    if params[:filter] == "All"
+      @bookclubs = Bookclub.all
+    elsif params[:filter].present?
+      @bookclubs = Bookclub.where(genre: params[:filter])
     end
   end
 
@@ -23,3 +26,13 @@ class BookclubsController < ApplicationController
     current_user.save
   end
 end
+
+# if params[:query].present?
+      # sql_query = "title ILIKE :query OR description ILIKE :query OR genre ILIKE :query"
+      # @books = Book.where(sql_query, query: "%#{params[:query]}%")
+    # else
+      # @books = Book.all
+    # end
+    # if params[:filter].present?
+      # @books = @books.where(genre: params[:filter])
+    # end
