@@ -60,26 +60,26 @@ user4 = User.create(
 
 sleep(1)
 user5 = User.create(
-  first_name: "Aleena",
-  last_name: "Sheraz",
+  first_name: "Sarah",
+  last_name: "Moxon",
   location: "SE13 6RD",
-  email: "asheraz@gmail.com",
+  email: "smoxon@gmail.com",
   password: '123123',
   description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
-  file = URI.open('https://images.unsplash.com/photo-1517945577684-acd9255116a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
-  user5.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+  file = File.open('app/assets/images/sarah-avatar.png')
+  user5.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/png')
 
 sleep(1)
 user6 = User.create(
-  first_name: "Scott",
+  first_name: "Gareth",
   last_name: "Buckland",
   location: "SE7 7HY",
-  email: "scotty_b@gmail.com",
+  email: "gareth_b@gmail.com",
   password: '123123',
   description: 'Ever since my wife lent me one of her romance novels I am hooked. What can I say, I am a sucker for romance',
   )
-  file = URI.open('https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9c88e092-9691-11e8-85e3-d844d3177259.jpg?crop=3000%2C1687%2C0%2C31&resize=1180')
+  file = URI.open('app/assets/images/gareth-avatar.jpg')
   user6.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 sleep(1)
