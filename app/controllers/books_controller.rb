@@ -11,7 +11,9 @@ class BooksController < ApplicationController
     else
       @books = Book.all
     end
-    if params[:filter].present?
+    if params[:filter] == "All"
+      @bookclubs = Bookclub.all
+    elsif params[:filter].present?
       @books = @books.where(genre: params[:filter])
     end
   end

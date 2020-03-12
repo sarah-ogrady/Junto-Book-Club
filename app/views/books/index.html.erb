@@ -35,6 +35,8 @@
           <%= link_to 'Thriller', books_path(query: params[:query], filter: 'Thriller'), class: "dropdown-item"  %>
           <%= link_to 'Historical fiction', books_path(query: params[:query], filter: 'Historical fiction'), class: "dropdown-item"  %>
           <%= link_to 'Non-fiction', books_path(query: params[:query], filter: 'Non-fiction'), class: "dropdown-item"  %>
+          <%= link_to 'All', books_path(query: params[:query], filter: 'All'), class: "dropdown-item"  %>
+
          <!--  ["Humour", "Non-fiction", "Fantasy", "Drama", "Romance", "Crime", "Action", "Thriller", "Poetry", "Science fiction", "Historical fiction", "Political fiction"] -->
         </div>
       </div>
