@@ -13,7 +13,7 @@ class BookclubsController < ApplicationController
   def index
     # @bookclubs = Bookclub.where(genre: params.dig(:search, :genre))
     # @bookclubs = Bookclub.all if @bookclubs.empty)
-    if params[:filter] == "All"
+    if !params[:filter] || params[:filter] == "All"
       @bookclubs = Bookclub.all
     elsif params[:filter].present?
       @bookclubs = Bookclub.where(genre: params[:filter])
