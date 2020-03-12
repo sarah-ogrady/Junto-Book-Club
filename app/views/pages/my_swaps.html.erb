@@ -94,8 +94,8 @@
                         <p><%= "Chat with #{swap.receiving_user.first_name.capitalize} to arrange the swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
                         <div class="swap-buttons">
-                          <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
-                          <%= link_to "Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline btn-block" %>
+                          <%= link_to "Chat", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
+                          <%= link_to "Mark Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline btn-block" %>
                         </div>
                       </div>
                     </div>
@@ -115,7 +115,7 @@
                         </div>
                       </div>
                       <div class="bookswap-card-info">
-                        <h4><%= "#{swap.giving_user.first_name.capitalize} accpted your request!" %></h4>
+                        <h4><%= "#{swap.giving_user.first_name.capitalize} accepted your request!" %></h4>
                         <p><%= "Book you would like: #{swap.book_given.title}, #{swap.book_given.year}" %></p>
                         <p><%= "Book #{swap.giving_user.first_name.capitalize} would like: #{swap.book_received.title}, #{swap.book_received.year}" %></p>
                         <p><%= "#{swap.giving_user.first_name.capitalize}'s Location: #{swap.giving_user.location}" %></p>
@@ -123,8 +123,8 @@
                         <p><%= "Chat with #{swap.giving_user.first_name.capitalize} to arrange the swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
                         <div class="swap-buttons">
-                          <%= link_to "Messages", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
-                          <%= link_to "Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline btn-block" %>
+                          <%= link_to "Chat", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
+                          <%= link_to "Mark Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline btn-block" %>
                         </div>
                       </div>
                     </div>
