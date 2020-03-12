@@ -519,7 +519,7 @@ Bookclub.create(name: 'It’s a Hardback Life',
   location: 'TW13 6DH',
   capacity: 18,
   description: 'Take a break from your boring life with a fantasy novel or ten.',
-  user_id: user2.id,
+  user_id: user1.id,
   image_url: 'https://live.staticflickr.com/1838/43781428232_f93e7a5320_b.jpg'
   )
 
@@ -528,7 +528,7 @@ Bookclub.create(name: 'Agree To Diss A Brie',
   location: 'E1 7HS',
   capacity: 15,
   description: 'A classic book club for cheese lovers.',
-  user_id: user3.id,
+  user_id: user2.id,
   image_url: 'https://media-cdn.tripadvisor.com/media/photo-s/12/93/41/f5/gulshan-the-book-shop.jpg'
   )
 
@@ -537,7 +537,7 @@ Bookclub.create(name: 'A Novel Idea',
   location: 'SL3 7QP',
   capacity: 20,
   description: 'All books welcome. A community book club for all bookworms.',
-  user_id: user5.id,
+  user_id: user3.id,
   image_url: 'https://therabbiisin.files.wordpress.com/2015/08/book-774837_640.jpg?w=640'
   )
 
@@ -546,7 +546,7 @@ Bookclub.create(name: 'Gangster Grandmas',
   location: 'SL0 9AF',
   capacity: 10,
   description: 'For grandmas or anybody else that loves true crime.',
-  user_id: user1.id,
+  user_id: user4.id,
   image_url: 'https://static.timesofisrael.com/jewishwdev/uploads/2018/06/7483010074_8d159cecc2_k.jpg'
   )
 
@@ -555,7 +555,7 @@ Bookclub.create(name: 'A Gouda Book',
   location: 'E9 5EN',
   capacity: 22,
   description: 'We love a pun and we love cheese. Come join the pun!',
-  user_id: user4.id,
+  user_id: user5.id,
   image_url: 'https://www.litro.co.uk/wp-content/uploads/2011/10/bookshop-cum-cafe.jpg'
   )
 
