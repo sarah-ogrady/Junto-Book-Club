@@ -1,5 +1,7 @@
 #messages {
   margin-top: 16px;
+  height: 410px;
+  overflow: scroll;
 }
 
 .all-messages-container {
@@ -27,7 +29,7 @@
 
 .message-container {
   padding: 5px 25px;
-  border-radius: 50px;
+  border-radius: 14px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
   color: white;
   max-width: 400px;

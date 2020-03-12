@@ -10,6 +10,7 @@ puts 'Repopulating database...'
 
 puts 'Creating users...'
 
+sleep(1)
 user1 = User.create(
   first_name: "Nadine",
   last_name: "O'Hara",
@@ -21,6 +22,7 @@ user1 = User.create(
   file = URI.open('https://res.cloudinary.com/arxmush/image/upload/v1553214529/Gallery/brianna_one_bb9rj8.jpg')
   user1.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user2 = User.create(
   first_name: "Tanya",
   last_name: "Silverman",
@@ -32,6 +34,7 @@ user2 = User.create(
   file = URI.open('https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')
   user2.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user3 = User.create(
   first_name: "Emily",
   last_name: "Wong",
@@ -43,6 +46,7 @@ user3 = User.create(
   file = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQH-3X4Qx0gq_w/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=FOE9E-1DHa-cCwMA5RsMFXQWBiKR_7gLYj8br9Kwa4o')
   user3.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user4 = User.create(
   first_name: "Mo",
   last_name: "Hussain",
@@ -54,6 +58,7 @@ user4 = User.create(
   file = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg')
   user4.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user5 = User.create(
   first_name: "Aleena",
   last_name: "Sheraz",
@@ -65,6 +70,7 @@ user5 = User.create(
   file = URI.open('https://images.unsplash.com/photo-1517945577684-acd9255116a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
   user5.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user6 = User.create(
   first_name: "Scott",
   last_name: "Buckland",
@@ -76,6 +82,7 @@ user6 = User.create(
   file = URI.open('https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9c88e092-9691-11e8-85e3-d844d3177259.jpg?crop=3000%2C1687%2C0%2C31&resize=1180')
   user6.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user7 = User.create(
   first_name: "Megan",
   last_name: "Lovett",
@@ -87,6 +94,7 @@ user7 = User.create(
   file = URI.open('https://images1.the-dots.com/763358/screen-shot-2017-03-17-at-15-51-22.png?p=socialSquare')
   user7.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user8 = User.create(
   first_name: "Vincent",
   last_name: "Onuegbu",
@@ -98,6 +106,7 @@ user8 = User.create(
   file = URI.open('https://c.stocksy.com/a/XJC000/z9/47339.jpg')
   user8.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user9 = User.create(
   first_name: "Tahira",
   last_name: "Syed",
@@ -109,6 +118,7 @@ user9 = User.create(
   file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFIXM7lYTeqtw/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=BsWw9n7w5Poz8Y5Or6MeyxcblATuye93WZwq0RauuNo')
   user9.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user10 = User.create(
   first_name: "Joe",
   last_name: "Thomas",
@@ -120,6 +130,7 @@ user10 = User.create(
   file = URI.open('https://pbs.twimg.com/profile_images/426035427326189568/BXYWW0uz_400x400.jpeg')
   user10.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user11 = User.create(
   first_name: "Luke",
   last_name: "Monroe",
@@ -131,6 +142,7 @@ user11 = User.create(
   file = URI.open('https://media.istockphoto.com/videos/young-man-smiling-video-id1008268548?s=640x640')
   user11.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user12 = User.create(
   first_name: "Mia",
   last_name: "Nguyen",
@@ -142,6 +154,7 @@ user12 = User.create(
   file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFLLevw_988cQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=MIXW_g67Lx3qaKfUijR58mcx_yNDCH-jYCAzSQ7VO0c')
   user12.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user13 = User.create(
   first_name: "Halima",
   last_name: "Khan",
@@ -153,6 +166,7 @@ user13 = User.create(
   file = URI.open('https://www.cgu.edu/wp-content/uploads/2016/06/Ruqayya_Khan.jpg')
   user13.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
 user14 = User.create(
   first_name: "Axel",
   last_name: "Lopez",
@@ -164,6 +178,7 @@ user14 = User.create(
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user14.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
   user15 = User.create(
   first_name: "Axel",
   last_name: "Lopez",
@@ -175,6 +190,7 @@ user14 = User.create(
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user15.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
  user16 = User.create(
   first_name: "Carl",
   last_name: "Lopez",
@@ -186,6 +202,7 @@ user14 = User.create(
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user16.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
  user16 = User.create(
   first_name: "Charlie",
   last_name: "Smith",
@@ -197,6 +214,7 @@ user14 = User.create(
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user16.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
    user17 = User.create(
   first_name: "Alex",
   last_name: "Lopez",
@@ -208,6 +226,7 @@ user14 = User.create(
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user17.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
    user18 = User.create(
   first_name: "Tony",
   last_name: "Lopez",
@@ -219,6 +238,7 @@ user14 = User.create(
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user18.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
    user19 = User.create(
   first_name: "Ruth",
   last_name: "Lopez",
@@ -230,6 +250,7 @@ user14 = User.create(
   file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
   user19.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+sleep(1)
    user20 = User.create(
   first_name: "Sam",
   last_name: "Lopez",
