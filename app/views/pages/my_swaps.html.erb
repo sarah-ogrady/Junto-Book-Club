@@ -94,7 +94,7 @@
                         <p><%= "Chat with #{swap.receiving_user.first_name.capitalize} to arrange the swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
                         <div class="swap-buttons">
-                          <%= link_to "Chat", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
+                          <%= link_to "Chat with #{swap.receiving_user.first_name.capitalize}", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
                           <%= link_to "Mark Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline btn-block" %>
                         </div>
                       </div>
@@ -123,7 +123,7 @@
                         <p><%= "Chat with #{swap.giving_user.first_name.capitalize} to arrange the swap" %></p>
                         <p>Remember to follow the safety guidelines</p>
                         <div class="swap-buttons">
-                          <%= link_to "Chat", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
+                          <%= link_to "Chat with #{swap.giving_user.first_name.capitalize}", chatroom_swap_path(swap), class: "btn-salmon btn-block" %>
                           <%= link_to "Mark Swap Complete", complete_swap_path(swap), method: :patch, data: { confirm: 'Are you sure?' }, class: "btn-salmon-outline btn-block" %>
                         </div>
                       </div>
