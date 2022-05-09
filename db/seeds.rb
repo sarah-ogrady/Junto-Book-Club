@@ -2,15 +2,19 @@
 
 # genre: 'Thriller', isbn: '0008234183'
 require "open-uri"
+
 puts 'Deleting'
-User.destroy_all
+Bookclub.destroy_all
+Message.destroy_all
+Swap.destroy_all
 Book.destroy_all
+User.destroy_all
 
 puts 'Repopulating database...'
 
 puts 'Creating users...'
-
 sleep(1)
+
 user1 = User.create(
   first_name: "Nadine",
   last_name: "O'Hara",
@@ -19,10 +23,12 @@ user1 = User.create(
   password: '123123',
   description: 'I read all kinds of books both fiction and non-fiction. I am a fast reader so tend to have a few on the go so I never get bored!',
   )
-  file = URI.open('https://res.cloudinary.com/arxmush/image/upload/v1553214529/Gallery/brianna_one_bb9rj8.jpg')
+  file = open('https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
   user1.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 1"
 sleep(1)
+
 user2 = User.create(
   first_name: "Tanya",
   last_name: "Silverman",
@@ -31,10 +37,12 @@ user2 = User.create(
   password: '123123',
   description: 'Science fiction and dramatic novels are my bread and butter. There is nothing better than lighting some candles and reading in the bath',
   )
-  file = URI.open('https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')
-  user2.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')
+user2.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 2"
 sleep(1)
+
 user3 = User.create(
   first_name: "Emily",
   last_name: "Wong",
@@ -43,10 +51,12 @@ user3 = User.create(
   password: '123123',
   description: 'I am a very calm and peaceful person which is why I love to read historical fiction in my free time. I am a yoga teacher and always read with a nice cup of tea.',
   )
-  file = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQH-3X4Qx0gq_w/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=FOE9E-1DHa-cCwMA5RsMFXQWBiKR_7gLYj8br9Kwa4o')
-  user3.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://images.unsplash.com/photo-1541823709867-1b206113eafd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
+user3.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 3"
 sleep(1)
+
 user4 = User.create(
   first_name: "Mo",
   last_name: "Hussain",
@@ -55,10 +65,12 @@ user4 = User.create(
   password: '123123',
   description: 'My job is very hectic so reading is my escape into another world. I read mainly romance novels and non-fiction.',
   )
-  file = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg')
-  user4.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg')
+user4.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 4"
 sleep(1)
+
 user5 = User.create(
   first_name: "Sarah",
   last_name: "Moxon",
@@ -67,10 +79,12 @@ user5 = User.create(
   password: '123123',
   description: 'I am a big book lover and cannot wait to get swapping. I am happy to travel to swap books. I love a good thriller and am keen to join a bookclub',
   )
-  file = File.open('app/assets/images/sarah-avatar.png')
-  user5.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/png')
+file = File.open('app/assets/images/sarah-avatar.png')
+user5.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/png')
 
+puts "finished user 5"
 sleep(1)
+
 user6 = User.create(
   first_name: "Gareth",
   last_name: "Buckland",
@@ -79,10 +93,12 @@ user6 = User.create(
   password: '123123',
   description: 'Ever since my wife lent me one of her romance novels I am hooked. What can I say, I am a sucker for romance',
   )
-  file = URI.open('app/assets/images/gareth-avatar.jpg')
-  user6.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('app/assets/images/gareth-avatar.jpg')
+user6.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 6"
 sleep(1)
+
 user7 = User.create(
   first_name: "Megan",
   last_name: "Lovett",
@@ -91,10 +107,12 @@ user7 = User.create(
   password: '123123',
   description: "Any Dickens or Bronte send them my way! There is nothing better than a classic novel. I can't wait to read more",
   )
-  file = URI.open('https://images1.the-dots.com/763358/screen-shot-2017-03-17-at-15-51-22.png?p=socialSquare')
-  user7.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://images1.the-dots.com/763358/screen-shot-2017-03-17-at-15-51-22.png?p=socialSquare')
+user7.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 7"
 sleep(1)
+
 user8 = User.create(
   first_name: "Vincent",
   last_name: "Onuegbu",
@@ -103,10 +121,12 @@ user8 = User.create(
   password: '123123',
   description: "I have three kids so when I have time alone I like to hideaway with a good true crime novel and try to work out 'who dunnit'.",
   )
-  file = URI.open('https://c.stocksy.com/a/XJC000/z9/47339.jpg')
-  user8.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://c.stocksy.com/a/XJC000/z9/47339.jpg')
+user8.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 8"
 sleep(1)
+
 user9 = User.create(
   first_name: "Tahira",
   last_name: "Syed",
@@ -115,10 +135,13 @@ user9 = User.create(
   password: '123123',
   description: "I discovered recently that I am most engaged in a book when it's based on something that really happened. Historical fiction is far more interesting to me than any drama.",
   )
-  file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFIXM7lYTeqtw/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=BsWw9n7w5Poz8Y5Or6MeyxcblATuye93WZwq0RauuNo')
-  user9.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+file = open('https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
+user9.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+puts "finished user 9"
 sleep(1)
+
 user10 = User.create(
   first_name: "Joe",
   last_name: "Thomas",
@@ -127,10 +150,12 @@ user10 = User.create(
   password: '123123',
   description: 'I have read the first Harry Potter with my granddaughter at least three times. I am also interested in non-fiction.  ',
   )
-  file = URI.open('https://pbs.twimg.com/profile_images/426035427326189568/BXYWW0uz_400x400.jpeg')
-  user10.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://pbs.twimg.com/profile_images/426035427326189568/BXYWW0uz_400x400.jpeg')
+user10.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 10"
 sleep(1)
+
 user11 = User.create(
   first_name: "Luke",
   last_name: "Monroe",
@@ -139,10 +164,12 @@ user11 = User.create(
   password: '123123',
   description: "I don't really enjoy novels so I stick to what I love which is non-fiction. I have lots of recommendations.",
   )
-  file = URI.open('https://media.istockphoto.com/videos/young-man-smiling-video-id1008268548?s=640x640')
-  user11.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://media.istockphoto.com/videos/young-man-smiling-video-id1008268548?s=640x640')
+user11.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 11"
 sleep(1)
+
 user12 = User.create(
   first_name: "Mia",
   last_name: "Nguyen",
@@ -151,10 +178,12 @@ user12 = User.create(
   password: '123123',
   description: 'I tend to read books about women who have inspiring stories. I read in coffee shops and go to a bookclub everyweek.',
   )
-  file = URI.open('https://media-exp1.licdn.com/dms/image/C4E03AQFLLevw_988cQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=MIXW_g67Lx3qaKfUijR58mcx_yNDCH-jYCAzSQ7VO0c')
-  user12.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80')
+user12.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 12"
 sleep(1)
+
 user13 = User.create(
   first_name: "Halima",
   last_name: "Khan",
@@ -163,10 +192,12 @@ user13 = User.create(
   password: '123123',
   description: 'I love reading insightful literature. Anything that gets me thinking or inspires my love of cooking is right up my street.',
   )
-  file = URI.open('https://www.cgu.edu/wp-content/uploads/2016/06/Ruqayya_Khan.jpg')
-  user13.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://www.cgu.edu/wp-content/uploads/2016/06/Ruqayya_Khan.jpg')
+user13.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 13"
 sleep(1)
+
 user14 = User.create(
   first_name: "Axel",
   last_name: "Lopez",
@@ -175,59 +206,56 @@ user14 = User.create(
   password: '123123',
   description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
   )
-  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
-  user14.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+user14.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 14"
 sleep(1)
-  user15 = User.create(
-  first_name: "Axel",
-  last_name: "Lopez",
-  location: "W10 6RP",
-  email: "Hello@hotmail.com",
-  password: '123123',
-  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
-  )
-  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
-  user15.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
-sleep(1)
- user16 = User.create(
-  first_name: "Carl",
-  last_name: "Lopez",
-  location: "W10 6RP",
-  email: "chicken@hotmail.com",
-  password: '123123',
-  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
-  )
-  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
-  user16.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+user15 = User.create(
+first_name: "Axel",
+last_name: "Lopez",
+location: "W10 6RP",
+email: "Hello@hotmail.com",
+password: '123123',
+description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+)
 
-sleep(1)
- user16 = User.create(
-  first_name: "Charlie",
-  last_name: "Smith",
-  location: "W10 6RP",
-  email: "snake@hotmail.com",
-  password: '123123',
-  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
-  )
-  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
-  user16.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+user15.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finished user 15"
 sleep(1)
-   user17 = User.create(
-  first_name: "Alex",
-  last_name: "Lopez",
-  location: "W10 6RP",
-  email: "why@hotmail.com",
-  password: '123123',
-  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
-  )
-  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
-  user17.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+user16 = User.create(
+first_name: "Carl",
+last_name: "Lopez",
+location: "W10 6RP",
+email: "chicken@hotmail.com",
+password: '123123',
+description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+)
+file = open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+user16.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+puts "finished user 16"
 sleep(1)
-   user18 = User.create(
+
+  user17 = User.create(
+first_name: "Alex",
+last_name: "Lopez",
+location: "W10 6RP",
+email: "why@hotmail.com",
+password: '123123',
+description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+)
+file = open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+user17.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+puts "finshed user 17"
+sleep(1)
+
+user18 = User.create(
   first_name: "Tony",
   last_name: "Lopez",
   location: "W10 6RP",
@@ -235,11 +263,13 @@ sleep(1)
   password: '123123',
   description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
   )
-  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
-  user18.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+user18.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finshed user 18"
 sleep(1)
-   user19 = User.create(
+
+user19 = User.create(
   first_name: "Ruth",
   last_name: "Lopez",
   location: "W10 6RP",
@@ -247,20 +277,37 @@ sleep(1)
   password: '123123',
   description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
   )
-  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
-  user19.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+user19.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
+puts "finshed user 19"
 sleep(1)
-   user20 = User.create(
+
+user20 = User.create(
   first_name: "Sam",
   last_name: "Lopez",
   location: "W10 6RP",
   email: "Sam@hotmail.com",
   password: '123123',
   description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
-  )
-  file = URI.open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
-  user20.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+)
+file = open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+user20.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+puts "finshed user 20"
+sleep(1)
+
+user21 = User.create(
+  first_name: "Charlie",
+  last_name: "Smith",
+  location: "W10 6RP",
+  email: "snake@hotmail.com",
+  password: '123123',
+  description: 'I am a self-proclaimed history nerd. I love to read fiction set in the past and imagine the great adventures of those times.',
+)
+file = open('https://i.pinimg.com/originals/cb/3a/17/cb3a175b03e01ebd10a908e65725b3a9.jpg')
+user21.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+puts "finshed user 21"
 
 def api_hash
   @book_info["items"].select{ |item| item["volumeInfo"]["language"] == "en" }.first["volumeInfo"]
@@ -270,7 +317,7 @@ def find_image
   images = api_hash["imageLinks"]
   if images
     image = images["thumbnail"]
-    URI.open(image)
+    open(image)
   else
     use_open_library("L")
   end
@@ -279,7 +326,7 @@ end
 def use_open_library(size)
   url = open_library_url(@book.isbn, "L")
   begin
-    URI.open(url)
+    open(url)
   rescue StandardError
     if size == "L"
       use_open_library("M")
@@ -288,7 +335,7 @@ def use_open_library(size)
     elsif size == "S"
       # Noooope
       # none of this has worked
-      URI.open("https://islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg")
+      open("https://islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg")
     end
   end
 end
@@ -336,16 +383,16 @@ sleep(10)
 
 index2 = 0
 
-isbn_array2 = [{genre: 'Drama', isbn: '9780349142920'}, {genre: 'Romance', isbn: '0008172145'}, {genre: 'Drama', isbn: '1409175227'}, {genre: 'Science fiction', isbn: '1481447939'}, {genre: 'Science fiction', isbn: '9781405927024'}]
-5.times do
-  p index2
-  @book = Book.new(genre: "#{isbn_array2[index2][:genre]}", user_id: user2.id, isbn: "#{isbn_array2[index2][:isbn]}")
-  scrape(isbn_array2[index2][:isbn])
-  @book.user_id = user2.id
-  @book.save
-  index2 += 1
-end
-p "finished isbn_array2"
+# isbn_array2 = [{genre: 'Drama', isbn: '9780349142920'}, {genre: 'Romance', isbn: '0008172145'}, {genre: 'Science fiction', isbn: '1481447939'}, {genre: 'Science fiction', isbn: '9781405927024'}]
+# 5.times do
+#   p index2
+#   @book = Book.new(genre: "#{isbn_array2[index2][:genre]}", user_id: user2.id, isbn: "#{isbn_array2[index2][:isbn]}")
+#   scrape(isbn_array2[index2][:isbn])
+#   @book.user_id = user2.id
+#   @book.save
+#   index2 += 1
+# end
+# p "finished isbn_array2"
 
 sleep(10)
 
@@ -719,4 +766,3 @@ Bookclub.create(name: "Cranial Crunch",
 
 
 puts 'Finished seeding.'
-
