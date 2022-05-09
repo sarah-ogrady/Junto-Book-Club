@@ -4,11 +4,10 @@
 require "open-uri"
 
 puts 'Deleting'
-Bookclub.destroy_all
 Message.destroy_all
 Swap.destroy_all
 Book.destroy_all
-User.destroy_all
+
 
 puts 'Repopulating database...'
 
