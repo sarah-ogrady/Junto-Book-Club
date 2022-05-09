@@ -22,8 +22,10 @@ user1 = User.create(
   password: '123123',
   description: 'I read all kinds of books both fiction and non-fiction. I am a fast reader so tend to have a few on the go so I never get bored!',
   )
-  file = open('https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
-  user1.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+
+file = open('https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
+user1.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+user1.save
 
 puts "finished user 1"
 sleep(1)
@@ -332,8 +334,6 @@ def use_open_library(size)
     elsif size == "M"
       use_open_library("S")
     elsif size == "S"
-      # Noooope
-      # none of this has worked
       open("https://islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg")
     end
   end
