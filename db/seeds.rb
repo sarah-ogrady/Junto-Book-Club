@@ -617,15 +617,6 @@ Bookclub.create(name: 'Gangster Grandmas',
   image_url: 'https://static.timesofisrael.com/jewishwdev/uploads/2018/06/7483010074_8d159cecc2_k.jpg'
   )
 
-Bookclub.create(name: 'A Gouda Book',
-  genre: 'Romance',
-  location: 'E9 5EN',
-  capacity: 22,
-  description: 'We love a pun and we love cheese. Come join the pun!',
-  user_id: user5.id,
-  image_url: 'https://www.litro.co.uk/wp-content/uploads/2011/10/bookshop-cum-cafe.jpg'
-  )
-
 Bookclub.create(name: 'Famished for fiction',
   genre: 'Historical fiction',
   location: 'W3 6RT',
