@@ -16,7 +16,6 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary', '~> 1.12.0'
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'turbolinks_render'
 gem 'turbolinks'
 gem 'geocoder'
