@@ -102,7 +102,7 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    loofah (2.17.0)
+    loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -121,7 +121,7 @@ GEM
     msgpack (1.5.1)
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.6-x86_64-darwin)
+    nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (0.21.0)
@@ -135,7 +135,7 @@ GEM
       pry (>= 0.10.4)
     puma (5.6.4)
       nio4r (~> 2.0)
-    racc (1.6.0)
+    racc (1.6.1)
     rack (2.2.3)
     rack-proxy (0.7.2)
       rack
@@ -239,7 +239,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails
